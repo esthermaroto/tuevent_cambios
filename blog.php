@@ -59,12 +59,8 @@ $footer = file_get_contents('includes/footer.html');
 
     <?php echo $footer; ?>
     
-<<<<<<< HEAD
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/navigation.js"></script>
-=======
-    <script src="js/jquery.min.js"></script>
-    <script src="js/navigation.js"></script>
     <script>
         // Inicializar navegación del header para que coincida con el resto del sitio
         document.addEventListener('DOMContentLoaded', function () {
@@ -110,7 +106,6 @@ $footer = file_get_contents('includes/footer.html');
             });
         });
     </script>
->>>>>>> 9347a2b1d6d308024e49386f18d807f21c1310c4
 </body>
 </html>
 

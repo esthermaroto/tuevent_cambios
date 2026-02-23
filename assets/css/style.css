@@ -3166,4 +3166,238 @@ h6 {
 
 .bg-project-sabor-andalucia {
     background-image: url('../images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');
+}/* ---------------------------------- */
+/* BLOG PAGE LAYOUT (NUEVOS ESTILOS)  */
+/* ---------------------------------- */
+.blog-hero {
+    background: linear-gradient(135deg, #2a2a2a 0%, #000000 100%);
+    padding: 140px 0 70px;
+    text-align: center;
+    color: #ffffff;
 }
+
+.blog-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+}
+
+.blog-hero p {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.blog-entry {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-entry:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.blog-entry:focus-visible {
+    outline: 3px solid rgba(238, 181, 0, 0.55);
+    outline-offset: 3px;
+}
+
+.blog-entry.featured {
+    width: 100%;
+}
+
+.blog-entry.regular {
+    width: calc(50% - 20px);
+}
+
+.blog-entry-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background: #f0f0f0;
+}
+
+.regular .blog-entry-image {
+    height: 260px;
+}
+
+.blog-entry-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featured .blog-entry-content {
+    padding: 40px;
+}
+
+.blog-entry-date {
+    color: #8d8d8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.blog-entry-title {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    margin: 0;
+    color: #2a2a2a;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.regular .blog-entry-title {
+    font-size: 1.7rem;
+    -webkit-line-clamp: 3;
+}
+
+.blog-entry-excerpt {
+    color: #737171;
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.featured .blog-entry-excerpt {
+    -webkit-line-clamp: 4;
+    font-size: 1.05rem;
+}
+
+.btn-read-more {
+    display: inline-block;
+    color: #2a2a2a;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    font-size: 0.9rem;
+    margin-top: 6px;
+    align-self: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.blog-entry:hover .btn-read-more {
+    color: var(--primary-color);
+    border-color: rgba(238, 181, 0, 0.7);
+}
+
+/* MEDIA QUERIES (TODO UNIFICADO)     */
+/* ---------------------------------- */
+@media (max-width: 1024px) {
+    .blog-hero {
+        padding: 120px 0 50px;
+    }
+    .blog-hero h1 {
+        font-size: 2.6rem;
+    }
+    .blog-hero p {
+        font-size: 1rem;
+    }
+    .blog-container {
+        margin: 30px auto 50px;
+        gap: 30px;
+    }
+    .blog-entry.regular {
+        width: 100%;
+    }
+    .blog-entry-image {
+        height: 280px;
+    }
+    .blog-entry-title {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-hero {
+        padding: 110px 0 40px;
+    }
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+    .blog-hero p {
+        font-size: 0.95rem;
+    }
+    .blog-container {
+        margin: 25px auto 40px;
+        padding: 0 16px;
+        gap: 24px;
+    }
+    .blog-entry.featured,
+    .blog-entry.regular {
+        width: 100%;
+    }
+    .blog-entry-image,
+    .regular .blog-entry-image {
+        height: 220px;
+    }
+    .blog-entry-content {
+        padding: 22px 18px 24px;
+    }
+    .blog-entry-title {
+        font-size: 1.7rem;
+    }
+    .featured .blog-entry-title {
+        font-size: 1.9rem;
+    }
+    .blog-entry-excerpt {
+        -webkit-line-clamp: 4;
+        font-size: 0.95rem;
+    }
+    .btn-read-more {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-hero {
+        padding: 100px 0 35px;
+    }
+    .blog-hero h1 {
+        font-size: 1.8rem;
+    }
+    .blog-container {
+        margin: 20px auto 30px;
+        padding: 0 12px;
+    }
+    .blog-entry-image {
+        height: 190px;
+    }
+    .blog-entry-title,
+    .featured .blog-entry-title {
+        font-size: 1.5rem;
+    }
+    .blog-entry-excerpt {
+        -webkit-line-clamp: 5;
+    }
+}
+
+/* P&aacute;gina Aviso Legal */
