@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación - Tuevent</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.website-editor.net/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source_Sans_Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open_Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap"  />
+    
+    <!-- CSS Links -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.website-editor.net/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source_Sans_Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open_Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap"  />
+    <link rel="stylesheet" type="text/css" href="https://static-cdn.website-editor.net/mnlt/production/6154/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.website-editor.net/WIDGET_CSS/ca79df3c956843fd3ce58cfa0cdbfcef.css" id="widgetCSS" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/files/78591e54e95f4111804b6550648d0bbe_1.min.css?v=207&Expires=1772853222&Signature=hpGeLOK2phFuBoAbZkBO7Mvs1i6o94UWDddvLu3rUTihxxQhDeYlSTZNOsnTrVYEZeYZTgorGEzGOkInzK7oO9FW3Sua~fHoo8jsaulmmowwys07NIbr2X-09ET5qYuq1NUdm3biY8w5T-qJCtZZHT4tqOfTKbusiXjkc0WxgJtXFhPBOWgfe0liLlw0kEl0fsne8fu3-R3FgSLVEQWz7uaAwTZ3CbLUO1ahejLEyeEkZvRwsUyFPWdaG0nCa40gBIpkLmibDWA-0CWNae7X125-VhqAUYqPD02wLQrND-v4Dg2G2ziXrxMJCcOyra6MDdjXvcp9hloJaQuRlDJW7g__&Key-Pair-Id=K2NXBXLF010TJW" id="siteGlobalCss" />
+    <link
+        type="text/css" rel="stylesheet"
+        href="/_dm/s/rt/css/oneUndOne/1and1-runtime.css?version=2026-02-04T13_48_24"
+/>
+    
+    <!-- Inline Styles -->
+    <style>
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+
+</style>
+    <style>
+    
+</style>
+    <style>img[width][height] {
+  height: auto;
+}</style>
+    <style>
+  body[data-page-alias="comunicación"] #dm [data-show-on-page-only="comunicación"] {
+    display: block !important;
+  }
+</style>
+    <style>
+</style>
+    <style>
+    
+</style>
+    <style>
+    
+</style>
+    <style>
+</style>
+    <style>
+    *#dm *.dmBody div.u_1692848273
+{
+}
+*#dm *.dmBody *.u_1383484449 *.photoGalleryThumbs *.image-container a
+{
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1083346177
+{
+	background-color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-inner
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-container *.caption-text
+{
+	color:rgba(35,35,35,1) !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-container *.caption-text *.rteBlock
+{
+	color:rgba(35,35,35,1) !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-container *.caption-title
+{
+	color:rgba(64,64,64,1) !important;
+	font-family:Montserrat !important;
+	direction:ltr !important;
+	font-weight:bold !important;
+}
+*#dm *.dmBody *.u_1383484449 *.caption-inner
+{
+	border-bottom-left-radius:0 !important;
+	-webkit-border-top-right-radius:0 !important;
+	-moz-border-top-right-radius:0 !important;
+	-webkit-border-bottom-right-radius:0 !important;
+	-webkit-border-bottom-left-radius:0 !important;
+	border-top-right-radius:0 !important;
+	-webkit-border-top-left-radius:0 !important;
+	border-radius:0 !important;
+	-moz-border-bottom-right-radius:0 !important;
+	-moz-border-top-left-radius:0 !important;
+	border-top-left-radius:0 !important;
+	-moz-border-radius:0 !important;
+	-moz-border-bottom-left-radius:0 !important;
+	border-bottom-right-radius:0 !important;
+	-webkit-border-radius:0 !important;
+}
+*#dm *.dmBody *.u_1022576856
+{
+	display:block !important;
+}
+*#dm *.dmBody *.u_1847851675
+{
+	display:none !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-button
+{
+	background-color:rgba(255,255,255,0.5) !important;
+	border-style:solid !important;
+	border-width:0 !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-button:hover
+{
+	background-color:rgba(238,181,0,0.5) !important;
+	background-image:none !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-button.hover
+{
+	background-color:rgba(238,181,0,0.5) !important;
+	background-image:none !important;
+}
+*#dm *.dmBody div.u_1383484449 *.caption-button span.text
+{
+	color:rgba(0,0,0,1) !important;
+	font-weight:bold !important;
+}
+*#dm *.dmBody *.u_1569214537
+{
+	background-position:50% 0 !important;
+}
+*#dm *.dmBody *.u_1422520936
+{
+	display:block !important;
+}
+*#dm *.dmBody *.u_1204350737
+{
+	display:block !important;
+}
+*#dm *.dmBody *.u_1572848756
+{
+	display:none !important;
+}
+*#dm *.dmBody *.u_1511598682
+{
+	display:block !important;
+}
+*#dm *.dmBody *.u_1011431007
+{
+	display:none !important;
+}
+*#dm *.dmBody *.u_1775570338
+{
+	display:block !important;
+}
+*#dm *.dmBody *.u_1012007995
+{
+	display:none !important;
+}
+*#dm *.dmBody *.u_1051627747
+{
+	background-position:50% 100% !important;
+}
+*#dm *.dmBody *.u_1924972366
+{
+	display:block !important;
+}
+*#dm *.dmBody div.u_1355843462
+{
+	background-color:rgba(255,255,255,1) !important;
+}
+*.u_1355843462
+{
+	background-image:none !important;
+	background-color:rgb(255,255,255) !important;
+	background-position:0 0 !important;
+	background-size:auto !important;
+	background-repeat:repeat !important;
+	padding-top:80px !important;
+	padding-bottom:30px !important;
+	padding-right:40px !important;
+	padding-left:40px !important;
+	margin:0 !important;
+	text-align:center !important;
+	color:rgb(0,0,0) !important;
+}
+*.u_1213515467
+{
+	background-image:none !important;
+	background-color:rgba(0,0,0,0) !important;
+	background-position:0 0 !important;
+	background-size:auto !important;
+	background-repeat:repeat !important;
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+	padding-left:0 !important;
+	margin:0 !important;
+	text-align:center !important;
+	color:rgb(0,0,0) !important;
+}
+*#dm *.dmBody nav.u_1225785886
+{
+	color:white !important;
+}
+*#dm *.dmBody *.u_1664954006:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1664954006.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1664954006>*.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_1664954006:before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1664954006.before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1664954006>*.bgExtraLayerOverlay
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1664954006
+{
+	background-repeat:no-repeat !important;
+	background-image:url(images/comunicacion/IV_Salon_Estudiantil_UGR_Paraninfo_Sala_Alumnos1_Tuevent_2019.jpg) !important;
+	background-size:cover !important;
+	background-position:center center !important;
+	background-attachment:fixed !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	min-height:500px !important;
+	padding-top:245px !important;
+	padding-left:40px !important;
+	padding-bottom:15px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:none !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1664954006:before
+{
+	content:"" !important;
+	position:absolute !important;
+	top:0 !important;
+	left:0 !important;
+	right:0 !important;
+	bottom:0 !important;
+	background-color:rgba(0,0,0,0.35) !important;
+	z-index:1 !important;
+}
+*#dm *.dmBody div.u_1664954006 > *
+{
+	position:relative !important;
+	z-index:2 !important;
+}
+*#dm *.dmBody h1.u_1772156911
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+}
+
+</style>
+    <style>
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] { .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+
+
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+    visibility: hidden;
+  }
+
+</style>
+    <style>
+    @font-face {
+  font-family: "Roboto Fallback";
+  src: local('Arial');
+  ascent-override: 92.6709%;
+  descent-override: 24.3871%;
+  size-adjust: 100.1106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Cabin Fallback";
+  src: local('Arial');
+  ascent-override: 101.7818%;
+  descent-override: 26.3684%;
+  size-adjust: 94.8106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Helvetica Fallback";
+  src: local('Arial');
+  ascent-override: 77.002%;
+  descent-override: 22.998%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Open Sans Fallback";
+  src: local('Arial');
+  ascent-override: 101.1768%;
+  descent-override: 27.7323%;
+  size-adjust: 105.6416%;
+  line-gap-override: 0%;
+ }
+</style>
+    <style>
+    html, body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+    #dmRoot, #dm, .dmRoot, .dmBody {
+        overflow: visible !important;
+        height: auto !important;
+    }
+    </style>
+    
+</head>
+<body>
+    <!-- Contenido principal sin header ni footer -->
+<div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_comunicación"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateid="BlankGalleryRespTemplate" class="dmGalleryTmpl generalRespTmplWrapper" id="1891893590"> <div class="innerPageTmplBox dmRespRowsWrapper" id="1500470601"> <div class="u_1664954006 dmRespRow hasBackgroundOverlay fullBleedChanged fullBleedMode dmSectionNoParallax" style="text-align: center;" id="1664954006" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9sZS1jZG4ud2Vic2l0ZS1lZGl0b3IubmV0L3MvNzg1OTFlNTRlOTVmNDExMTgwNGI2NTUwNjQ4ZDBiYmUvZG1zM3JlcC9tdWx0aS9vcHQvV1JSVDYxMzQtMTkyMHcuSlBHP0V4cGlyZXM9MTc3Mjg1MzIyMiZTaWduYXR1cmU9SWMyOFpDN1oyMlFYQlR4M3V5ci1VU3BIVW9xNkJ_eU92dkRTdVpKU3NJTktBVXBrT3hBdVQyaE1ScVpKUXdzR0VWbHEtLWk4MDJ6akNOV0hUTW9tbFpvbkNKM3ZEbzQwdkRMOVF1SVJhY09Ld3lTbXZNT2xYYTJCRTNXOC1sb3pSZm85ZTFST1FmflZMYUF4TFFoS3ZPa2t4cnJGTXhDdU92V1F6MUdUaWF5N1Y3U0o4TTd6VE9nY1BrZnhFQ0MxUkVXV0Q4Nm12YU1zSTg4cHM4RmRmZjc4cUhhdGM0em5yT2VXSEdXdVRMYkhZTXVYeW9sQzQ4WFRTSllPR1o1Z21jcVpnR2ltSzRTdTJlQVBteHVLM0dBQ2F2a3dtVEN_YTVNMTJnS2c0VzJpWFZyaDJCdk01M1dRbWNuay1md1BSUGtyZkdVckdsT1k5bmdmM211eVVRX18mS2V5LVBhaXItSWQ9SzJOWEJYTEYwMTBUSlciLCJodHRwczovL2xlLWNkbi53ZWJzaXRlLWVkaXRvci5uZXQvcy83ODU5MWU1NGU5NWY0MTExODA0YjY1NTA2NDhkMGJiZS9kbXMzcmVwL211bHRpL29wdC9GSUNaT05FLTE5MjB3LmpwZWc/RXhwaXJlcz0xNzcyODUzMjIyJlNpZ25hdHVyZT1mOVBSNU93NUlGbm5xbTJNWk9JOHdzR3Y4REMyQWo3Sk5HWHlHRDNjdEFaTXBCcFI4czRmanFzMlZTRnl2M3RmcHhzREFqSWJCb3pIaThhSEpGNW5oMVJUT0lQbllSdENoWVl2ZGtBUzJ5YUpYd2RJNk8xNmhvNlJHVnQ5YjlKQm5PT2MxV2xDeFVMQTAwYlg0cFNRSUVQLUtxdTRBcGZiTWl3MlNmQjVEWTh4S3RYck9OMGdlN3g1NllRRmNiNVk0M0hIRzBPSEx_NXJwaFVMMTBQZmRIZW1mR3g0V2s0SUpJfmhhU083Q2ZTcUZNcFI4TGFZOWFWek01VVY1QWdxY2JhV0V1MXhkTENVWG1ERFhQNXJqQnJDMlJ6MFBTSDA1WnBTbjhtdk9jYWEtckxNTnRKaDBSNGxTSHA3SUpFRDNpUlc4Zy1CM0JJNnM2cTBMZzluSndfXyZLZXktUGFpci1JZD1LMk5YQlhMRjAxMFRKVyIsImh0dHBzOi8vbGUtY2RuLndlYnNpdGUtZWRpdG9yLm5ldC9zLzc4NTkxZTU0ZTk1ZjQxMTE4MDRiNjU1MDY0OGQwYmJlL2RtczNyZXAvbXVsdGkvb3B0L1NhYm9yX2dyYW5hZGFfYW5kYWx1Y2lhX3NhYm9yX2FnZW5jaWFfdHVldmVudF8yMDE5LTE5MjB3LkpQRz9FeHBpcmVzPTE3NzI4NTMyMjImU2lnbmF0dXJlPVNzdU1UY21FUzB1azU0fmcwZE82QURxbUtMYWMtWm1Yd0NPUn5rVUwzbC1CU1JzTUU1dklLVnZsSUVtZmFhREMyV3lxZEY0R2pFfnE4dmlDYWRZYWdhNjVQRDFtaH5QM0lxY3NDYkNZMmprQ3pad3N_N2JSdGZqck1NclNQOWg0ODNKaktyRDlhdEFYd0c1NVAwU2d3NlVhVDc3M2tVVkRPVWR3RWQ1LUZnV21vOEtuYTBwcHZ_WXRyaTZuSWk3SjBrSzVoTVFwWmJveX45Smhzc1VTRHpESU9Bb2czNkthQ1h1b1dHSGt6TGRQOUZmTi1rUy1HS1p3bkV5RzNwTVZlWGVUT0l4M1IwNGtKTkZPamVJSFZBd3RUUUJOY1FRVWZDLTVjOGJGSHFKbUZ3R3ZjUWJ2U09HWmlMOTF3WWVCd1hKOG11THpmMWs1YXBXU0gyVX5_QV9fJktleS1QYWlyLUlkPUsyTlhCWExGMDEwVEpXIiwiaHR0cHM6Ly9sZS1jZG4ud2Vic2l0ZS1lZGl0b3IubmV0L3MvNzg1OTFlNTRlOTVmNDExMTgwNGI2NTUwNjQ4ZDBiYmUvZG1zM3JlcC9tdWx0aS9vcHQvVHVldmVudF9CaW9UZWNoLWE2MDg5NDYwLTE5MjB3LmpwZz9FeHBpcmVzPTE3NzI4NTMyMjImU2lnbmF0dXJlPWVsbURDNnEzRWtjU3RiUGhIdUk5aHkxN1gzeDBVWEFIYXM2RHZoVmNFWVpUbjBMTThuSUtOTVpvfjlxTlRSUkZheTNZM25BY0VGYWdTNnNQVElVWi1QNGlxc1hoSnNuLVV4SE9MNzlMNTJNfnlhQzhIWHU2RGh0MX5WRzZiS3hSdzY4d2dTU01CM3FsaWpQfnBjSXMtUm10Qzk2Tk5hcnlRYnROYzVLaVJFNU1SNjdROGpQeFFTZFhuUjgtWmpWUjdQNGRSYlUxTzRyc2pBNGNaYUdTSTV3N3otdktHNllJUWxkcXBBVUNYUkhyb0RNN1EtfktCd3FYS2pNTlFmbVkyVnhRSlFFSGpPNnFHME1nazF_V1R_fk5UT1p1R09PbkRyMEd5QlllVGpBQnk1VkU1SFNzdTBZYVdDc1dQc0FmVWl_V2hvbWhhTU9TQkN_d0tUNlZLd19fJktleS1QYWlyLUlkPUsyTlhCWExGMDEwVEpXIl19"> <div class="dmRespColsWrapper" id="1938442130"> <div class="dmRespCol small-12 medium-12 large-12 u_1408915061" id="1408915061"> <h1 class="u_1772156911 dmNewParagraph" data-element-type="paragraph" id="1772156911" style="transition: none; display: block;"><font style="color:rgb(255, 255, 255);">Comunicaci&oacute;n y Marketing de Eventos</font></h1></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1851670793" style="text-align: center;" id="1851670793"> <div class="dmRespColsWrapper" id="1061054216"> <div class="dmRespCol small-12 medium-12 large-12" id="1990583633"> <div class="dmRespRow" id="1103796952"> <div class="dmRespColsWrapper" id="1480375508"> <div class="dmRespCol small-12 medium-12 large-12" id="1327704215"> <div data-inject="gallery-pageDescription" class="u_1692848273 dmNewParagraph" id="1692848273"><div style="text-align: left;"><span style="background-color: transparent; font-weight: 400;" class="lh-1 font-size-20"><b><font style="color: rgb(234, 175, 10);">Tuevent</font> 
+es experto en la comunicaci&oacute;n y marketing de eventos.</b></span></div><div style="text-align: left;"><span style="font-weight: 400;">Asesoramos y llevamos a cabo el</span> 
+<span style=""><b>plan de comunicaci&oacute;n y marketing</b></span> <span style="font-weight: 400;">de tu evento, empezando la definici&oacute;n de la estrategia y el dise&ntilde;o de los elementos que utilizaremos en la campa&ntilde;a de</span> 
+<span style=""><b>publicidad</b></span><span style="font-weight: 400;">.&nbsp; Como empresa de</span> 
+<span style=""><b>producci&oacute;n integral</b></span><span style="font-weight: 400;">, estamos especializados en la implementaci&oacute;n de la campa&ntilde;a publicitaria utilizando para ello elementos</span> 
+ <b>online y offline.</b><br/></div></div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1355843462" style="text-align: center;" id="1355843462"> <div class="dmRespColsWrapper" id="1804798847"> <div class="dmRespCol small-12 medium-12 large-12 u_1213515467" id="1213515467"> <div class="u_1947379867 dmNewParagraph" id="1947379867"><div style="text-align: center;"><span style="" class="m-font-size-36 lh-1 font-size-48"><font style=""><font style="font-weight: 900; color: rgb(238, 181, 0);">#ON</font> 
+<font style=""><b><span style="font-weight: 400;">Hacemos</span> 
+eventos 360&ordm;</b></font></font></span></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1923848594 dmRespRow" id="1923848594"> <div class="dmRespColsWrapper" id="1123101230"> <div class="dmRespCol large-12 medium-12 small-12" id="1662240070"> <div data-inject="gallery-pageDescription" class="u_1298061938 dmNewParagraph" id="1298061938"><div style="text-align: right;"><span style="font-weight: 700;"><font style="color: rgb(234, 175, 10);"><span style="font-weight: 800;" class="lh-1 font-size-48 m-specific m-font-size-35"><span style="" class="m-specific m-font-size-30 lh-1">#MarketingFerial</span>&nbsp;</span></font></span></div><div style="text-align: right;"><span style="font-weight: 700;"><font style="color: rgb(0, 0, 0);"><span style="font-weight: 800;"><span style="font-weight: 300;" class="lh-1 font-size-30">Somos especialistas en el dise&ntilde;o, la producci&oacute;n y el montaje de ferias y congresos, pero tambi&eacute;n somos tus <span style="font-weight: 600;">asesores</span>.</span>&nbsp;</span></font></span></div><div style="text-align: right;"><span style="font-weight: 700;"><font style="color: rgb(0, 0, 0);"><span style="font-weight: 800;"><br/></span></font></span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Promociona <span style="font-weight: 700;">tu marca en ferias y congresos.&nbsp;</span></span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Nos encargamos de la <span style="font-weight: 700;">pre-feria, feria y post-feria</span>.&nbsp;</span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;"><br/></span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Planificamos , promocionamos , elaboramos tu plan de marketing ferial y comunicamos tu marca.&nbsp;</span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;"><br/></span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Durante el evento solo queda</span> 
+ <span style="background-color: transparent;"><font style="color: rgb(234, 175, 10);"><b>#brillar</b></font></span><span style="color: rgb(0, 0, 0); background-color: transparent;">. Hacemos la labor de <span style="font-weight: 700;">comercial para que consigas atraer a tu p&uacute;blico objetivo y sorprenderlo en el stand</span>. Analizamos los resultados y extraemos conclusiones para que todo vaya siempre sobre ruedas.&nbsp;&nbsp;</span></div><div style="text-align: right;"><span style="color: rgb(0, 0, 0); background-color: transparent;"><br/></span></div><div style="text-align: right;"><span style="background-color: transparent;" class="lh-1 font-size-36"><b style=""><font style="color: rgb(234, 175, 10);"><span style="font-weight: 300;">&iquest;C&oacute;mo lo hacemos?&nbsp;</span></font></b></span></div><div style="text-align: right;"><span style="background-color: transparent;"><span style="color: rgb(0, 0, 0);">Cuando la tecnolog&iacute;a, el audiovisual, las charlas y los regalos confluyen, lo dif&iacute;cil&nbsp;es que las cosas salgan mal.</span></span></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1083346177 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1083346177"> <div class="dmRespColsWrapper" id="1462206508"> <div class="dmRespCol small-12 medium-12 large-12" id="1340559548"> <div class="u_1383484449 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp photo-gallery-done text-layout-fixed captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="4" data-element-type="dPhotoGalleryId" data-desktop-text-layout="fixed" id="1383484449" data-rows-to-show="100" data-placeholder="false" data-image-hover-effect="zoomout" data-desktop-caption-alignment="center_center" data-tablet-text-layout="fixed" data-tablet-caption-alignment="center_center" data-mobile-text-layout="fixed" data-mobile-caption-alignment="center_center" data-mobile-columns="1" data-enable-lazy-loading="false" data-image-animation="none" data-link-gallery="true" data-auto-adjust-columns="true"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container square"> <div class="photogallery-row " data-index=""> <div class="photogallery-column column-4" data-index="0"> <div index="0" class="photoGalleryThumbs animated  " data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1750028072" data-image-url="images/comunicacion/Tuevent_BioTech.jpg" style="background-image: url('images/comunicacion/Tuevent_BioTech.jpg');"><img id="1107256602" data-src="images/comunicacion/Tuevent_BioTech.jpg" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1022576856" class="caption-container u_1022576856" style="display:none"> <span class="caption-inner"> <a id="1770553651" class="caption-button dmWidget  clearfix u_1770553651" href="/biotech-open-innovation" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">Biotech Open Innovation 2018</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-4" data-index="1"> <div index="1" class="photoGalleryThumbs animated  " data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1569214537" data-image-url="images/comunicacion/Guadalinfo2018_Cordoba_Robot_Lona_Tuevent.jpg" style="background-image: url('images/comunicacion/Guadalinfo2018_Cordoba_Robot_Lona_Tuevent.jpg');"><img id="1572788772" data-src="images/comunicacion/Guadalinfo2018_Cordoba_Robot_Lona_Tuevent.jpg" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1422520936" class="caption-container u_1422520936" style=""> <span class="caption-inner"> <a id="1094543354" class="caption-button dmWidget  clearfix u_1094543354" href="/guadalinfo-en-ruta" target="_blank" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">Guadalinfo en ruta 2018</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-4" data-index="2"> <div index="2" class="photoGalleryThumbs animated  " data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1789926720" data-image-url="images/comunicacion/IV_Salon_Estudiantil_UGR_Paraninfo_Sala_Alumnos1_Tuevent_2019.jpg" style="background-image: url("images/comunicacion/IV_Salon_Estudiantil_UGR_Paraninfo_Sala_Alumnos1_Tuevent_2019.jpg");"><img id="1823676832" data-src="images/comunicacion/IV_Salon_Estudiantil_UGR_Paraninfo_Sala_Alumnos1_Tuevent_2019.jpg" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1204350737" class="caption-container u_1204350737" style="display:none"> <span class="caption-inner"> <a id="1335042064" class="caption-button dmWidget  clearfix u_1335042064" href="" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">IV Sal&oacute;n Estudiantil UGR</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-4" data-index="3"> <div index="3" class="photoGalleryThumbs animated  " data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1372094903" data-image-url="images/comunicacion/Sabor_Granada_H_T_Malaga_2019_Tuevent_Showcooking-aab1285e.jpg" style="background-image: url('images/comunicacion/Sabor_Granada_H_T_Malaga_2019_Tuevent_Showcooking-aab1285e.jpg');"><img id="1050703474" data-src="images/comunicacion/Sabor_Granada_H_T_Malaga_2019_Tuevent_Showcooking-aab1285e.jpg" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1511598682" class="caption-container u_1511598682" style="display:none"> <span class="caption-inner"> <a id="1288819712" class="caption-button dmWidget  clearfix u_1288819712" href="/sabor-granada" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">Sabor Granada en H&amp;T Sal&oacute;n de Innovaci&oacute;n en Hosteler&iacute;a</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-4" data-index="4"> <div index="4" class="photoGalleryThumbs animated  " data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1048469322" data-image-url="images/comunicacion/Vinoble2018_Carpa_Lona3_Tuevent.JPG" style="background-image: url('images/comunicacion/Vinoble2018_Carpa_Lona3_Tuevent.JPG');"><img id="1962895350" data-src="images/comunicacion/Vinoble2018_Carpa_Lona3_Tuevent.JPG" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1775570338" class="caption-container u_1775570338" style="display:none"> <span class="caption-inner"> <a id="1942533145" class="caption-button dmWidget  clearfix u_1942533145" href="/vinoble-2018" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">Vinoble 2018</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-4" data-index="5"> <div index="5" class="photoGalleryThumbs animated  " data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1051627747" data-image-url="images/comunicacion/Feria_del_corredor_2019_decathlon_stand_tuevent_3.jpg" style="background-image: url('images/comunicacion/Feria_del_corredor_2019_decathlon_stand_tuevent_3.jpg');"><img id="1625770661" data-src="images/comunicacion/Feria_del_corredor_2019_decathlon_stand_tuevent_3.jpg" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1924972366" class="caption-container u_1924972366" style=""> <span class="caption-inner"> <a id="1243735831" class="caption-button dmWidget  clearfix u_1243735831" href="/feria-del-corredor-granada-2019" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">Feria del Corredor</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-4" data-index="6"> <div index="6" class="photoGalleryThumbs animated  " data-index="6"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="" data-dm-force-device="mobile" class="u_1439044826" data-image-url="images/comunicacion/CongresoGepac_Stand_Gepac_Kolors2018_1_-ce79939f.JPG" style="background-image: url('images/comunicacion/CongresoGepac_Stand_Gepac_Kolors2018_1_-ce79939f.JPG');"><img id="1047984820" data-src="images/comunicacion/CongresoGepac_Stand_Gepac_Kolors2018_1_-ce79939f.JPG" alt="" aria-label="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1228535605" class="caption-container u_1228535605" style="display:none"> <span class="caption-inner"> <a id="1231284476" class="caption-button dmWidget  clearfix u_1231284476" href="/congreso-gepac" style=""> <span class="iconBg"> <span class="icon hasFontIcon "></span> 
+</span> 
+ <span class="text">Congreso GEPAC</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de organización de eventos y comunicación</title>
+    <meta name="description" content="Agencia de organización integral de eventos, ferias y congresos. Llevamos el diseño y la comunicación de tu evento. Organizamos eventos integrales">
+    <meta name="keywords" content="gestión de eventos, organización de eventos, eventos, comunicación, diseño gráfico, stands, montaje, audiovisual, ferias, congresos">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1770315462">
+    
+    <style>
+        /* Estilos específicos de la página principal */
+        .hero-section {
+            background-image: url('images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-section {
+            padding: 0px;
+            background: #fff;
+        }
+        
+        .service-item {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .welcome-section {
+            padding: 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .welcome-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-section {
+            padding: 60px 0;
+            background: #f5f5f5;
+        }
+        
+        .projects-section {
+            padding: 0;
+            background: #fff;
+        }
+        
+        .hashtag-section {
+            padding: 0;
+            background: #fff;
+            color: #000;
+        }
+        
+        .hashtag-title {
+            font-size: 36px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            padding: 0px;
+        }
+        
+        .photo-gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            aspect-ratio: 1;
+        }
+        
+        .photo-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .photo-gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .photo-gallery-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+        
+        .form-section {
+            padding: 80px 0;
+            background-image: url('images/unsplash-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            position: relative;
+        }
+        
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        
+        .form-section > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-title h4 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        
+        .form-title h2 {
+            font-size: 32px;
+            font-weight: 600;
+        }
+        
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .contact-form input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-form input[type="email"]::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .contact-form input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        
+        .form-group-checkbox {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .form-group-checkbox label {
+            font-size: 14px;
+            line-height: 1.5;
+            cursor: pointer;
+            margin-bottom: 0;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .form-group-checkbox label a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+        
+        .form-group-checkbox label a:hover {
+            color: var(--color-secondary);
+        }
+        
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background: var(--color-primary);
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background: var(--color-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header común -->
+    <div id="common-header"></div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span style="color: #EEB500;">_tu</span><span style="color: #000;">sueño</span><br>
+                <span style="color: #EEB500;">_tu</span><span style="color: #000;">inspiración</span><br>
+                <span style="color: #EEB500;">_tu</span><span style="color: #000;">realidad</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="dmHeaderResp">
+            <!-- EVENTOS -->
+            <div class="dmRespRow fullBleedChanged fullBleedMode">
+                <div class="dmRespColsWrapper">
+                    <div class="dmRespCol small-12 hasBackgroundOverlay large-4 medium-4 empty-column" style="background-image: url('images/eventos-section.jpg');"></div>
+                    <div class="dmRespCol small-12 large-4 medium-4">
+                        <div style="max-width: 500px; margin: 0 auto;">
+                            <h3 class="service-title" style="text-align: left; margin-top: 0;">_EVENTOS</h3>
+                            <div class="service-text" style="text-align: left;">
+                                <p>Queremos conocerte, por eso <b>estudiamos tus necesidades</b> con todas sus variables para ofrecerte la opción que mejor se adapte a tu proyecto.</p>
+                                <p><b style="color: #EEB500;">Exploradores por naturaleza</b>. Nos desplazamos y <b>analizamos la ubicación</b> del evento al detalle.</p>
+                                <p><b style="color: #EEB500;">Creamos y re-creamos</b> el diseño para conseguir <b>capturar tu identidad y plasmarla en tu evento.</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dmRespCol small-12 hasBackgroundOverlay large-4 medium-4 empty-column" style="background-image: url('images/comunicacion-section.jpg');"></div>
+                </div>
+            </div>
+
+            <!-- COMUNICACIÓN y PRODUCCIÓN -->
+            <div class="dmRespRow fullBleedChanged fullBleedMode" style="margin-top: 0;">
+                <div class="dmRespColsWrapper">
+                    <div class="dmRespCol small-12 medium-4 large-4">
+                        <div style="max-width: 500px; margin: 0 auto;">
+                            <h3 class="service-title" style="text-align: left; margin-top: 0;">_COMUNICACIÓN</h3>
+                            <div class="service-text" style="text-align: left;">
+                                <p><b style="color: #EEB500;">¿Qué sería un evento sin comunicación?</b> Trabajamos la <b>comunicación online y offline.</b></p>
+                                <p>Desarrollamos toda la <b>campaña de comunicación, diseñamos su imagen</b> y la llevamos a cualquier tipo de soporte publicitario.</p>
+                                <p>Nos encargamos de documentar todo tu evento y de su posterior edición.</p>
+                                <p><b>¡Déja el móvil en casa, que ya nos ocupamos nosotros!</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dmRespCol small-12 hasBackgroundOverlay medium-4 large-4 empty-column" style="background-image: url('images/produccion-section.jpg');"></div>
+                    <div class="dmRespCol small-12 medium-4 large-4">
+                        <div style="max-width: 500px; margin: 0 auto;">
+                            <h3 class="service-title" style="text-align: left; margin-top: 0;">_PRODUCCIÓN</h3>
+                            <div class="service-text" style="text-align: left;">
+                                <p><b style="color: #EEB500;">¡Olvídate de todo y déjate llevar!</b></p>
+                                <p>Nos encargamos de <b>producir tu evento</b> de principio a fin: <b>diseño y montaje de stands, alquiler de mobiliario, soportes publicitarios, merchandising, decoración...todo lo necesario para conseguir un evento único.</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section dmRespRow hasBackgroundOverlay">
+        <div class="dmRespColsWrapper">
+            <div class="dmRespCol small-12 medium-12 large-12">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">Bienvenido a tuevent</h1>
+                    <div class="welcome-quote">
+                        "La gente olvidará lo que dijiste, también olvidará lo que hiciste, pero jamás olvidará como les hiciste sentir"
+                    </div>
+                    <div class="welcome-author">- Maya Angelou -</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-section">
+        <div class="dmHeaderResp">
+            <div class="dmRespRow">
+                <div class="dmRespColsWrapper">
+                    <div class="dmRespCol small-12 medium-6 large-6 contact-info-item">
+                        <div class="contact-info-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" class="contact-icon">
+                                <path d="M21,14h2.4l0,0c1,0,1.9,0.6,2.2,1.6l3,9.5c0.3,0.8,0,1.7-0.6,2.3l-3.5,3.5c-0.1,0.1-0.1,0.2-0.1,0.4c0.8,1.5,2.8,4.4,6.3,8c3.5,3.5,6.5,5.5,8,6.3c0.1,0.1,0.3,0,0.4-0.1l3.5-3.5c0.6-0.6,1.5-0.8,2.3-0.6l9.5,3c1,0.3,1.6,1.2,1.6,2.2V49c0,2-6,7-10,7c-2.3,0-10.8-0.8-21-11l0,0C14.8,34.8,14,26.3,14,24C14,20.1,18.9,14,21,14z"/>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Llámanos:</div>
+                                <h3 class="contact-value">+34 687 853096</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dmRespCol small-12 medium-6 large-6 contact-info-item">
+                        <div class="contact-info-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="contact-icon">
+                                <path d="M17.8,28.2v43.6h64.4V28.2H17.8z M77.7,30.3L50,48.8L22.3,30.3H77.7z M19.9,69.7V31.2L50,51.2l30.1-20.1v38.5H19.9z"/>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Correo electrónico:</div>
+                                <h3 class="contact-value"><a href="mailto:info@tuevent.es">info@tuevent.es</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="dmHeaderResp">
+            <!-- Primera fila: Congresos y Ferias (con imágenes de fondo) -->
+            <div class="dmRespRow fullBleedChanged fullBleedMode">
+                <div class="dmRespColsWrapper">
+                    <div class="dmRespCol small-12 hasBackgroundOverlay medium-6 large-6 project-button-bg" style="background-image: url('images/biotech.jpg');">
+                        <a href="biotech-open-innovation.html" class="project-button">_Congresos</a>
+                    </div>
+                    <div class="dmRespCol small-12 hasBackgroundOverlay medium-6 large-6 project-button-bg" style="background-image: url('images/feria-corredor.jpg');">
+                        <a href="feria-del-corredor-granada-2019.html" class="project-button">_Ferias</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Segunda fila: Eventos gastronómicos y Exposiciones itinerantes (con imágenes de fondo) -->
+            <div class="dmRespRow fullBleedChanged fullBleedMode">
+                <div class="dmRespColsWrapper">
+                    <div class="dmRespCol small-12 hasBackgroundOverlay medium-6 large-6 project-button-bg" style="background-image: url('images/vinoble.jpg');">
+                        <a href="vinoble-2018.html" class="project-button">_Eventos gastronómicos</a>
+                    </div>
+                    <div class="dmRespCol small-12 hasBackgroundOverlay medium-6 large-6 project-button-bg" style="background-image: url('images/guadalinfo.jpg');">
+                        <a href="guadalinfo-en-ruta.html" class="project-button">_Exposiciones itinerantes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hashtag Section -->
+    <section class="hashtag-section">
+        <div class="dmHeaderResp">
+            <div class="dmRespRow">
+                <div class="dmRespColsWrapper">
+                    <div class="dmRespCol small-12 medium-6 large-6">
+                        <h3 class="hashtag-title">#LlaveEnMano</h3>
+                        <div class="service-text" style="color: #737171;">
+                            <p>Tuevent es tu <b>agencia de servicios integrales</b> para que tu evento sea un éxito.</p>
+                            <p>Ferias, congresos, exposiciones, presentaciones de producto, mítines y reuniones, conciertos y actuaciones musicales, pruebas deportivas, y todo aquello que seas capaz de imaginar!</p>
+                        </div>
+                    </div>
+                    <div class="dmRespCol small-12 medium-6 large-6">
+                        <h3 class="hashtag-title">#Eventos360</h3>
+                        <div class="service-text" style="color: #737171;">
+                            <p><b>Nos ocupamos de tu evento de forma integral, 360º.</b> Desde el diseño de un plan de comunicación hasta la producción del último detalle.</p>
+                            <p>Tú pones la idea y nosotros hacemos que se haga realidad!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="clients-section">
+        <div class="dmHeaderResp">
+            <div class="photo-gallery">
+                <div class="photo-gallery-item">
+                    <img src="images/clientes/junta-andalucia.jpg" >
+                </div>
+                <div class="photo-gallery-item">
+                    <img src="images/clientes/diputacion-jaen.jpg" >
+                    
+                </div>
+                <div class="photo-gallery-item">
+                    <img src="images/clientes/ayuntamiento-granada.jpg" >
+                  
+                </div>
+                <div class="photo-gallery-item">
+                    <img src="images/clientes/universidad-granada.jpg" >
+                </div>
+                 <div class="photo-gallery-item">
+                    <img src="images/clientes/camara-granada.jpg" >
+                </div>
+                <div class="photo-gallery-item">
+                    <img src="images/clientes/sabor-granada.jpg" >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="form-section">
+        <div class="dmHeaderResp">
+            <div class="form-container">
+                <div class="form-title">
+                    <h4>¿Quieres que te ayudemos a llevar a cabo tu evento?</h4>
+                    <h2>¡Póngase en contacto con nosotros!</h2>
+                </div>
+                <form class="contact-form" action="#" method="post" id="contactFormIndex">
+                    <input type="email" name="email" id="email-index" placeholder="SU DIRECCIÓN DE CORREO ELECTRÓNICO" required>
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="privacidad-index" name="privacidad" required>
+                        <label for="privacidad-index">
+                            He leído y acepto la <a href="politica_de_privacidad.html" target="_blank">Política de Privacidad</a> y doy mi consentimiento para el tratamiento de mis datos personales.
+                        </label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer común -->
+    <div id="common-footer"></div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/load-common.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        // Validación del formulario de contacto en index
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactFormIndex');
+            if (!form) return;
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email-index').value.trim();
+                const privacidad = document.getElementById('privacidad-index').checked;
+                
+                if (!email) {
+                    alert('Por favor, introduzca su dirección de correo electrónico.');
+                    return;
+                }
+                
+                if (!privacidad) {
+                    alert('Debe aceptar la Política de Privacidad para enviar el formulario.');
+                    return;
+                }
+                
+                // Validación de email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Por favor, introduzca una dirección de correo electrónico válida.');
+                    return;
+                }
+                
+                // Aquí iría la lógica de envío
+                alert('Gracias por contactarnos. Nos pondremos en contacto con usted pronto.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>

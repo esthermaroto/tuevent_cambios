@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros - Tuevent</title>
+    <meta name="description" content="Somos tu agencia de servicios integrales para tu evento. Más de 20 años de experiencia en eventos, ferias y congresos.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1770315462">
+    <style>
+        /* Estilos específicos de la página de contacto */
+        .about-section {
+            padding-top: 80px;
+            padding-bottom: 0;
+            background: #fff;
+        }
+        
+        .about-intro {
+            max-width: 100%;
+            margin: 0 0 30px;
+            text-align: left;
+        }
+        
+        .about-intro h2 {
+            font-size: 36px;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+        
+        .about-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .about-intro .highlight {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+        
+        .values-section {
+            padding: 20px 0;
+            background: #f5f5f5;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 0;
+        }
+        
+        .value-card {
+            background: #fff;
+            padding: 0;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .value-card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .value-card-content {
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .value-card h4 {
+            font-size: 24px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .value-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .rewind-section {
+            padding: 80px 0;
+            background: #fff;
+            color: #333;
+        }
+        
+        .rewind-section h2 {
+            font-size: 36px;
+            color: var(--color-primary);
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 800;
+        }
+        
+        .rewind-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .rewind-image {
+            height: 500px;
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            border-radius: 0;
+            margin-left: -20px;
+            width: calc(80% + 20px);
+        }
+        
+        .rewind-text {
+            padding-right: 20px;
+        }
+        
+        .rewind-text {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .rewind-item h3 {
+            font-size: 24px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .rewind-item p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .rewind-item .highlight-orange {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+        
+        .contact-form-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .contact-cta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contact-cta-text {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .contact-cta-text .text-dark {
+            color: #333;
+            display: inline-block;
+        }
+        
+        .contact-cta-text .text-highlight {
+            color: var(--color-primary);
+            display: inline-block;
+        }
+        
+        .contact-cta-text .text-dark + .text-highlight {
+            margin-left: 0;
+        }
+        
+        .form-container {
+            max-width: 100%;
+        }
+        
+        .form-title {
+            margin-bottom: 30px;
+        }
+        
+        .form-title h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #333;
+            text-transform: uppercase;
+        }
+        
+        .contact-form {
+            background: transparent;
+            padding: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #4A90E2;
+            border-radius: 4px;
+            background: #fff;
+            color: #333;
+            font-size: 16px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #357ABD;
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+        }
+        
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-form input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        
+        .form-group-checkbox {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .form-group-checkbox label {
+            font-size: 14px;
+            line-height: 1.5;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        
+        .form-group-checkbox label a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+        
+        .form-group-checkbox label a:hover {
+            color: var(--color-secondary);
+        }
+        
+        .honeypot-field {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            width: 0;
+            overflow: hidden;
+        }
+        
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background: #555;
+        }
+        
+        .form-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(76, 175, 80, 0.8);
+            color: #fff;
+        }
+        
+        .form-message.error {
+            background: rgba(244, 67, 54, 0.8);
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .rewind-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .rewind-image {
+                height: 300px;
+            }
+            
+            .contact-form-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-cta-text {
+                font-size: 36px;
+                text-align: center;
+            }
+            
+            .about-section,
+            .values-section,
+            .rewind-section,
+            .contact-form-section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header común -->
+    <div id="common-header"></div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="dmHeaderResp">
+            <div class="about-intro">
+                <h2>Somos tu agencia de servicios integrales para tu evento</h2>
+                <p>Ferias, congresos, exposiciones, museografía, presentaciones de producto, mítines y reuniones, conciertos y actuaciones musicales, pruebas deportivas...</p>
+                
+                <h3 style="font-size: 28px; color: var(--color-primary); margin-top: 40px; margin-bottom: 20px; font-weight: 700;">¿Por qué servicios integrales?</h3>
+                <p>Porque nos encanta tenerlo todo bajo control. Trabajamos el pre-evento, el evento y el post-evento, garantizando la profesionalidad en cada una de las fases. Desde el diseño de la imagen del evento, pasando por el asesoramiento, la localización de espacios, el plan de comunicación y marketing hasta el montaje y desmontaje.</p>
+                
+                <p>Entregamos tu evento <span class="highlight">#LlaveEnMano</span> ocupándonos de él de forma integral, por eso no nos importa si eres una pequeña, mediana o gran empresa.</p>
+                
+                <p style="font-size: 20px; font-weight: 700; margin-top: 30px;">¡Tenemos tu evento preparado para hacerlo realidad!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="dmHeaderResp">
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-card-image" style="background-image: url('images/valores.png');"></div>
+                    <div class="value-card-content">
+                        <h4>Valores</h4>
+                        <p>Personalización y adaptabilidad. Creatividad, diferenciación y experiencia</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-card-image" style="background-image: url('images/objetivos.png');"></div>
+                    <div class="value-card-content">
+                        <h4>Objetivos</h4>
+                        <p>Conseguir <strong>eventos únicos</strong> y adaptados a cada cliente.</p>
+                        <p>Crear <strong>grandes ideas</strong> en el menor tiempo posible.</p>
+                        <p>Asegurar la <strong>calidad</strong> de nuestros eventos, contamos con lo imprescindible durante todo el proceso de producción.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-card-image" style="background-image: url('images/equipo.png');"></div>
+                    <div class="value-card-content">
+                        <h4>Equipo</h4>
+                        <p>Un equipo de grandes profesionales está esperándote para desarrollar tu proyecto de principio a fin. Contamos con especialistas en cada una de nuestras áreas de acción porque sabemos que una idea brillante es el resultado de un buen trabajo en equipo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rewind Section -->
+    <section class="rewind-section">
+        <div class="dmHeaderResp">
+            <h2>_Rebobinemos</h2>
+            <div class="rewind-content">
+                <div class="rewind-image" style="background-image: url('images/rewind.jpg');"></div>
+                <div class="rewind-text">
+                    <div class="rewind-item">
+                        <h3>DE DONDE VENIMOS</h3>
+                        <p>Más de 20 años nos unen al mundo de los eventos, el diseño y el montaje de ferias y congresos. Y claro, después de tanto tiempo con nuestros clientes... son ellos mismos los que han depositado toda su confianza en nosotros para que llevemos a cabo la organización integral de sus proyectos.</p>
+                        <p>Entonces nos preguntamos, ¿y por qué no? Así, nace <span class="highlight-orange">Tuevent</span>.</p>
+                    </div>
+                    <div class="rewind-item">
+                        <h3>HACIA DONDE VAMOS</h3>
+                        <p>Seguimos avanzando y creciendo ofreciendo a nuestros clientes un servicio 360º en el que volcamos toda nuestra profesionalidad, creatividad y pasión</p>
+                        <p><strong>¿El resultado?</strong> <span class="highlight-orange">un evento único</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="dmHeaderResp">
+            <div class="contact-form-container">
+                <div class="contact-cta">
+                    <p class="contact-cta-text">
+                        <span class="text-dark">¡Si tienes<br>
+                        una idea<br>
+                        en mente,</span>
+                        <span class="text-highlight">ponte en<br>
+                        contacto<br>
+                        con nosotros!</span>
+                    </p>
+                </div>
+                <div class="form-container">
+                    <div class="form-title">
+                        <h3>Envíanos Un Mensaje</h3>
+                    </div>
+                    <form class="contact-form" action="#" method="post" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+                        </div>
+                        <!-- Honeypot field para protección anti-spam -->
+                        <input type="text" name="website" class="honeypot-field" tabindex="-1" autocomplete="off">
+                        <div class="form-group-checkbox">
+                            <input type="checkbox" id="privacidad" name="privacidad" required>
+                            <label for="privacidad">
+                                He leído y acepto la <a href="politica_de_privacidad.html" target="_blank">Política de Privacidad</a> y doy mi consentimiento para el tratamiento de mis datos personales.
+                            </label>
+                        </div>
+                        <button type="submit">Enviar</button>
+                        <div class="form-message success" id="successMessage">
+                            Muchas gracias por ponerse en contacto con nosotros.<br>
+                            Un miembro de nuestro equipo le contactará lo antes posible.
+                        </div>
+                        <div class="form-message error" id="errorMessage">
+                            Oops, there was an error sending your message.<br>
+                            Please try again later
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer común -->
+    <div id="common-footer"></div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/load-common.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        // Sistema anti-spam avanzado
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (!form) return;
+            
+            // Tiempo de carga de la página (para detectar envíos demasiado rápidos)
+            const pageLoadTime = Date.now();
+            const MIN_FORM_TIME = 3000; // Mínimo 3 segundos desde la carga
+            
+            // Rate limiting: máximo 3 envíos por hora
+            const RATE_LIMIT_KEY = 'tuevent_form_submissions';
+            const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hora
+            const MAX_SUBMISSIONS = 3;
+            
+            // Función para validar email
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Función para validar teléfono (opcional, formato básico)
+            function isValidPhone(phone) {
+                if (!phone || phone.trim() === '') return true; // Opcional
+                const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 9;
+            }
+            
+            // Función para detectar spam en el mensaje
+            function containsSpam(text) {
+                const spamKeywords = [
+                    'viagra', 'cialis', 'casino', 'poker', 'loan', 'credit',
+                    'click here', 'buy now', 'limited time', 'act now',
+                    'http://', 'https://', 'www.', '.com', '.net', '.org'
+                ];
+                const lowerText = text.toLowerCase();
+                // Permitir URLs en el contexto de un mensaje legítimo
+                // Solo marcar como spam si hay múltiples URLs o palabras clave de spam
+                const urlCount = (lowerText.match(/https?:\/\//g) || []).length;
+                const spamCount = spamKeywords.filter(keyword => lowerText.includes(keyword)).length;
+                
+                return urlCount > 2 || spamCount > 2;
+            }
+            
+            // Función para verificar rate limiting
+            function checkRateLimit() {
+                try {
+                    const submissions = JSON.parse(localStorage.getItem(RATE_LIMIT_KEY) || '[]');
+                    const now = Date.now();
+                    const recentSubmissions = submissions.filter(time => now - time < RATE_LIMIT_WINDOW);
+                    
+                    if (recentSubmissions.length >= MAX_SUBMISSIONS) {
+                        return false;
+                    }
+                    
+                    recentSubmissions.push(now);
+                    localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify(recentSubmissions));
+                    return true;
+                } catch (e) {
+                    // Si hay error con localStorage, permitir el envío
+                    return true;
+                }
+            }
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Ocultar mensajes anteriores
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                // Obtener valores del formulario
+                const nombre = document.getElementById('nombre').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const telefono = document.getElementById('telefono').value.trim();
+                const mensaje = document.getElementById('mensaje').value.trim();
+                const honeypot = form.querySelector('input[name="website"]').value;
+                const privacidad = document.getElementById('privacidad').checked;
+                
+                // Validación 1: Honeypot (si está lleno, es un bot)
+                if (honeypot !== '') {
+                    console.log('Spam detectado: honeypot field lleno');
+                    errorMessage.textContent = 'Error al enviar el formulario. Por favor, inténtelo de nuevo.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación de checkbox de privacidad
+                if (!privacidad) {
+                    errorMessage.textContent = 'Debe aceptar la Política de Privacidad para enviar el formulario.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 2: Tiempo mínimo desde la carga de la página
+                const formTime = Date.now() - pageLoadTime;
+                if (formTime < MIN_FORM_TIME) {
+                    console.log('Spam detectado: envío demasiado rápido');
+                    errorMessage.textContent = 'Por favor, espere unos segundos antes de enviar el formulario.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 3: Campos requeridos
+                if (!nombre || !email || !mensaje) {
+                    errorMessage.textContent = 'Por favor, complete todos los campos requeridos.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 4: Formato de email
+                if (!isValidEmail(email)) {
+                    errorMessage.textContent = 'Por favor, ingrese un email válido.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 5: Formato de teléfono (si se proporciona)
+                if (telefono && !isValidPhone(telefono)) {
+                    errorMessage.textContent = 'Por favor, ingrese un teléfono válido.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 6: Detección de spam en el mensaje
+                if (containsSpam(mensaje)) {
+                    errorMessage.textContent = 'El mensaje contiene contenido no permitido. Por favor, revise su mensaje.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 7: Longitud mínima del mensaje
+                if (mensaje.length < 10) {
+                    errorMessage.textContent = 'El mensaje debe tener al menos 10 caracteres.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Validación 8: Rate limiting
+                if (!checkRateLimit()) {
+                    errorMessage.textContent = 'Has enviado demasiados mensajes recientemente. Por favor, espera un momento antes de intentar de nuevo.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Si pasa todas las validaciones, enviar el formulario
+                // Aquí iría la lógica real de envío (AJAX, fetch, etc.)
+                // Por ahora, simulamos el envío
+                const submitButton = form.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.textContent = 'Enviando...';
+                
+                // Simular envío al servidor
+                setTimeout(function() {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Enviar';
+                    
+                    // Scroll al mensaje
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
