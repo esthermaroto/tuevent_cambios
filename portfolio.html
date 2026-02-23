@@ -1,183 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Tuevent</title>
-    <meta name="description" content="Portfolio de proyectos llevados a cabo por Tuevent">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1770315462">
-    
+    <meta
+      name="description"
+      content="Portfolio de proyectos llevados a cabo por Tuevent"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css?v=1770315462" />
+
     <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-        /* --- Hero Section --- */
-        .portfolio-hero-section {
-            padding: 70px 20px 40px;
-            text-align: center;
-            background: #fff;
-        }
-        
-        /* --- Portfolio Grid Section --- */
-        .portfolio-grid-section {
-            width: 100%;
-            background: #000;
-        }
+      /* --- Hero Section --- */
+      .portfolio-hero-section {
+        padding: 70px 20px 40px;
+        text-align: center;
+        background: #fff;
+      }
 
-        .portfolio-grid {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-        }
+      /* --- Portfolio Grid Section --- */
+      .portfolio-grid-section {
+        width: 100%;
+        background: #000;
+      }
 
-        /* TARJETAS */
+      .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      /* TARJETAS */
+      .portfolio-card {
+        position: relative;
+        width: 50%;
+        height: 525px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      /* CAPA DE IMAGEN (Para que el gris no afecte al botón) */
+      .portfolio-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(100%);
+        z-index: 1;
+        transition: transform 0.5s ease;
+      }
+
+      /* Overlay oscuro para legibilidad */
+      .portfolio-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 2;
+      }
+
+      /* CONTENEDOR DE LA CAJA */
+      .button-wrapper {
+        position: relative;
+        z-index: 3;
+        width: 320px;
+        height: 290px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* LA CAJA DEL NOMBRE */
+      .portfolio-card-button {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.1;
+        text-align: center;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: 0px solid transparent;
+      }
+
+      .portfolio-card-button:hover {
+        background-color: #eeb50080 !important;
+        color: #ffffff !important;
+        transform: scale(1.05);
+      }
+
+      /* Desfase visual */
+      .portfolio-card:nth-child(odd) .button-wrapper {
+        transform: translateX(-15px);
+      }
+      .portfolio-card:nth-child(even) .button-wrapper {
+        transform: translateX(15px);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
         .portfolio-card {
-            position: relative;
-            width: 50%; 
-            height: 525px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background-color: #000;
+          width: 100%;
+          height: 450px;
         }
-
-        /* CAPA DE IMAGEN (Para que el gris no afecte al botón) */
-        .portfolio-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: inherit; 
-            background-size: cover;
-            background-position: center;
-            filter: grayscale(100%); 
-            z-index: 1;
-            transition: transform 0.5s ease;
-        }
-
-        /* Overlay oscuro para legibilidad */
-        .portfolio-card::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.25); 
-            z-index: 2;
-        }
-
-        /* CONTENEDOR DE LA CAJA */
         .button-wrapper {
-            position: relative;
-            z-index: 3; 
-            width: 320px; 
-            height: 290px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          width: 220px;
+          height: 220px;
+          transform: none !important;
         }
-
-        /* LA CAJA DEL NOMBRE */
         .portfolio-card-button {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            box-sizing: border-box;
-            color: #ffffff !important;
-            text-decoration: none;
-            font-weight: 700; 
-            font-size: 45px;  
-            line-height: 1.1;
-            text-align: center;
-            transition: all 0.3s ease;
-            background: transparent;
-            border: 0px solid transparent;
+          font-size: 24px;
         }
-
-        .portfolio-card-button:hover {
-            background-color: #eeb50080 !important; 
-            color: #ffffff !important;
-            transform: scale(1.05);
-        }
-
-        /* Desfase visual */
-        .portfolio-card:nth-child(odd) .button-wrapper { transform: translateX(-15px); }
-        .portfolio-card:nth-child(even) .button-wrapper { transform: translateX(15px); }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .portfolio-card { width: 100%; height: 450px; }
-            .button-wrapper { width: 220px; height: 220px; transform: none !important; }
-            .portfolio-card-button { font-size: 24px; }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="common-header"></div>
 
     <section class="portfolio-hero-section">
-        <div style="text-align: center; margin-bottom: -8px;">
-            <span style="color: rgb(0, 0, 0); font-size: 30px; font-weight: 200;">Algunos de nuestros eventos te están esperando</span>
+      <div style="text-align: center; margin-bottom: -8px">
+        <span style="color: rgb(0, 0, 0); font-size: 30px; font-weight: 200"
+          >Algunos de nuestros eventos te están esperando</span
+        >
+      </div>
+      <div style="text-align: center">
+        <span style="font-size: 36px; font-weight: 800; color: rgb(238, 181, 0)"
+          >¿Por qué no pasas y les echas un vistazo?</span
+        >
+      </div>
+      <div style="margin-top: 100px; line-height: 1.3">
+        <div style="text-align: center">
+          <span
+            style="font-weight: 300; font-size: 35px; color: rgb(64, 64, 64)"
+            >Nuestros proyectos
+          </span>
         </div>
-        <div style="text-align: center;">
-            <span style="font-size: 36px; font-weight: 800; color: rgb(238, 181, 0);">¿Por qué no pasas y les echas un vistazo?</span>
+        <div style="text-align: center">
+          <span
+            style="font-weight: 400; font-size: 48px; color: rgb(64, 64, 64)"
+            >son el resultado
+          </span>
         </div>
-        <div style="margin-top: 100px; line-height: 1.3;">
-            <div style="text-align: center;"><span style="font-weight: 300; font-size: 35px; color: rgb(64, 64, 64);">Nuestros proyectos </span></div>
-            <div style="text-align: center;"><span style="font-weight: 400; font-size: 48px; color: rgb(64, 64, 64);">son el resultado </span></div>
-            <div style="text-align: center;"><span style="font-weight: 600; font-size: 34px; color: rgb(64, 64, 64);">de todo en lo que creemos: </span></div>
-            <div style="text-align: center;">
-                <span style="font-weight: 900; font-size: 60px; color: rgb(107, 107, 107);">_TUS </span>
-                <span style="font-weight: 900; font-size: 60px; color: #eaaf0a;">IDEAS</span>
-            </div>
+        <div style="text-align: center">
+          <span
+            style="font-weight: 600; font-size: 34px; color: rgb(64, 64, 64)"
+            >de todo en lo que creemos:
+          </span>
         </div>
+        <div style="text-align: center">
+          <span
+            style="font-weight: 900; font-size: 60px; color: rgb(107, 107, 107)"
+            >_TUS
+          </span>
+          <span style="font-weight: 900; font-size: 60px; color: #eaaf0a"
+            >IDEAS</span
+          >
+        </div>
+      </div>
     </section>
 
     <section class="portfolio-grid-section">
-        <div class="portfolio-grid">
-            <div class="portfolio-card" style="background-image: url('images/biotech.jpg');">
-                <div class="button-wrapper">
-                    <a href="portfolio/biotech-open-innovation.html" class="portfolio-card-button">Biotech Open Innovation</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/feria-corredor.jpg');">
-                <div class="button-wrapper">
-                    <a href="feria-del-corredor-granada-2019.html" class="portfolio-card-button">Feria del Corredor</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/salon-estudiantil/paraninfo.jpg');">
-                <div class="button-wrapper">
-                    <a href="salon-estudiantil-universidad-granada.html" class="portfolio-card-button">IV Salón Estudiantil UGR</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/guadalinfo.jpg');">
-                <div class="button-wrapper">
-                    <a href="guadalinfo-en-ruta.html" class="portfolio-card-button">Guadalinfo en ruta</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/vinoble.jpg');">
-                <div class="button-wrapper">
-                    <a href="vinoble-2018.html" class="portfolio-card-button">Salón Internacional de Vinos Nobles</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/sabor-granada/showcooking-2.jpg');">
-                <div class="button-wrapper">
-                    <a href="sabor-granada.html" class="portfolio-card-button">Sabor Granada</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/gepac/stand-gepac.jpg');">
-                <div class="button-wrapper">
-                    <a href="congreso-gepac.html" class="portfolio-card-button">CONGRESO GEPAC</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');">
-                <div class="button-wrapper">
-                    <a href="sabor-granada-andalucia.html" class="portfolio-card-button">Sabor Granada en Andalucía Sabor</a>
-                </div>
-            </div>
+      <div class="portfolio-grid">
+        <div
+          class="portfolio-card"
+          style="background-image: url(&quot;images/biotech.jpg&quot;)"
+        >
+          <div class="button-wrapper">
+            <a
+              href="portfolio/biotech-open-innovation.html"
+              class="portfolio-card-button"
+              >Biotech Open Innovation</a
+            >
+          </div>
         </div>
+        <div
+          class="portfolio-card"
+          style="background-image: url(&quot;images/feria-corredor.jpg&quot;)"
+        >
+          <div class="button-wrapper">
+            <a
+              href="feria-del-corredor-granada-2019.html"
+              class="portfolio-card-button"
+              >Feria del Corredor</a
+            >
+          </div>
+        </div>
+        <div
+          class="portfolio-card"
+          style="
+            background-image: url(&quot;images/salon-estudiantil/paraninfo.jpg&quot;);
+          "
+        >
+          <div class="button-wrapper">
+            <a
+              href="salon-estudiantil-universidad-granada.html"
+              class="portfolio-card-button"
+              >IV Salón Estudiantil UGR</a
+            >
+          </div>
+        </div>
+        <div
+          class="portfolio-card"
+          style="background-image: url(&quot;images/guadalinfo.jpg&quot;)"
+        >
+          <div class="button-wrapper">
+            <a href="guadalinfo-en-ruta.html" class="portfolio-card-button"
+              >Guadalinfo en ruta</a
+            >
+          </div>
+        </div>
+        <div
+          class="portfolio-card"
+          style="background-image: url(&quot;images/vinoble.jpg&quot;)"
+        >
+          <div class="button-wrapper">
+            <a href="vinoble-2018.html" class="portfolio-card-button"
+              >Salón Internacional de Vinos Nobles</a
+            >
+          </div>
+        </div>
+        <div
+          class="portfolio-card"
+          style="
+            background-image: url(&quot;images/sabor-granada/showcooking-2.jpg&quot;);
+          "
+        >
+          <div class="button-wrapper">
+            <a href="sabor-granada.html" class="portfolio-card-button"
+              >Sabor Granada</a
+            >
+          </div>
+        </div>
+        <div
+          class="portfolio-card"
+          style="
+            background-image: url(&quot;images/gepac/stand-gepac.jpg&quot;);
+          "
+        >
+          <div class="button-wrapper">
+            <a href="congreso-gepac.html" class="portfolio-card-button"
+              >CONGRESO GEPAC</a
+            >
+          </div>
+        </div>
+        <div
+          class="portfolio-card"
+          style="
+            background-image: url(&quot;images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG&quot;);
+          "
+        >
+          <div class="button-wrapper">
+            <a href="sabor-granada-andalucia.html" class="portfolio-card-button"
+              >Sabor Granada en Andalucía Sabor</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <div id="common-footer"></div>
@@ -185,5 +299,5 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/load-common.js"></script>
     <script src="js/navigation.js"></script>
-</body>
+  </body>
 </html>
