@@ -1,4 +1,4 @@
-// Navigation functionality
+﻿// Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation dropdown functionality
     const navItems = document.querySelectorAll('.unifiednav__item_has-sub-nav');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Gracias por contactarnos. Un miembro de nuestro equipo se pondrá en contacto lo antes posible.');
+            alert('Gracias por contactarnos. Un miembro de nuestro equipo se pondr&aacute; en contacto lo antes posible.');
             this.reset();
         });
     });
@@ -43,3 +43,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
 });
+

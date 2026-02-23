@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // blog.php
 require_once 'includes/db.php';
 
@@ -14,8 +14,8 @@ $footer = file_get_contents('includes/footer.html');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Tuevent</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .blog-hero {
             background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
@@ -149,21 +149,22 @@ $footer = file_get_contents('includes/footer.html');
                     <div class="blog-entry-date"><?php echo date('d/m/Y', strtotime($post['fecha_publicacion'])); ?></div>
                     <h2 class="blog-entry-title"><?php echo htmlspecialchars($post['titulo']); ?></h2>
                     <div class="blog-entry-excerpt"><?php echo $excerpt; ?></div>
-                    <span class="btn-read-more">Ver más →</span>
+                    <span class="btn-read-more">Ver m&aacute;s â†&rsquo;</span>
                 </div>
             </a>
         <?php endforeach; ?>
 
         <?php if (empty($posts)): ?>
             <div style="text-align: center; width: 100%; padding: 100px 0;">
-                <h3>Próximamente nuevas entradas...</h3>
+                <h3>Pr&oacute;ximamente nuevas entradas...</h3>
             </div>
         <?php endif; ?>
     </main>
 
     <?php echo $footer; ?>
     
-    <script src="js/jquery.min.js"></script>
-    <script src="js/navigation.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </body>
 </html>
+

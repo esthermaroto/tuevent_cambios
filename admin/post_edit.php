@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // admin/post_edit.php
 session_start();
 if (!isset($_SESSION['admin_logged_in'])) {
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Procesar Imagen
     if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
-        $upload_dir = '../images/blog/';
+        $upload_dir = '../assets/images/blog/';
         if (!is_dir($upload_dir)) {
             mkdir($upload_dir, 0755, true);
         }
@@ -39,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $file_tmp = $_FILES['imagen']['tmp_name'];
         $file_name = time() . '_' . basename($_FILES['imagen']['name']);
         $target_file = $upload_dir . $file_name;
-        $relative_path = 'images/blog/' . $file_name;
+        $relative_path = '../assets/images/blog/' . $file_name;
 
-        // Optimización de imagen
+        // Optimizaci&oacute;n de imagen
         $info = getimagesize($file_tmp);
         if ($info) {
             $mime = $info['mime'];
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Guardar optimizada
                 if ($mime == 'image/png') {
-                    imagepng($src, $target_file, 8); // Compresión 0-9
+                    imagepng($src, $target_file, 8); // Compresi&oacute;n 0-9
                 } elseif ($mime == 'image/gif') {
                     imagegif($src, $target_file);
                 } else {
@@ -144,12 +144,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         <form method="POST" enctype="multipart/form-data" class="form-card">
             <div class="form-group">
-                <label for="titulo">Título</label>
+                <label for="titulo">T&iacute;tulo</label>
                 <input type="text" id="titulo" name="titulo" value="<?php echo htmlspecialchars($post['titulo']); ?>" required>
             </div>
             
             <div class="form-group">
-                <label for="fecha">Fecha de Publicación</label>
+                <label for="fecha">Fecha de Publicaci&oacute;n</label>
                 <input type="date" id="fecha" name="fecha_publicacion" value="<?php echo $post['fecha_publicacion']; ?>" required>
             </div>
 
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="toolbar">
                     <button type="button" onclick="formatDoc('bold')"><b>B</b></button>
                     <button type="button" onclick="formatDoc('italic')"><i>I</i></button>
-                    <button type="button" onclick="formatDoc('insertUnorderedList')">• Lista</button>
+                    <button type="button" onclick="formatDoc('insertUnorderedList')">â€¢ Lista</button>
                     <button type="button" onclick="formatDoc('formatBlock', 'h3')">H3</button>
                     <button type="button" onclick="formatDoc('createLink')">Link</button>
                 </div>
@@ -190,8 +190,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             document.getElementById('realContent').value = document.getElementById('editor').innerHTML;
         }
         
-        // Mantener sincronizado mientras se edita para evitar pérdida accidental
+        // Mantener sincronizado mientras se edita para evitar p&eacute;rdida accidental
         document.getElementById('editor').addEventListener('input', syncContent);
     </script>
 </body>
 </html>
+
+

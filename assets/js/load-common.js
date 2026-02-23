@@ -1,6 +1,6 @@
-// Cargar header y footer comunes en todas las páginas
+﻿// Cargar header y footer comunes en todas las p&aacute;ginas
 document.addEventListener('DOMContentLoaded', function () {
-    // Función para cargar un archivo HTML (compatible con file:// y http://)
+    // Funci&oacute;n para cargar un archivo HTML (compatible con file:// y http://)
     function loadHTML(elementId, filePath) {
         // Intentar primero con fetch (funciona con http/https)
         fetch(filePath)
@@ -13,10 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(html => {
                 const element = document.getElementById(elementId);
                 if (element) {
-                    element.innerHTML = html;
-                    console.log(`✓ Loaded ${elementId} from ${filePath}`);
+                    let processedHtml = html;
+                    // Ajustar rutas relativas si estamos en un subdirectorio antes de insertar en el DOM
+                    if (pathPrefix) {
+                        // Reemplazar src y href que no sean absolutos ni ya relativos (../)
+                        // Usamos una expresi&oacute;n regular simple para src y href que empiecen por comillas
+                        processedHtml = processedHtml.replace(/(src|href)=(["'])(?!(http|mailto|#|\.\.\/))/gi, `$1=$2${pathPrefix}`);
+                    }
 
-                    // Reinicializar navegación después de cargar el header
+                    element.innerHTML = processedHtml;
+                    console.log(`âœ&ldquo; Loaded ${elementId} from ${filePath}`);
+
+                    // Reinicializar navegaci&oacute;n despu&eacute;s de cargar el header
                     if (elementId === 'common-header') {
                         initNavigation();
                     }
@@ -33,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             const element = document.getElementById(elementId);
                             if (element) {
                                 element.innerHTML = xhr.responseText;
-                                console.log(`✓ Loaded ${elementId} from ${filePath} (via XMLHttpRequest)`);
+                                console.log(`âœ&ldquo; Loaded ${elementId} from ${filePath} (via XMLHttpRequest)`);
 
                                 if (elementId === 'common-header') {
                                     initNavigation();
@@ -48,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Función para inicializar la navegación
+    // Funci&oacute;n para inicializar la navegaci&oacute;n
     function initNavigation() {
         // Mobile menu toggle
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
@@ -61,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Submenu toggle en móvil
+        // Submenu toggle en m&oacute;vil
         const hasSubmenu = document.querySelectorAll('.has-submenu');
         hasSubmenu.forEach(item => {
             const link = item.querySelector('a');
@@ -73,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Marcar el elemento activo del menú según la página actual
+        // Marcar el elemento activo del men&uacute; seg&uacute;n la p&aacute;gina actual
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
@@ -84,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Cerrar menú móvil al hacer clic en un enlace
+        // Cerrar men&uacute; m&oacute;vil al hacer clic en un enlace
         const navMenuLinks = document.querySelectorAll('.nav-menu a');
         navMenuLinks.forEach(link => {
             link.addEventListener('click', function () {
@@ -96,9 +104,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Usar rutas relativas simples - se resuelven desde la ubicación del archivo HTML actual
-    const headerPath = 'includes/header.html';
-    const footerPath = 'includes/footer.html';
+    // Determinar el prefijo de ruta seg&uacute;n la profundidad del directorio actual
+    const currentPath = window.location.pathname;
+    const isInSubdir = /\/admin\/|\/portfolio\/|\/maintenance\//.test(currentPath) ||
+        currentPath.startsWith('admin/') ||
+        currentPath.startsWith('portfolio/') ||
+        currentPath.startsWith('maintenance/');
+    const pathPrefix = isInSubdir ? '../' : '';
+
+    const headerPath = pathPrefix + 'includes/header.html';
+    const footerPath = pathPrefix + 'includes/footer.html';
 
     // Verificar que los elementos existen antes de cargar
     const headerElement = document.getElementById('common-header');
@@ -116,3 +131,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Element #common-footer not found in DOM');
     }
 });
+

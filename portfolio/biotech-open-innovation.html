@@ -1,273 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biotech Open Innovation - Tuevent</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1770315462">
-    <style>
-        .biotech-hero {
-            background: #fff;
-            padding: 80px 0 60px;
-            text-align: center;
-        }
-        
-        .biotech-hero h1 {
-            font-size: 48px;
-            font-weight: 500;
-            color: #000;
-            margin-bottom: 10px;
-        }
-        
-        .biotech-hero h1 .highlight {
-            font-weight: 800;
-            color: #EEB500;
-        }
-        
-        .biotech-hero .date {
-            font-size: 18px;
-            font-weight: 300;
-            color: #000;
-            margin: 20px 0;
-        }
-        
-        .biotech-hero .description {
-            font-size: 18px;
-            color: #000;
-            max-width: 800px;
-            margin: 30px auto;
-            line-height: 1.6;
-        }
-        
-        .biotech-slider {
-            width: 100%;
-            max-width: 1920px;
-            margin: 0 auto;
-            position: relative;
-            height: 520px;
-            overflow: hidden;
-        }
-        
-        .biotech-slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none;
-        }
-        
-        .biotech-slider img.active {
-            display: block;
-        }
-        
-        .biotech-content {
-            padding: 60px 0;
-            background: #fff;
-        }
-        
-        .biotech-content .dmHeaderResp {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        
-        .biotech-content h3 {
-            font-size: 20px;
-            font-weight: 200;
-            color: #000;
-            margin: 40px 0 20px;
-        }
-        
-        .biotech-content h3 .highlight {
-            color: #EEB500;
-        }
-        
-        .biotech-content p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #000;
-            margin-bottom: 20px;
-        }
-        
-        .biotech-content p strong {
-            font-weight: 600;
-        }
-        
-        .biotech-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 5px;
-            margin: 30px 0;
-        }
-        
-        .biotech-gallery-item {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 1;
-            overflow: hidden;
-        }
-        
-        .biotech-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        @media (max-width: 1024px) {
-            .biotech-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .biotech-hero {
-                padding: 60px 0 40px;
-            }
-            
-            .biotech-hero h1 {
-                font-size: 36px;
-            }
-            
-            .biotech-slider {
-                height: 400px;
-            }
-            
-            .biotech-content .dmHeaderResp {
-                padding: 0 20px;
-            }
-            
-            .biotech-gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    
-        /* Photo Gallery Styles */
-        .photo-gallery-section {
-            padding: 60px 0;
-            background: #fff;
-        }
-        
-        .photo-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .photo-gallery-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            aspect-ratio: 4/3;
-            border-radius: 4px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .photo-gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .photo-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        /* Lightbox Styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.95);
-            animation: fadeIn 0.3s;
-        }
-        
-        .lightbox.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .lightbox-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            margin: auto;
-        }
-        
-        .lightbox-image {
-            max-width: 100%;
-            max-height: 90vh;
-            object-fit: contain;
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10000;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            transition: background 0.3s;
-        }
-        
-        .lightbox-close:hover {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            font-size: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 20px;
-            user-select: none;
-            transition: opacity 0.3s;
-            z-index: 10000;
-        }
-        
-        .lightbox-nav:hover {
-            opacity: 0.7;
-        }
-        
-        .lightbox-prev {
-            left: 20px;
-        }
-        
-        .lightbox-next {
-            right: 20px;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css?v=1770315462">
+
 </head>
+
 <body>
-    <!-- Header común -->
+    <!-- Header com&uacute;n -->
     <div id="common-header"></div>
-    
+
     <!-- Hero Section -->
     <section class="biotech-hero">
         <div class="dmHeaderResp">
@@ -277,15 +26,17 @@
             </h1>
             <div class="date">23 DE MARZO DE 2018</div>
             <div class="description">
-                Biotech Open Innovation es un encuentro empresarial entre startups, spinoffs y otras empresas del sector.
+                Biotech Open Innovation es un encuentro empresarial entre startups, spinoffs y otras empresas del
+                sector.
             </div>
         </div>
     </section>
 
     <!-- Slider Section -->
     <section class="biotech-slider">
-        <img src="../images/biotech/biotech-banderolas.jpg" alt="Biotech Open Innovation - Banderolas" class="active">
-        <img src="../images/biotech/biotech-main.jpg" alt="Biotech Open Innovation">
+        <img src="../assets/images/biotech/biotech-banderolas.jpg" alt="Biotech Open Innovation - Banderolas"
+            class="active">
+        <img src="../assets/images/biotech/biotech-main.jpg" alt="Biotech Open Innovation">
     </section>
 
     <!-- Content Section -->
@@ -295,33 +46,39 @@
                 <span>Nuestra</span> <span class="highlight">propuesta de valor</span>
             </h3>
             <p>
-                Para este encuentro empresarial nos ocupamos de la <strong>producción integral del evento</strong>, desde la habilitación del espacio con decoración y mobiliario, hasta el diseño e impresión de todos los elementos de comunicación. Dispusimos unas letras de porexpan, roll ups, photocall, banderolas en la entrada, para conseguir el <strong>ambiente idóneo de cooperación entre empresas.</strong>
+                Para este encuentro empresarial nos ocupamos de la <strong>producci&oacute;n integral del
+                    evento</strong>, desde la habilitaci&oacute;n del espacio con decoraci&oacute;n y mobiliario, hasta
+                el dise&ntilde;o e impresi&oacute;n de todos los elementos de comunicaci&oacute;n. Dispusimos unas
+                letras de porexpan, roll ups, photocall, banderolas en la entrada, para conseguir el <strong>ambiente
+                    id&oacute;neo de cooperaci&oacute;n entre empresas.</strong>
             </p>
 
             <!-- Gallery -->
             <div class="biotech-gallery">
                 <div class="biotech-gallery-item">
-                    <img src="../images/biotech/biotech2.jpg" alt="Biotech Open Innovation">
+                    <img src="../assets/images/biotech/biotech2.jpg" alt="Biotech Open Innovation">
                 </div>
                 <div class="biotech-gallery-item">
-                    <img src="../images/biotech/biotech-bolsas.jpg" alt="Biotech Open Innovation - Bolsas">
+                    <img src="../assets/images/biotech/biotech-bolsas.jpg" alt="Biotech Open Innovation - Bolsas">
                 </div>
                 <div class="biotech-gallery-item">
-                    <img src="../images/biotech/biotech1.jpg" alt="Biotech Open Innovation">
+                    <img src="../assets/images/biotech/biotech1.jpg" alt="Biotech Open Innovation">
                 </div>
                 <div class="biotech-gallery-item">
-                    <img src="../images/biotech/biotech-mesa.jpg" alt="Biotech Open Innovation - Mesa">
+                    <img src="../assets/images/biotech/biotech-mesa.jpg" alt="Biotech Open Innovation - Mesa">
                 </div>
             </div>
 
             <h3>
-                <span>Desarrollo de</span> <span class="highlight">Programas de Innovación Abierta</span>
+                <span>Desarrollo de</span> <span class="highlight">Programas de Innovaci&oacute;n Abierta</span>
             </h3>
             <p>
-                Este encuentro es una gran oportunidad para que las empresas regionales del sector biotecnológico lleven a cabo <strong>foros y programas de innovación a abierta.</strong>
+                Este encuentro es una gran oportunidad para que las empresas regionales del sector biotecnol&oacute;gico
+                lleven a cabo <strong>foros y programas de innovaci&oacute;n a abierta.</strong>
             </p>
             <p>
-                Biotech Open Innovation 2018 nace con el objetivo de <strong>dar visibilidad a la actividad de las Pymes andaluzas de este sector.</strong>
+                Biotech Open Innovation 2018 nace con el objetivo de <strong>dar visibilidad a la actividad de las Pymes
+                    andaluzas de este sector.</strong>
             </p>
         </div>
     </section>
@@ -332,16 +89,18 @@
         <div class="dmHeaderResp">
             <div class="photo-gallery-grid">
                 <div class="photo-gallery-item" data-index="0">
-                    <img src="../images/biotech/Tuevent_Biotech2.jpg" alt="Tuevent Biotech2" loading="lazy">
+                    <img src="../assets/images/biotech/Tuevent_Biotech2.jpg" alt="Tuevent Biotech2" loading="lazy">
                 </div>
                 <div class="photo-gallery-item" data-index="1">
-                    <img src="../images/biotech/Tuevent_BioTech_Bolsas.jpg" alt="Tuevent BioTech Bolsas" loading="lazy">
+                    <img src="../assets/images/biotech/Tuevent_BioTech_Bolsas.jpg" alt="Tuevent BioTech Bolsas"
+                        loading="lazy">
                 </div>
                 <div class="photo-gallery-item" data-index="2">
-                    <img src="../images/biotech/Tuevent_Biotech1.jpg" alt="Tuevent Biotech1" loading="lazy">
+                    <img src="../assets/images/biotech/Tuevent_Biotech1.jpg" alt="Tuevent Biotech1" loading="lazy">
                 </div>
                 <div class="photo-gallery-item" data-index="3">
-                    <img src="../images/biotech/Tuevent_BioTech_Mesa.jpg" alt="Tuevent BioTech Mesa" loading="lazy">
+                    <img src="../assets/images/biotech/Tuevent_BioTech_Mesa.jpg" alt="Tuevent BioTech Mesa"
+                        loading="lazy">
                 </div>
             </div>
         </div>
@@ -359,17 +118,17 @@
 
     <!-- JavaScript para el slider -->
     <script>
-        // Slider simple automático
-        (function() {
+        // Slider simple autom&aacute;tico
+        (function () {
             const images = document.querySelectorAll('.biotech-slider img');
             let currentIndex = 0;
-            
+
             function showNextImage() {
                 images[currentIndex].classList.remove('active');
                 currentIndex = (currentIndex + 1) % images.length;
                 images[currentIndex].classList.add('active');
             }
-            
+
             // Cambiar imagen cada 7 segundos
             setInterval(showNextImage, 7000);
         })();
@@ -377,7 +136,7 @@
 
     <!-- JavaScript para el lightbox -->
     <script>
-        (function() {
+        (function () {
             const galleryItems = document.querySelectorAll('.photo-gallery-item');
             const lightbox = document.getElementById('lightbox');
             const lightboxImage = document.getElementById('lightboxImage');
@@ -439,14 +198,15 @@
             });
         })();
     </script>
-    
-    <!-- Footer común -->
+
+    <!-- Footer com&uacute;n -->
     <div id="common-footer"></div>
 
     <!-- JavaScript -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/load-common.js"></script>
-    <script src="../js/navigation.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/load-common.js"></script>
+    <script src="../assets/js/navigation.js"></script>
 
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // config/db.php
 
 // Load environment variables
@@ -33,6 +33,7 @@ try {
     $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
 } catch (\PDOException $e) {
     error_log($e->getMessage());
-    die("Error de conexión a la base de datos.");
+    die("Error de conexi&oacute;n a la base de datos.");
 }
+
 

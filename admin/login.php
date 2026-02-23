@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // admin/login.php
 session_start();
 require_once '../includes/db.php';
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: index.php');
             exit;
         } else {
-            $error = 'Usuario o contraseña incorrectos';
+            $error = 'Usuario o contrase&ntilde;a incorrectos';
         }
     } else {
         $error = 'Por favor, rellene todos los campos';
@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" id="usuario" name="usuario" required>
             </div>
             <div class="form-group">
-                <label for="password">Contraseña</label>
+                <label for="password">Contrase&ntilde;a</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Entrar</button>
@@ -109,3 +109,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+
+
