@@ -14,115 +14,11 @@ $footer = file_get_contents('includes/footer.html');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Tuevent</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .blog-hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-            padding: 120px 0 60px;
-            text-align: center;
-            color: white;
-        }
-        .blog-hero h1 { font-size: 3.5rem; margin: 0; color: #f39c12; }
-        
-        .blog-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .blog-entry {
-            display: flex;
-            flex-direction: column;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: inherit;
-        }
-        .blog-entry:hover { transform: translateY(-5px); }
-
-        /* Estilo para el primer post (Ancho completo) */
-        .blog-entry.featured {
-            width: 100%;
-        }
-        
-        /* Estilo para el resto (50%) */
-        .blog-entry.regular {
-            width: calc(50% - 20px);
-        }
-
-        .blog-entry-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-        .regular .blog-entry-image {
-            height: 250px;
-        }
-
-        .blog-entry-content {
-            padding: 30px;
-        }
-        .featured .blog-entry-content {
-            padding: 40px;
-        }
-
-        .blog-entry-date {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-        .blog-entry-title {
-            font-size: 2.5rem;
-            margin: 0 0 15px 0;
-            color: #2c3e50;
-            line-height: 1.2;
-        }
-        .regular .blog-entry-title {
-            font-size: 1.8rem;
-        }
-
-        .blog-entry-excerpt {
-            color: #34495e;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .featured .blog-entry-excerpt {
-            -webkit-line-clamp: 4;
-            font-size: 1.1rem;
-        }
-
-        .btn-read-more {
-            display: inline-block;
-            color: #f39c12;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .blog-entry.regular {
-                width: 100%;
-            }
-            .blog-entry-image {
-                height: 250px;
-            }
-            .blog-entry-title {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <?php echo $header; ?>
@@ -165,5 +61,50 @@ $footer = file_get_contents('includes/footer.html');
     
     <script src="js/jquery.min.js"></script>
     <script src="js/navigation.js"></script>
+    <script>
+        // Inicializar navegación del header para que coincida con el resto del sitio
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-navigation');
+
+            if (mobileToggle && mainNav) {
+                mobileToggle.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+            }
+
+            const hasSubmenu = document.querySelectorAll('.has-submenu');
+            hasSubmenu.forEach(item => {
+                const link = item.querySelector('a');
+                if (link && window.innerWidth <= 768) {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            const navMenuLinks = document.querySelectorAll('.nav-menu a');
+            navMenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 768 && !this.parentElement.classList.contains('has-submenu')) {
+                        if (mobileToggle) mobileToggle.classList.remove('active');
+                        if (mainNav) mainNav.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
