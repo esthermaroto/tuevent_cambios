@@ -2144,8 +2144,6 @@
 
         </div>
     </div>
-    <!--  Add full CSS and Javascript before the close tag of the body if needed -->
-    <!-- ========= JS Section ========= -->
     <script>
         var isWLR = true;
 
@@ -2352,12 +2350,9 @@
             appId: '78591e54e95f4111804b6550648d0bbe'
         });
 
-        // snowplow queries element styles so we wait until CSS calculations are done.
         requestAnimationFrame(() => {
             dmsnowplow('trackPageView');
             _dm_insite.forEach((rule) => {
-                // Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
-                // the tracking is in popup.js
                 if (rule.actionName !== "popup") {
                     dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
                 }
@@ -2368,30 +2363,10 @@
         });
     </script>
     <div style="display:none;" id="P6iryBW0Wu"></div>
-
-    <!-- photoswipe markup -->
-
-
-
-
-
-
-
-
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
         <div class="pswp__bg"></div>
 
-        <!-- Slides wrapper with overflow:hidden. -->
         <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
             <div class="pswp__container">
                 <div class="pswp__item"></div>
                 <div class="pswp__item"></div>
@@ -2403,20 +2378,12 @@
 
                 <div class="pswp__top-bar">
 
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
                     <div class="pswp__counter"></div>
-
                     <button class="pswp__button pswp__button--close" title="Cerrar (Esc)"></button>
-
                     <button class="pswp__button pswp__button--share" title="Compartir"></button>
-
                     <button class="pswp__button pswp__button--fs" title="Activar pantalla completa"></button>
-
                     <button class="pswp__button pswp__button--zoom" title="Acercar/alejar"></button>
 
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -2470,10 +2437,6 @@
         Parameters.NavigationAreaParams.LessButtonText = '......';
         Parameters.HomeLinkText = 'Home';
     </script>
-    <!--  End Script tags -->
-    <!--  Site Wide Html Markup -->
-    <!--  Site Wide Html Markup -->
-    <!--  Begin Product Custom HTML Markup -->
     <script>
         function call1and1Tracking() {
             var externalId = dmAPI.getSiteExternalId();
@@ -2484,7 +2447,11 @@
             document.head.appendChild(tracking);
         }
         call1and1Tracking();
-    </script><!--  End Product Custom HTML Markup -->
+    </script>
+
+    <!-- Footer -->
+    <div id="common-footer"></div>
+    
 </body>
 
 </html>
