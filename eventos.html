@@ -4,8 +4,6 @@
 <head>
 	<meta charset="utf-8">
 
-
-
 	<script type="text/javascript">
 		window._currentDevice = 'desktop';
 		window.Parameters = window.Parameters || {
@@ -97,38 +95,6 @@
 		window.Parameters.LayoutVariationID[window._currentDevice] = 5;
 	</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- Injecting site-wide to the head -->
-
-
-
-
-	<!-- End Injecting site-wide to the head -->
-
-	<!-- Inject secured cdn script -->
-
-
-	<!-- ========= Meta Tags ========= -->
-	<!-- PWA settings -->
 	<script>
 		function toHash(str) {
 			var hash = 5381, i = str.length;
@@ -140,7 +106,6 @@
 	</script>
 	<script>
 		(function (global) {
-			//const cacheKey = global.cacheKey;
 			const isOffline = 'onLine' in navigator && navigator.onLine === false;
 			const hasServiceWorkerSupport = 'serviceWorker' in navigator;
 			if (isOffline) {
@@ -211,27 +176,20 @@
 			}
 		})(window);
 	</script>
-	<!-- Add manifest -->
-	<!-- End PWA settings -->
-
-
-
 	<link rel="canonical" href="https://www.tuevent.es/eventos">
 
 	<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<!--Add favorites icons-->
-
 	<link rel="apple-touch-icon"
 		href="https://cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/FAVICON_TODOS-09.png?Expires=1773737150&Signature=HqpCl2D9znfvfUVuyPFnNb8OO0dPia-OQQE2cAiNirc8oRWkoM37TukHlGBnfOisRLTClbGRq92BwVLkv7A7pe-ddmIrepRDKy1z03rlCQ90GpBDnygywMEiSUTf7~IOvd7sW-UHWa9fvnVyHaCl4~rjWID-C1xsLE5BQ-4GeDk~eTlEMEnaOVQKMR9bkugowxpu7EZupoyrJxmvoXreV~DYtxY4F-h~hHhlyIgUIMIQ9idAPdM-p20Bt1NmCwEi~gkliYPPw52-2iSegly4jwglPTlm-lu~4hUhDOyB2ToILKAz9K67Pf6RifgPtY72X5LqyNUPcA5COAN7Qnq4Fg__&Key-Pair-Id=K2NXBXLF010TJW" />
 
 	<link rel="icon" type="image/x-icon"
 		href="https://cdn.website-editor.net/78591e54e95f4111804b6550648d0bbe/site_favicon_16_1672785771553.ico" />
-
 	<!-- End favorite icons -->
-	<link rel="preconnect" href="https://le-cdn.website-editor.net/" />
 
+	<link rel="preconnect" href="https://le-cdn.website-editor.net/" />
 
 	<!-- Prefetch Ecwid Javascript to speed up loading -->
 	<link rel="prefetch" href="https://app.multiscreenstore.com/script.js?28675099&lang=es" />
@@ -240,7 +198,6 @@
 			window.Parameters.ecwidScriptUrl = 'https://app.multiscreenstore.com/script.js?28675099&lang=es';
 		}
 	</script>
-
 
 	<!-- render the required CSS and JS in the head section -->
 	<script id='d-js-dmapi'>
@@ -298,22 +255,7 @@
 		}
 	</script>
 
-	<!-- loadCSS function header.jsp-->
-
-
-
-
-
-
 	<script id="d-js-load-css">
-		/**
-		 * There are a few <link> tags with CSS resource in them that are preloaded in the page
-		 * in each of those there is a "onload" handler which invokes the loadCSS callback
-		 * defined here.
-		 * We are monitoring 3 main CSS files - the runtime, the global and the page.
-		 * When each load we check to see if we can append them all in a batch. If threre
-		 * is no page css (which may happen on inner pages) then we do not wait for it
-		 */
 		(function () {
 			let cssLinks = {};
 			function loadCssLink(link) {
@@ -358,9 +300,6 @@
 							if (storedWidgetCssLink) {
 								storedWidgetCssLink.disabled = false;
 							}
-							// (SUP-4179) Clear the accumulated cssLinks only when we're
-							// sure that the document has finished loading and the document 
-							// has been parsed.
 							if (document.readyState === 'interactive') {
 								cssLinks = null;
 							}
@@ -368,7 +307,6 @@
 					});
 				}
 			}
-
 
 			function loadCSS(link) {
 				try {
@@ -410,10 +348,7 @@
 		})();
 	</script>
 
-
-
 	<script data-role="deferred-init" type="text/javascript">
-		/* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
 		function Def() {
 			this.promise = new Promise((function (a, b) {
 				this.resolve = a, this.reject = b
@@ -436,8 +371,6 @@
 		};
 	</script>
 	<style id="forceCssIncludes">
-		/* This file is auto-generated from a `scss` file with the same name */
-
 		.videobgwrapper {
 			overflow: hidden;
 			position: absolute;
@@ -463,33 +396,27 @@
 		#dm video.videobgframe {
 			margin: 0
 		}
-
 		@media (max-width:767px) {
 			.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
 				min-height: 80vh
 			}
 		}
-
 		@media (min-width:1025px) {
 			.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
 				min-height: 45vh
 			}
 		}
-
 		@media (min-width:768px) and (max-width:1024px) {
 			.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
 				min-height: 45vh
 			}
 		}
-
 		#dm [data-show-on-page-only] {
 			display: none !important
 		}
-
 		#dmRoot div.stickyHeaderFix div.site_content {
 			margin-top: 0 !important
 		}
-
 		#dmRoot div.stickyHeaderFix div.hamburger-header-container {
 			position: relative
 		}
@@ -498,90 +425,34 @@
 
 	</style>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- Google Fonts Include -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- loadCSS function fonts.jsp-->
-
-
-
 	<link type="text/css" rel="stylesheet"
 		href="https://cdn.website-editor.net/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap" />
 
-
-
-
-
-	<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
 	<link rel="stylesheet" type="text/css"
 		href="https://static-cdn.website-editor.net/mnlt/production/6180/_dm/s/rt/dist/assets/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
-
-	<!-- End of RT CSS Include -->
 
 	<link type="text/css" rel="stylesheet"
 		href="https://cdn.website-editor.net/WIDGET_assets/css/ca79df3c956843fd3ce58cfa0cdbfcef.css" id="widgetCSS" />
 
-	<!-- Support `img` size attributes -->
 	<style>
 		img[width][height] {
 			height: auto;
 		}
 	</style>
 
-	<!-- Support showing sticky element on page only -->
 	<style>
 		body[data-page-alias="eventos"] #dm [data-show-on-page-only="eventos"] {
 			display: block !important;
 		}
 	</style>
 
-	<!-- This is populated in Ajax navigation -->
 	<style id="pageAdditionalWidgetsCss" type="text/css">
 	</style>
 
-
-
-
-	<!-- Site CSS -->
 	<link type="text/css" rel="stylesheet"
 		href="https://cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/files/78591e54e95f4111804b6550648d0bbe_1.min.css?v=207&Expires=1773737150&Signature=krGfR9AWVn1DFHksp6IIoSHk4oaYJEjgGsELUD8aLncDZ9hYUGSXWB71EK~8gGiSrpyviR4V3rijPmnhaNW06tp8lR-cSFxDNvRTXkTzHMm0vuJZbXS1ENH79zlKFzuMJdefkddxlPSC55qrkorRy3UEwQN7nckD~0b-E0ZYZM1nkQdyfuSVekN1J5gYFTBniW-sOUcg9wMcGiL85aJETk5tQ6wVfDj-pf-gUNhxPoeLWwilPzQK~es8yaOSDM~cfHM3NnQiiSD4MNAqU9Km~ejBDHVjuPZCkbxyghTXqJScx~~TvQjD26EN7Z7AuxAMn0zEpgdIi4qnhCORVW3zPQ__&Key-Pair-Id=K2NXBXLF010TJW"
 		id="siteGlobalCss" />
 
-
-	<!-- additional css file per platform -->
 	<link type="text/css" rel="stylesheet"
 		href="/_dm/s/rt/assets/css/oneUndOne/1and1-runtime.css?version=2026-02-12T13_48_28" />
 
@@ -592,7 +463,6 @@
 	<style id="innerPagesStyle" type="text/css">
 
 	</style>
-
 
 	<style id="additionalGlobalCss" type="text/css">
 	</style>
@@ -3116,14 +2986,6 @@
 		}
 	</style>
 
-	<!-- Flex Sections CSS -->
-
-
-
-
-
-
-
 	<style id="globalFontSizeStyle" type="text/css">
 		.font-size-20,
 		.size-20,
@@ -3170,9 +3032,6 @@
 	<style id="pageFontSizeStyle" type="text/css">
 	</style>
 
-
-
-
 	<style id="hideAnimFix">
 		.dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']),
 		.dmDesktopBody:not(.editGrid) [data-anim-extended] {
@@ -3189,9 +3048,6 @@
 			visibility: hidden;
 		}
 	</style>
-
-
-
 
 	<style id="fontFallbacks">
 		@font-face {
@@ -3239,23 +3095,12 @@
 		}
 	</style>
 
-
-	<!-- End render the required css and JS in the head section -->
-
-
-
-
-
-
-
 	<link type="application/rss+xml" rel="alternate" href="https://www.tuevent.es/feed/rss2" />
 	<link type="application/atom+xml" rel="alternate" href="https://www.tuevent.es/feed/atom" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://www.tuevent.es/eventos" />
 	<title>
-
-		Servicios agencia de organizaci&oacute;n de eventos y comunicaci&oacute;n
-
+		Servicios agencia de organización de eventos y comunicación
 	</title>
 	<meta name="keywords"
 		content="&amp;quot;organizaci&oacute;n de eventos&amp;quot; &amp;quot;servicios&amp;quot; &amp;quot;agencia comunicaci&oacute;n&amp;quot; &amp;quot;agencia eventos&amp;quot; &amp;quot;tecnolog&iacute;a&amp;quot; &amp;quot;maketing ferial&amp;quot; &amp;quot;audiovisuales&amp;quot; &amp;quot;desarrollo web&amp;quot; &amp;quot;mailing&amp;quot; &amp;quot;espacios&amp;quot; &amp;quot;identidad&amp;quot; &amp;quot;llave en mano&amp;quot; &amp;quot;impresi&oacute;n digital&amp;quot; &amp;quot;stands&amp;quot; &amp;quot;mobiliario&amp;quot;" />
@@ -3274,51 +3119,10 @@
 	<meta property="og:image"
 		content="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/RRSS_200px200px-04-1920w.png?Expires=1773737150&amp;Signature=HS1EJgH3xEE6ufgJ2btdWBeC3r2ibVyLZm9QChCg7ZDL4sGJdRP8D45mLugcrBfKl7~xh2prK9tsgfqJbRDmRXmrW-C7Vv4u-61jiE6MbjwpHEa9c8tnBtzOaLdnp6nGHBnKnRiDVrBNIWwWWEGjrHD0~Ek-1QfBrzHurzJO6XNtrqP0h6P0d4fSTT3maBgNitiwIiWBqqw-GUje8C3d5rHPkjPrzjAqNV0rLL1hMnX1w3A-4vk3Bd~H1qM-~A4WbCI7R8iOOdOJ9QObNIjLZUtZqINijlcgstUXj7FoclHSQEfqIQuzMr1P1q0h288OW9fUluhKFpJNkDHURth1Zg__&amp;Key-Pair-Id=K2NXBXLF010TJW" />
 
-
-
-
-	<!-- SYS- MUFORDFfRVVfUFJPRA== -->
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body id="dmRoot" data-page-alias="eventos"
 	class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody "
 	style="padding:0;margin:0;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<!-- ========= Site Content ========= -->
 	<div id="dm" class='dmwr'>
 
@@ -3656,8 +3460,7 @@
 																							</div>
 																							<div
 																								style="text-align: left;">
-																								<span style=""
-																									class="lh-1 font-size-20"><span
+																								<span class="lh-1 font-size-20"><span
 																										style="background-color: transparent;">Con
 																										oficinas en
 																										<b>Madrid</b>
@@ -3723,13 +3526,12 @@
 																			<div class="u_1947379867 dmNewParagraph"
 																				id="1947379867">
 																				<div style="text-align: center;"><span
-																						style=""
 																						class="m-font-size-36 lh-1 font-size-48">
-																						<font style="">
+																						<font>
 																							<font
 																								style="font-weight: 900; color: rgb(238, 181, 0);">
 																								#ON</font>
-																							<font style=""><b><span
+																							<font><b><span
 																										style="font-weight: 400;">Hacemos</span>
 																									eventos
 																									360&ordm;</b></font>
@@ -4333,8 +4135,7 @@
 																											class="caption-inner">
 																											<a id="1770553651"
 																												class="caption-button dmWidget  clearfix u_1770553651"
-																												href="/biotech-open-innovation"
-																												style="">
+																												href="/biotech-open-innovation">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4373,14 +4174,12 @@
 																												onerror="handleImageLoadError(this)" /></a>
 																									</div>
 																									<div id="1422520936"
-																										class="caption-container u_1422520936"
-																										style=""> <span
+																										class="caption-container u_1422520936"> <span
 																											class="caption-inner">
 																											<a id="1094543354"
 																												class="caption-button dmWidget  clearfix u_1094543354"
 																												href="/guadalinfo-en-ruta"
-																												target="_blank"
-																												style="">
+																												target="_blank">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4425,8 +4224,7 @@
 																											class="caption-inner">
 																											<a id="1335042064"
 																												class="caption-button dmWidget  clearfix u_1335042064"
-																												href=""
-																												style="">
+																												href="">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4471,8 +4269,7 @@
 																											class="caption-inner">
 																											<a id="1288819712"
 																												class="caption-button dmWidget  clearfix u_1288819712"
-																												href="/sabor-granada"
-																												style="">
+																												href="/sabor-granada">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4525,8 +4322,7 @@
 																											class="caption-inner">
 																											<a id="1942533145"
 																												class="caption-button dmWidget  clearfix u_1942533145"
-																												href="/vinoble-2018"
-																												style="">
+																												href="/vinoble-2018">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4563,13 +4359,11 @@
 																												onerror="handleImageLoadError(this)" /></a>
 																									</div>
 																									<div id="1924972366"
-																										class="caption-container u_1924972366"
-																										style=""> <span
+																										class="caption-container u_1924972366"> <span
 																											class="caption-inner">
 																											<a id="1243735831"
 																												class="caption-button dmWidget  clearfix u_1243735831"
-																												href="/feria-del-corredor-granada-2019"
-																												style="">
+																												href="/feria-del-corredor-granada-2019">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4618,8 +4412,7 @@
 																											</h3>
 																											<a id="1190639499"
 																												class="caption-button dmWidget  clearfix u_1190639499"
-																												href="/congreso-gepac"
-																												style="">
+																												href="/congreso-gepac">
 																												<span
 																													class="iconBg">
 																													<span
@@ -4735,7 +4528,7 @@
 																		id="1587334537"
 																		style="transition: none 0s ease 0s; display: block;">
 																		<div style="text-align: left;">
-																			<font><span style=""
+																			<font><span
 																					class="font-size-16 lh-1">
 																					<font
 																						style="color: rgb(255, 255, 255);">
@@ -4775,11 +4568,11 @@
 																						style="font-weight: 700;"></span></b>
 																			</font>
 																		</div>
-																		<font style=""><span style="font-weight: 700;">
+																		<font><span style="font-weight: 700;">
 																				<div style="text-align: left; ">
 																					<font
 																						style="color: rgb(255, 255, 255);">
-																						<b style=""><span
+																						<b><span
 																								style="font-weight: inherit;"
 																								class="font-size-14 lh-1">Enlaces
 																								&uacute;tiles</span></b>
@@ -4961,11 +4754,11 @@
 																						style="font-weight: 900;"></span></b>
 																			</font>
 																		</div><span style="font-weight: 700;">
-																			<font style="">
-																				<div style="">
+																			<font>
+																				<div>
 																					<font
 																						style="color: rgb(255, 255, 255);">
-																						<b style=""><span
+																						<b><span
 																								style="font-weight: inherit;"
 																								class="font-size-14 lh-1 m-specific m-font-size-18">Informaci&oacute;n
 																								de contacto</span></b>
@@ -4993,10 +4786,10 @@
 																		data-element-type="paragraph" id="1766181806"
 																		style="transition: opacity 1s ease-in-out;">
 																		<font style="color: rgb(255, 255, 255);"
-																			class="m-specific lh-1 m-font-size-18"><span
-																				style="">+34 629 544 399</span><br />
+																			class="m-specific lh-1 m-font-size-18">
+																			<span>+34 629 544 399</span><br />
 																		</font>
-																		<div><span style=""
+																		<div><span
 																				class="m-specific lh-1 m-font-size-18">
 																				<font
 																					style="color: rgb(255, 255, 255);">
@@ -5011,7 +4804,6 @@
 																		<div>
 																			<font color="#ffffff"><span
 																					style="font-weight: 700;"><span
-																						style=""
 																						class="m-specific lh-1 m-font-size-18">OFICINA
 																						MADRID&nbsp;<span
 																							style="font-weight: 400;">Calle
@@ -5055,7 +4847,7 @@
 																					style="color: rgb(255, 255, 255);">
 																					<span style="font-weight: 200;"
 																						class="font-size-13 lh-1">
-																						<font style=""><a
+																						<font><a
 																								href="/aviso-legal"
 																								runtime_url="/aviso-legal"
 																								style="color: rgb(255, 255, 255);">Aviso
@@ -5077,7 +4869,7 @@
 																		class="u_1037027168 dmNewParagraph"
 																		id="1037027168"
 																		style="transition: none 0s ease 0s; display: block;">
-																		<div style="text-align: left;"><b style="">
+																		<div style="text-align: left;"><b>
 																				<font
 																					style="color: rgb(255, 255, 255);">
 																					<span style="font-weight: 200;"
@@ -5113,8 +4905,6 @@
 
 		</div>
 	</div>
-	<!--  Add full CSS and Javascript before the close tag of the body if needed -->
-	<!-- ========= JS Section ========= -->
 	<script>
 		var isWLR = true;
 
@@ -5150,13 +4940,8 @@
 		buildEditorParent();
 	</script>
 
-	<!-- Load jQuery -->
 	<script type="text/javascript" id='d-js-jquery'
 		src="https://static-cdn.website-editor.net/libs/jquery/2.2.4/jquery.min.js"></script>
-	<!-- End Load jQuery -->
-	<!-- Injecting site-wide before scripts -->
-	<!-- End Injecting site-wide to the head -->
-
 
 	<script>
 		var _jquery = window.$;
@@ -5320,16 +5105,12 @@
 		}(window, document, "script", "//d1dxoqu0t5mb7j.cloudfront.net/sp-2.0.0-dm-0.1.min.js", "snowplow"));
 		window.dmsnowplow = window.snowplow;
 
-		dmsnowplow('newTracker', 'cf', 'd1dxoqu0t5mb7j.cloudfront.net', { // Initialise a tracker
+		dmsnowplow('newTracker', 'cf', 'd1dxoqu0t5mb7j.cloudfront.net', {
 			appId: '78591e54e95f4111804b6550648d0bbe'
 		});
-
-		// snowplow queries element styles so we wait until CSS calculations are done.
 		requestAnimationFrame(() => {
 			dmsnowplow('trackPageView');
 			_dm_insite.forEach((rule) => {
-				// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
-				// the tracking is in popup.js
 				if (rule.actionName !== "popup") {
 					dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
 				}
@@ -5341,29 +5122,15 @@
 	</script>
 	<div style="display:none;" id="P6iryBW0Wu"></div>
 
-	<!-- photoswipe markup -->
-
-
-
-
-
-
-
-
-
-	<!-- Root element of PhotoSwipe. Must have class pswp. -->
 	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-		<!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
+		<!-- Background of PhotoSwipe. -->
 		<div class="pswp__bg"></div>
 
 		<!-- Slides wrapper with overflow:hidden. -->
 		<div class="pswp__scroll-wrap">
 
-			<!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
+			<!-- Container that holds slides.-->
 			<div class="pswp__container">
 				<div class="pswp__item"></div>
 				<div class="pswp__item"></div>
@@ -5376,19 +5143,11 @@
 				<div class="pswp__top-bar">
 
 					<!--  Controls are self-explanatory. Order can be changed. -->
-
 					<div class="pswp__counter"></div>
-
 					<button class="pswp__button pswp__button--close" title="Cerrar (Esc)"></button>
-
 					<button class="pswp__button pswp__button--share" title="Compartir"></button>
-
 					<button class="pswp__button pswp__button--fs" title="Activar pantalla completa"></button>
-
 					<button class="pswp__button pswp__button--zoom" title="Acercar/alejar"></button>
-
-					<!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-					<!-- element will get class pswp__preloader--active when preloader is running -->
 					<div class="pswp__preloader">
 						<div class="pswp__preloader__icn">
 							<div class="pswp__preloader__cut">
@@ -5401,24 +5160,17 @@
 				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
 					<div class="pswp__share-tooltip"></div>
 				</div>
-
 				<button class="pswp__button pswp__button--arrow--left" title="Anterior (flecha izquierda)">
 				</button>
-
 				<button class="pswp__button pswp__button--arrow--right" title="Siguiente (flecha derecha)">
 				</button>
-
 				<div class="pswp__caption">
 					<div class="pswp__caption__center"></div>
 				</div>
-
 			</div>
-
 		</div>
-
 	</div>
 	<div id="fb-root" data-locale="es_ES"></div>
-	<!-- Alias: 78591e54e95f4111804b6550648d0bbe -->
 	<div class="dmPopupMask" id="dmPopupMask"></div>
 	<div id="dmPopup" class="dmPopup">
 		<div class="dmPopupCloseWrapper">
@@ -5429,7 +5181,6 @@
 	</div>
 	<script id="d_track_personalization">
 		window?.waitForDeferred?.('dmAjax', () => {
-			// Collects client data and updates cookies used by smart sites
 			window.expireDays = 365;
 			window.visitLength = 30 * 60000;
 			$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
@@ -5443,10 +5194,6 @@
 		Parameters.NavigationAreaParams.LessButtonText = '......';
 		Parameters.HomeLinkText = 'Home';
 	</script>
-	<!--  End Script tags -->
-	<!--  Site Wide Html Markup -->
-	<!--  Site Wide Html Markup -->
-	<!--  Begin Product Custom HTML Markup -->
 	<script>
 		function call1and1Tracking() {
 			var externalId = dmAPI.getSiteExternalId();
@@ -5457,7 +5204,11 @@
 			document.head.appendChild(tracking);
 		}
 		call1and1Tracking();
-	</script><!--  End Product Custom HTML Markup -->
+	</script>
+
+	<!-- Footer -->
+    <div id="common-footer"></div>
+
 </body>
 
 </html>

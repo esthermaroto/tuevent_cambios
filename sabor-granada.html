@@ -1,0 +1,2406 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" class="">
+
+<head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript">
+        window._currentDevice = 'desktop';
+        window.Parameters = window.Parameters || {
+            HomeUrl: 'http://www.tuevent.es/',
+            AccountUUID: 'ec67f6f7a96244188e27982dd3aee63d',
+            SystemID: '1AND1_EU_PROD',
+            SiteAlias: '78591e54e95f4111804b6550648d0bbe',
+            SiteType: atob('RFVEQU9ORQ=='),
+            PublicationDate: 'Sat Jan 10 12:57:44 UTC 2026',
+            ExternalUid: 'f56bd728-26d9-47fd-9e94-012d1340ad5b',
+            IsSiteMultilingual: false,
+            InitialPostAlias: '',
+            InitialPostPageUuid: '',
+            InitialDynamicItem: '',
+            DynamicPageInfo: {
+                isDynamicPage: false,
+                base64JsonRowData: 'null',
+            },
+            InitialPageAlias: 'sabor-granada',
+            InitialPageUuid: 'f3e535a13ba74b83a90ec6efcb8d5a9c',
+            InitialPageId: '441640652',
+            InitialEncodedPageAlias: 'c2Fib3ItZ3JhbmFkYQ==',
+            InitialHeaderUuid: '26f62c1236af42868b87da26caf809c6',
+            CurrentPageUrl: '',
+            IsCurrentHomePage: false,
+            AllowAjax: false,
+            AfterAjaxCommand: null,
+            HomeLinkText: 'Back To Home',
+            UseGalleryModule: false,
+            CurrentThemeName: 'Layout Theme',
+            ThemeVersion: '500000',
+            DefaultPageAlias: '',
+            RemoveDID: true,
+            WidgetStyleID: null,
+            IsHeaderFixed: false,
+            IsHeaderSkinny: false,
+            IsBfs: true,
+            StorePageAlias: 'tienda13574010',
+            StorePagesUrls: 'e30=',
+            IsNewStore: 'false',
+            StorePath: '/tienda13574010',
+            StoreId: '28675099',
+            StoreVersion: 2,
+            StoreBaseUrl: '/tienda13574010',
+            StoreCleanUrl: true,
+            StoreDisableScrolling: true,
+            IsStoreSuspended: false,
+            HasCustomDomain: true,
+            SimpleSite: false,
+            showCookieNotification: true,
+            cookiesNotificationMarkup: ' <div>Este sitio web utiliza cookies para proporcionarle la mejor experiencia en l&iacute;nea. Al utilizar nuestro sitio web, acepta el uso de cookies. <a href=\"\/privacy\" target=\"_blank\">M&aacute;s informaci&oacute;n<\/a>.<\/div> \n',
+            translatedPageUrl: '',
+            isFastMigrationSite: false,
+            sidebarPosition: 'NA',
+            currentLanguage: 'es',
+            currentLocale: 'es',
+            NavItems: '{}',
+            errors: {
+                general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+                password: 'Incorrect name/password combination',
+                tryAgain: 'Try again'
+            },
+            NavigationAreaParams: {
+                ShowBackToHomeOnInnerPages: true,
+                NavbarSize: 4,
+                NavbarLiveHomePage: 'http://www.tuevent.es/',
+                BlockContainerSelector: '.dmBody',
+                NavbarSelector: '#dmNav:has(a)',
+                SubNavbarSelector: '#subnav_main'
+            },
+            hasCustomCode: false,
+            planID: '2410',
+            customTemplateId: 'null',
+            siteTemplateId: 'null',
+            productId: 'DM_DIRECT',
+            disableTracking: false,
+            pageType: 'FROM_SCRATCH',
+            isRuntimeServer: true,
+            isInEditor: false,
+            hasNativeStore: false,
+            defaultLang: 'es',
+            hamburgerMigration: null,
+            isFlexSite: false
+        };
+
+        window.Parameters.LayoutID = {};
+        window.Parameters.LayoutID[window._currentDevice] = 6;
+        window.Parameters.LayoutVariationID = {};
+        window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+    </script>
+    <!-- ========= Meta Tags ========= -->
+    <script>
+        function toHash(str) {
+            var hash = 5381, i = str.length;
+            while (i) {
+                hash = hash * 33 ^ str.charCodeAt(--i)
+            }
+            return hash >>> 0
+        }
+    </script>
+    <script>
+        (function (global) {
+            //const cacheKey = global.cacheKey;
+            const isOffline = 'onLine' in navigator && navigator.onLine === false;
+            const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+            if (isOffline) {
+                console.log('offline mode');
+            }
+            if (!hasServiceWorkerSupport) {
+                console.log('service worker is not supported');
+            }
+            if (hasServiceWorkerSupport && !isOffline) {
+                window.addEventListener('load', function () {
+                    const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+                    navigator.serviceWorker
+                        .register(serviceWorkerPath, { scope: './' })
+                        .then(
+                            function (registration) {
+                                // Registration was successful
+                                console.log(
+                                    'ServiceWorker registration successful with scope: ',
+                                    registration.scope
+                                );
+                            },
+                            function (err) {
+                                // registration failed :(
+                                console.log('ServiceWorker registration failed: ', err);
+                            }
+                        )
+                        .catch(function (err) {
+                            console.log(err);
+                        });
+                });
+
+                // helper function to refresh the page
+                var refreshPage = (function () {
+                    var refreshing;
+                    return function () {
+                        if (refreshing) return;
+                        // prevent multiple refreshes
+                        var refreshkey = 'refreshed' + location.href;
+                        var prevRefresh = localStorage.getItem(refreshkey);
+                        if (prevRefresh) {
+                            localStorage.removeItem(refreshkey);
+                            if (Date.now() - prevRefresh < 30000) {
+                                return; // dont go into a refresh loop
+                            }
+                        }
+                        refreshing = true;
+                        localStorage.setItem(refreshkey, Date.now());
+                        console.log('refereshing page');
+                        window.location.reload();
+                    };
+                })();
+
+                function messageServiceWorker(data) {
+                    return new Promise(function (resolve, reject) {
+                        if (navigator.serviceWorker.controller) {
+                            var worker = navigator.serviceWorker.controller;
+                            var messageChannel = new MessageChannel();
+                            messageChannel.port1.onmessage = replyHandler;
+                            worker.postMessage(data, [messageChannel.port2]);
+                            function replyHandler(event) {
+                                resolve(event.data);
+                            }
+                        } else {
+                            resolve();
+                        }
+                    });
+                }
+            }
+        })(window);
+    </script>
+    <link rel="canonical" href="https://www.tuevent.es/sabor-granada">
+
+    <meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--Add favorites icons-->
+
+    <link rel="apple-touch-icon"
+        href="https://cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/FAVICON_TODOS-09.png?Expires=1773750325&Signature=gsIfYiuzD0m-PGsy6PTwPTOhVRhahFYULjIeAc16nVCoC2s3kvXXDis4J1HtTC1SmmtVJzEgCtequGkQlDQo9YN0rjc9k-qWRMBr~FT29itt~wxKU2LwWf5B~ZOV2srVuAUKcF0Zww07XyB5nl6zSalx~eUU6sQH2b4KjeCKYJQXLAcWcnl1MUqTApTOAS0jBdq9YUXXATYWQCQlxeQ2bCLt5BsB4Q05cO1u~zil0~jmX57RIzv0FpJ1M~xfdKaw8hX6yKoILpLswhpENgIQG2JyPo6BJbQElqY6l2UAH~lOhMxFV6sf~1uEa-e1~QB~atpiQs2v2PplcJGZJIB-mg__&Key-Pair-Id=K2NXBXLF010TJW" />
+
+    <link rel="icon" type="image/x-icon"
+        href="https://cdn.website-editor.net/78591e54e95f4111804b6550648d0bbe/site_favicon_16_1672785771553.ico" />
+
+    <!-- End favorite icons -->
+    <link rel="preconnect" href="https://le-cdn.website-editor.net/" />
+
+
+    <!-- Prefetch Ecwid Javascript to speed up loading -->
+    <link rel="prefetch" href="https://app.multiscreenstore.com/script.js?28675099&lang=es" />
+    <script>
+        if (window.Parameters) {
+            window.Parameters.ecwidScriptUrl = 'https://app.multiscreenstore.com/script.js?28675099&lang=es';
+        }
+    </script>
+
+
+    <!-- render the required CSS and JS in the head section -->
+    <script id='d-js-dmapi'>
+        window.SystemID = '1AND1_EU_PROD';
+
+        if (!window.dmAPI) {
+            window.dmAPI = {
+                registerExternalRuntimeComponent: function () {
+                },
+                getCurrentDeviceType: function () {
+                    return window._currentDevice;
+                },
+                runOnReady: (ns, fn) => {
+                    const safeFn = dmAPI.toSafeFn(fn);
+                    ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                    const eventName = 'afterAjax.' + ns;
+
+                    if (document.readyState === 'complete') {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        setTimeout(function () {
+                            safeFn({
+                                isAjax: false,
+                            });
+                        }, 0);
+                    } else {
+                        window?.waitForDeferred?.('dmAjax', () => {
+                            $.DM.events.off(eventName).on(eventName, safeFn);
+                            safeFn({
+                                isAjax: false,
+                            });
+                        });
+                    }
+                },
+                toSafeFn: (fn) => {
+                    if (fn?.safe) {
+                        return fn;
+                    }
+                    const safeFn = function (...args) {
+                        try {
+                            return fn?.apply(null, args);
+                        } catch (e) {
+                            console.log('function failed ' + e.message);
+                        }
+                    };
+                    safeFn.safe = true;
+                    return safeFn;
+                }
+            };
+        }
+
+        if (!window.requestIdleCallback) {
+            window.requestIdleCallback = function (fn) {
+                setTimeout(fn, 0);
+            }
+        }
+    </script>
+
+    <script id="d-js-load-css">
+        (function () {
+            let cssLinks = {};
+            function loadCssLink(link) {
+                link.onload = null;
+                link.rel = "stylesheet";
+                link.type = "text/css";
+            }
+
+            function checkCss() {
+                const pageCssLink = document.querySelector("[id*='CssLink']");
+                const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+                if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+                    const storedRuntimeCssLink = cssLinks.runtime;
+                    const storedPageCssLink = cssLinks.page;
+                    const storedGlobalCssLink = cssLinks.global;
+                    const storedWidgetCssLink = cssLinks.widget;
+
+                    storedGlobalCssLink.disabled = true;
+                    loadCssLink(storedGlobalCssLink);
+
+                    if (storedPageCssLink) {
+                        storedPageCssLink.disabled = true;
+                        loadCssLink(storedPageCssLink);
+                    }
+
+                    if (storedWidgetCssLink) {
+                        storedWidgetCssLink.disabled = true;
+                        loadCssLink(storedWidgetCssLink);
+                    }
+
+                    storedRuntimeCssLink.disabled = true;
+                    loadCssLink(storedRuntimeCssLink);
+
+                    requestAnimationFrame(() => {
+                        setTimeout(() => {
+                            storedRuntimeCssLink.disabled = false;
+                            storedGlobalCssLink.disabled = false;
+                            if (storedPageCssLink) {
+                                storedPageCssLink.disabled = false;
+                            }
+                            if (storedWidgetCssLink) {
+                                storedWidgetCssLink.disabled = false;
+                            }
+                            // (SUP-4179) Clear the accumulated cssLinks only when we're
+                            // sure that the document has finished loading and the document 
+                            // has been parsed.
+                            if (document.readyState === 'interactive') {
+                                cssLinks = null;
+                            }
+                        }, 0);
+                    });
+                }
+            }
+
+            function loadCSS(link) {
+                try {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var noCSS = !!urlParams.get("nocss");
+                    var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+                    if (noCSS) {
+                        return;
+                    }
+                    if (link.href && link.href.includes("d-css-runtime")) {
+                        cssLinks.runtime = link;
+                        checkCss();
+                    } else if (link.id === "siteGlobalCss") {
+                        cssLinks.global = link;
+                        checkCss();
+                    }
+
+                    else if (link.id && link.id.includes("CssLink")) {
+                        cssLinks.page = link;
+                        checkCss();
+                    } else if (link.id && link.id.includes("widgetCSS")) {
+                        cssLinks.widget = link;
+                        checkCss();
+                    }
+
+                    else {
+                        requestIdleCallback(function () {
+                            window.setTimeout(function () {
+                                loadCssLink(link);
+                            }, parseInt(cssTimeout, 10));
+                        });
+                    }
+                } catch (e) {
+                    throw e
+                }
+            }
+            window.loadCSS = window.loadCSS || loadCSS;
+        })();
+    </script>
+
+
+
+    <script data-role="deferred-init" type="text/javascript">
+        function Def() {
+            this.promise = new Promise((function (a, b) {
+                this.resolve = a, this.reject = b
+            }).bind(this))
+        }
+
+        const defs = {};
+        window.getDeferred = function (a) {
+            return null == defs[a] && (defs[a] = new Def), defs[a]
+        }
+        window.waitForDeferred = function (b, a, c) {
+            let d = window?.getDeferred?.(b);
+            d
+                ? d.promise.then(a)
+                : c && ["complete", "interactive"].includes(document.readyState)
+                    ? setTimeout(a, 1)
+                    : c
+                        ? document.addEventListener("DOMContentLoaded", a)
+                        : console.error(`Deferred  does not exist`);
+        };
+    </script>
+    <style id="forceCssIncludes">
+        .videobgwrapper {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            border-radius: inherit
+        }
+
+        .videobgframe {
+            position: absolute;
+            width: 101%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            object-fit: fill
+        }
+
+        #dm video.videobgframe {
+            margin: 0
+        }
+
+        @media (max-width:767px) {
+            .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 80vh
+            }
+        }
+
+        @media (min-width:1025px) {
+            .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 45vh
+            }
+        }
+
+        @media (min-width:768px) and (max-width:1024px) {
+            .responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 45vh
+            }
+        }
+
+        #dm [data-show-on-page-only] {
+            display: none !important
+        }
+
+        #dmRoot div.stickyHeaderFix div.site_content {
+            margin-top: 0 !important
+        }
+
+        #dmRoot div.stickyHeaderFix div.hamburger-header-container {
+            position: relative
+        }
+    </style>
+    <style id="cssVariables" type="text/css">
+
+    </style>
+
+
+    <link type="text/css" rel="stylesheet"
+        href="https://cdn.website-editor.net/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://static-cdn.website-editor.net/mnlt/production/6182/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+
+    <link type="text/css" rel="stylesheet"
+        href="https://cdn.website-editor.net/WIDGET_CSS/576a9e91fb472eeb098b1b4a084c4390.css" id="widgetCSS" />
+
+    <style>
+        img[width][height] {
+            height: auto;
+        }
+    </style>
+
+    <style>
+        body[data-page-alias="sabor-granada"] #dm [data-show-on-page-only="sabor-granada"] {
+            display: block !important;
+        }
+    </style>
+
+    <style id="pageAdditionalWidgetsCss" type="text/css">
+    </style>
+
+    <link type="text/css" rel="stylesheet"
+        href="https://cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/files/78591e54e95f4111804b6550648d0bbe_1.min.css?v=207&Expires=1773750325&Signature=PwDk9jTn~dNatygvOBtcw3Q0nN4tpB5TxQXMiKrSdvLWNnQ2w~FfXtTPBDAwfaMqZGwxhKCAEJlHHdSsuB4jKK5a86-dkPMVDYL841L008B5lCgmTo9Ua~JMk34G1Szv8KHNcG3zyGO9PsfxRG5ffm4928XFJnA6qXAzkK2uEj~Jtgnl-FxABQCx5PE8BeLCAv3BWtvKDH2S2HlXCVLwPO9s6LBbXLIb3mNyZgpJ-h5wpbjZZY4VrgATWsbBOFhVYleKwP5fOQb3NaRD7uCYFFRjjUvqgwyE2aoo0QUaOt7gc7tz79XlWzoyi3zeu6HhlKViBmwMPAnXxgcqZqF5WA__&Key-Pair-Id=K2NXBXLF010TJW"
+        id="siteGlobalCss" />
+
+    <link type="text/css" rel="stylesheet"
+        href="/_dm/s/rt/css/oneUndOne/1and1-runtime.css?version=2026-02-15T09_48_34" />
+
+
+    <style id="customWidgetStyle" type="text/css">
+
+    </style>
+    <style id="innerPagesStyle" type="text/css">
+
+    </style>
+
+
+    <style id="additionalGlobalCss" type="text/css">
+    </style>
+
+    <style id="pagestyle" type="text/css">
+        *#dm *.dmBody div.u_1144088973 {
+            line-height: 150% !important;
+        }
+
+        *#dm *.dmBody div.u_1970845985 {
+            line-height: 150% !important;
+        }
+
+        *#dm *.dmBody div.u_1440505187 {
+            line-height: 150% !important;
+        }
+
+        *#dm *.dmBody *.u_1330879603 *.caption-inner {
+            border-bottom-left-radius: 0px !important;
+            -webkit-border-top-right-radius: 0px !important;
+            -moz-border-top-right-radius: 0px !important;
+            -webkit-border-bottom-right-radius: 0px !important;
+            -webkit-border-bottom-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+            -webkit-border-top-left-radius: 0px !important;
+            border-radius: 0px !important;
+            -moz-border-bottom-right-radius: 0px !important;
+            -moz-border-top-left-radius: 0px !important;
+            border-top-left-radius: 0px !important;
+            -moz-border-radius: 0px !important;
+            -moz-border-bottom-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+            -webkit-border-radius: 0px !important;
+        }
+
+        *#dm *.dmBody *.u_1477120619 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1589726374 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1315395654 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1215587976 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody div.u_1885042527 {
+            background-color: rgba(0, 0, 0, 0) !important;
+        }
+
+        *#dm *.dmBody div.u_1202658461 *.slides *.slide-title {
+            color: rgba(255, 255, 255, 1) !important;
+            font-weight: bold !important;
+        }
+
+        *#dm *.dmBody *.u_1875086163 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1029413741 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1202658461 *.flex-direction-nav a {
+            color: rgba(255, 255, 255, 1) !important;
+        }
+
+        *#dm *.dmBody div.u_1202658461 *.color-overlay {
+            background-color: rgba(0, 0, 0, 0.22) !important;
+        }
+
+        *#dm *.dmBody *.u_1276298668 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1661655864 {
+            display: none !important;
+        }
+
+        *#dm *.dmBody *.u_1958005789 {
+            background-image: url("https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Malaga_2019_tuevent_showcooking_1-2880w.jpeg?Expires=1773750325&Signature=gL8L3vUw0DeSLkO-Fe4b5801wvaYXN5~rt22zEHxeu4iwEwCn4Gl5LiHiZ21ae5oO-WJ2ZEO3P7PGGMtWK4HLRGTlePB2Cp7Hs7met-35na~QvahVfdppddtr2bLmfX-aQlUWg17yoX9bMY2JE3g9j-LYX4kh1wWOEO6r7L7jDr7cmxcHAlWPQWmyKwu~EUx2TRMIGO7WSoiOZWGwm-lE1qMAa04aAklUXN-Neo-d9gD0RYsD2ogXG30leRa4FSoca5P4DAgJ7Ot0l2axMSWpspDzPBdUdmSqIV-Us8vub4~1G3sJtH4rfBnEBKMDY0En9nkj9IsH~T~dNdUYri1SA__&Key-Pair-Id=K2NXBXLF010TJW") !important;
+        }
+
+        *#dm *.dmBody *.u_1323603152 {
+            background-image: url("https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_H%26T_Malaga_2019_Tuevent_Showcooking-b05db31b-2880w.jpg?Expires=1773750325&Signature=Fng77NS6YvSiRozsklUajQ8zvzqeRU6VI6NlxF5hdhSg2xDJbJXFMH12qN9ToTyOaIRQF7~eY09H8UU~flJe~kVqZMw7wARMwBBccS3lTlWSTxbsKy9Hyn9NAMf-JQh-NQK8DfXcmhqUCIOLt2utYhM8kv74QyQ~tTsVcpxQxbsuif5Vm5Bh~EqBycnadOSZn5be3X2BKQnFDp4L3Drpq~YLS4nOmguhiCmRUacRVVnKr0SwgsCEKBaK4W62JHt3bJ~63UmW1GEfUCIy-BVDmaL17SVnxwsskfKrcabM2~vMA9pWsmMrbGFfaF~-dDR0K9WhnHpkf4E-6Wl~clGsZg__&Key-Pair-Id=K2NXBXLF010TJW") !important;
+        }
+    </style>
+
+    <style id="pagestyleDevice" type="text/css">
+        *#dm *.dmBody *.u_1958005789 {
+            background-image: url("https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Malaga_2019_tuevent_showcooking_1-1920w.jpeg?Expires=1773750325&Signature=LPwGFla~YKY~QRlj-ah3JreLU2emwWZWjDoQ5J8xCDdigbaURb4pkos06l~zkdDJet8MBjS9ZD5aXfeXJht0jW9SQDaTDoHF5Uu2wSQ3f4f8s0Z~asBqa0zLFr~gTUxxfoAHTrM1-WNNh5RCUh28~6N-psmQg49Wci41N6UnzGCg-EG8I2D5jRo1XWeTcNigA-XoIAPztrqipk8pfQRjapiHWkvhJFXCjE72JFUCEl8oAzAjExp9RhkcF0oVMDL8BGVWMpfyTB48tCJA3HXwMaLKtrHkNFcgZ3fuuSNGKLU1rmYzaXvt0XYrqxAD6hq1nzEW3C02TSDQZuQ3VKEHTQ__&Key-Pair-Id=K2NXBXLF010TJW") !important;
+        }
+
+        *#dm *.dmBody *.u_1323603152 {
+            background-image: url("https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_H%26T_Malaga_2019_Tuevent_Showcooking-b05db31b-1920w.jpg?Expires=1773750325&Signature=oViUP9IpD8hJxQPiYFSuubIwuNlCuj5FGnCLZ9CFWy~l88BRUD-yv9uA8oGMcSM32TvFErTct3YgbaX3cvkVoiThMqcxfdc8IjuWv5fNdJA2NzFQ0KDNisFcZ8QigOsMy3EazJYfh8SE2sXP~sSth~3WugLAV6kITh0gxnJO2Jqj9~Ty6tAr9qp61T8pyWO4rNKOxoyR-kYozC5T0mLn-o-TPyX8nvka-vciWvfpb0x1IY2Ctn26IJ6Covs5Jt8MlW-sf69asOSOKmFeK0rSO-rBgnVoan4tiu9pOWuKZlasKvgSY24Ke1UokijHdMItbQ3e7IVmco27A~Z0TnVAaQ__&Key-Pair-Id=K2NXBXLF010TJW") !important;
+        }
+
+        @media all and (min-width:1920px),
+        all and (-webkit-min-device-pixel-ratio: 1.5),
+        all and (min--moz-device-pixel-ratio: 1.5),
+        all and (min-device-pixel-ratio: 1.5) {
+
+            *#dm *.dmBody *.u_1958005789 {
+                background-image: url("https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Malaga_2019_tuevent_showcooking_1-2880w.jpeg?Expires=1773750325&Signature=gL8L3vUw0DeSLkO-Fe4b5801wvaYXN5~rt22zEHxeu4iwEwCn4Gl5LiHiZ21ae5oO-WJ2ZEO3P7PGGMtWK4HLRGTlePB2Cp7Hs7met-35na~QvahVfdppddtr2bLmfX-aQlUWg17yoX9bMY2JE3g9j-LYX4kh1wWOEO6r7L7jDr7cmxcHAlWPQWmyKwu~EUx2TRMIGO7WSoiOZWGwm-lE1qMAa04aAklUXN-Neo-d9gD0RYsD2ogXG30leRa4FSoca5P4DAgJ7Ot0l2axMSWpspDzPBdUdmSqIV-Us8vub4~1G3sJtH4rfBnEBKMDY0En9nkj9IsH~T~dNdUYri1SA__&Key-Pair-Id=K2NXBXLF010TJW") !important;
+            }
+
+            *#dm *.dmBody *.u_1323603152 {
+                background-image: url("https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_H%26T_Malaga_2019_Tuevent_Showcooking-b05db31b-2880w.jpg?Expires=1773750325&Signature=Fng77NS6YvSiRozsklUajQ8zvzqeRU6VI6NlxF5hdhSg2xDJbJXFMH12qN9ToTyOaIRQF7~eY09H8UU~flJe~kVqZMw7wARMwBBccS3lTlWSTxbsKy9Hyn9NAMf-JQh-NQK8DfXcmhqUCIOLt2utYhM8kv74QyQ~tTsVcpxQxbsuif5Vm5Bh~EqBycnadOSZn5be3X2BKQnFDp4L3Drpq~YLS4nOmguhiCmRUacRVVnKr0SwgsCEKBaK4W62JHt3bJ~63UmW1GEfUCIy-BVDmaL17SVnxwsskfKrcabM2~vMA9pWsmMrbGFfaF~-dDR0K9WhnHpkf4E-6Wl~clGsZg__&Key-Pair-Id=K2NXBXLF010TJW") !important;
+            }
+        }
+
+        *#dm *.dmBody h1.u_1321182104 {
+            display: block !important;
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: 100% !important;
+            margin-top: 8px !important;
+            margin-bottom: 8px !important;
+            padding-right: 0px !important;
+            min-width: 0 !important;
+            text-align: center !important;
+        }
+
+        *#dm *.dmBody h2.u_1321182104 {
+            display: block !important;
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: 100% !important;
+            margin-top: 8px !important;
+            margin-bottom: 8px !important;
+            padding-right: 0px !important;
+            min-width: 0 !important;
+            text-align: center !important;
+        }
+
+        *#dm *.dmBody h3.u_1321182104 {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: calc(100% - 0px) !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+        }
+
+        *#dm *.dmBody div.u_1144088973 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            max-width: calc(100% - 0px) !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+            display: block !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            margin-top: 15px !important;
+            margin-bottom: 0px !important;
+        }
+
+        *#dm *.dmBody div.u_1970845985 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            max-width: calc(100% - 0px) !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+            display: block !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            margin-top: 15px !important;
+            margin-bottom: 0px !important;
+        }
+
+        *#dm *.dmBody *.u_1330879603 *.photoGalleryThumbs *.image-container a {
+            padding-top: 215px !important;
+        }
+
+        *#dm *.dmBody *.u_1330879603 *.photoGalleryThumbs {
+            padding: 2.5px !important;
+        }
+
+        *#dm *.dmBody *.u_1330879603 *.layout-container {
+            padding: 2.5px !important;
+        }
+
+        *#dm *.dmBody h4.u_1794567936 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: calc(100% - 0px) !important;
+            margin-top: 40px !important;
+            margin-bottom: 0px !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+        }
+
+        *#dm *.dmBody div.u_1885042527 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 70px !important;
+            padding-left: 40px !important;
+            padding-bottom: 30px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: none !important;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            padding-right: 40px !important;
+            min-width: 0 !important;
+            text-align: center !important;
+        }
+
+        *#dm *.dmBody div.u_1202658461 *.slides *.slide-title {
+            font-size: 22px !important;
+        }
+
+        *#dm *.dmBody div.u_1202658461 *.slides *.slide-text {
+            font-size: 16px !important;
+        }
+
+        *#dm *.dmBody div.u_1330879603 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 0px !important;
+            padding-left: 0px !important;
+            padding-bottom: 0px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: calc(100% - 0px) !important;
+            margin-top: 17px !important;
+            margin-bottom: 0px !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: center !important;
+        }
+
+        *#dm *.dmBody div.u_1440505187 {
+            display: block !important;
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 726px !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: calc(100% - 117px) !important;
+            margin-top: 22px !important;
+            margin-bottom: 8px !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: center !important;
+        }
+
+        *#dm *.dmBody div.u_1202658461 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: 520px !important;
+            padding-top: 0px !important;
+            padding-left: 0px !important;
+            padding-bottom: 0px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: calc(100% - 0px) !important;
+            margin-top: 18px !important;
+            margin-bottom: 0px !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: center !important;
+        }
+
+        *#dm *.dmBody h3.u_1794567936 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            max-width: calc(100% - 0px) !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+            display: block !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            margin-top: 41px !important;
+            margin-bottom: 8px !important;
+        }
+
+        *#dm *.dmBody h3.u_1753836395 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            max-width: calc(100% - 0px) !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+            display: block !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            margin-top: 20px !important;
+            margin-bottom: 8px !important;
+        }
+
+        *#dm *.dmBody h4.u_1753836395 {
+            float: none !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            position: relative !important;
+            height: auto !important;
+            padding-top: 2px !important;
+            padding-left: 0px !important;
+            padding-bottom: 2px !important;
+            max-width: calc(100% - 0px) !important;
+            padding-right: 0px !important;
+            min-width: 25px !important;
+            text-align: left !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            margin-top: 24px !important;
+            margin-bottom: 0px !important;
+        }
+    </style>
+
+    <!-- Flex Sections CSS -->
+
+
+
+
+
+
+
+    <style id="globalFontSizeStyle" type="text/css">
+        .font-size-48,
+        .size-48,
+        .size-48>font {
+            font-size: 48px !important;
+        }
+
+        .font-size-20,
+        .size-20,
+        .size-20>font {
+            font-size: 20px !important;
+        }
+
+        .font-size-16,
+        .size-16,
+        .size-16>font {
+            font-size: 16px !important;
+        }
+
+        .font-size-14,
+        .size-14,
+        .size-14>font {
+            font-size: 14px !important;
+        }
+
+        .font-size-13,
+        .size-13,
+        .size-13>font {
+            font-size: 13px !important;
+        }
+    </style>
+    <style id="pageFontSizeStyle" type="text/css">
+    </style>
+
+
+
+
+    <style id="hideAnimFix">
+        .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']),
+        .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+            visibility: hidden;
+        }
+
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']),
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+            visibility: hidden !important;
+        }
+
+
+        #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+            visibility: hidden;
+        }
+    </style>
+
+
+
+
+    <style id="fontFallbacks">
+        @font-face {
+            font-family: "Roboto Fallback";
+            src: local('Arial');
+            ascent-override: 92.6709%;
+            descent-override: 24.3871%;
+            size-adjust: 100.1106%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Montserrat Fallback";
+            src: local('Arial');
+            ascent-override: 84.9466%;
+            descent-override: 22.0264%;
+            size-adjust: 113.954%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Cabin Fallback";
+            src: local('Arial');
+            ascent-override: 101.7818%;
+            descent-override: 26.3684%;
+            size-adjust: 94.8106%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Helvetica Fallback";
+            src: local('Arial');
+            ascent-override: 77.002%;
+            descent-override: 22.998%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Open Sans Fallback";
+            src: local('Arial');
+            ascent-override: 101.1768%;
+            descent-override: 27.7323%;
+            size-adjust: 105.6416%;
+            line-gap-override: 0%;
+        }
+    </style>
+
+    <link type="application/rss+xml" rel="alternate" href="https://www.tuevent.es/feed/rss2" />
+    <link type="application/atom+xml" rel="alternate" href="https://www.tuevent.es/feed/atom" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.tuevent.es/sabor-granada" />
+    <title>
+
+        Stand para Sabor Granada
+
+    </title>
+    <meta name="keywords"
+        content="&amp;quot;agencia de eventos&amp;quot; &amp;quot;organización de eventos Granada&amp;quot;  &amp;quot;agencia de comunicación&amp;quot; &amp;quot;marketing&amp;quot; &amp;quot;marketing experiencial&amp;quot; &amp;quot;diseño gráfico&amp;quot; &amp;quot;audiovisuales&amp;quot; &amp;quot;ferias&amp;quot; &amp;quot;congresos&amp;quot; &amp;quot;stands&amp;quot; &amp;quot;decoración de eventos&amp;quot; &amp;quot;llave en mano&amp;quot; &amp;quot;montaje de stands&amp;quot; &amp;quot;stands en granada&amp;quot; &amp;quot;stand en malaga&amp;quot; &amp;quot;stand fermasa&amp;quot; &amp;quot;stand en fycma&amp;quot;" />
+    <meta name="description"
+        content="Agencia de gestión y organización de eventos, ferias y congresos. Hacemos eventos experienciales. Producción integral de eventos,  diseño y montaje de stands." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Stand para Sabor Granada" />
+    <meta name="twitter:description"
+        content="Agencia de gestión y organización de eventos, ferias y congresos. Hacemos eventos experienciales. Producción integral de eventos,  diseño y montaje de stands." />
+    <meta name="twitter:image"
+        content="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/RRSS_200px200px-04-1920w.png?Expires=1773750325&amp;Signature=CC8eNgyLhPJqn2UxIOca-3FQ6OHGDzn1YFlX~8mklyNL1IF3ZYFa8XDfOpl5oFfaTyr5xe-~CoVTvRnou518OZQZFS1gF-Qic3HhMdDXFMJTPiNZA3mhFoCgznozTzSZyCGxzq8SaNm2dt0r429rE2hWuK444MUQ36qO3-8cECj0K91sHzIaQ3gT-sjtS0Wp7ld~pEGAjxNAvqstS6toYRRBVl0E87FNGeX4BNKDRDMJXmL1R-Zr3qBdlv5~a4nkqBTTHC~XoJ3bzgygedZYXHRsZTj6XobLbLcKHmOs7itgrJnWBWu27ESskUyPmJzk15VYDF7Gu1bcwsyIX6dQ~A__&amp;Key-Pair-Id=K2NXBXLF010TJW" />
+    <meta property="og:description"
+        content="Agencia de gestión y organización de eventos, ferias y congresos. Hacemos eventos experienciales. Producción integral de eventos,  diseño y montaje de stands." />
+    <meta property="og:title" content="Stand para Sabor Granada" />
+    <meta property="og:image"
+        content="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/RRSS_200px200px-04-1920w.png?Expires=1773750325&amp;Signature=CC8eNgyLhPJqn2UxIOca-3FQ6OHGDzn1YFlX~8mklyNL1IF3ZYFa8XDfOpl5oFfaTyr5xe-~CoVTvRnou518OZQZFS1gF-Qic3HhMdDXFMJTPiNZA3mhFoCgznozTzSZyCGxzq8SaNm2dt0r429rE2hWuK444MUQ36qO3-8cECj0K91sHzIaQ3gT-sjtS0Wp7ld~pEGAjxNAvqstS6toYRRBVl0E87FNGeX4BNKDRDMJXmL1R-Zr3qBdlv5~a4nkqBTTHC~XoJ3bzgygedZYXHRsZTj6XobLbLcKHmOs7itgrJnWBWu27ESskUyPmJzk15VYDF7Gu1bcwsyIX6dQ~A__&amp;Key-Pair-Id=K2NXBXLF010TJW" />
+
+</head>
+
+<body id="dmRoot" data-page-alias="sabor-granada"
+    class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody "
+    style="padding:0;margin:0;">
+
+    <!-- ========= Site Content ========= -->
+    <div id="dm" class='dmwr'>
+
+        <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+            <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true">
+                <div dmtemplateid="StandardLayoutMultiD"
+                    class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations dmPageBody d-page-1716942098 inputs-css-clean dmFreeHeader"
+                    id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true"
+                    data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex">
+                    <div id="dmStyle_outerContainer" class="dmOuter">
+                        <div id="dmStyle_innerContainer" class="dmInner">
+                            <div class="dmLayoutWrapper standard-var dmStandardDesktop">
+                                <div>
+                                    <div id="iscrollBody">
+                                        <div id="site_content">
+                                            <div class="dmHeaderContainer fHeader d-header-wrapper">
+                                                <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer"
+                                                    freeheader="true">
+                                                    <div dm:templateorder="85"
+                                                        class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236">
+                                                        <div class="u_1571063569 dmRespRow dmHeaderContent freeHeaderRow1 fullBleedChanged fullBleedMode"
+                                                            id="1571063569">
+                                                            <div class="dmRespColsWrapper clearfix" id="1618005341">
+                                                                <div class="u_1188728890 dmRespCol small-12 large-2 medium-2"
+                                                                    id="1188728890"> <span id="1847680890"></span>
+                                                                    <a data-display-type="block"
+                                                                        class="u_1877070214 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient"
+                                                                        file="false" href="/"
+                                                                        data-element-type="dButtonLinkId"
+                                                                        id="1877070214"> <span class="iconBg"
+                                                                            id="1241169466"> <span
+                                                                                class="icon hasFontIcon icon-star"
+                                                                                id="1459665852"></span>
+                                                                        </span>
+                                                                        <span class="text" id="1593171334"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="u_1780181932 dmRespCol small-12 large-10 medium-10"
+                                                                    id="1780181932"> <span id="1520082955"></span>
+                                                                    <div class="dmSpacer u_1525210507" id="1525210507"
+                                                                        data-element-type="spacer"></div>
+                                                                    <nav class="u_1284501632 effect-bottom2 main-navigation unifiednav dmLinksMenu"
+                                                                        role="navigation"
+                                                                        layout-main="horizontal_nav_layout_1"
+                                                                        layout-sub="submenu_horizontal_1"
+                                                                        data-show-vertical-sub-items="HOVER"
+                                                                        id="1284501632" dmle_extension="onelinksmenu"
+                                                                        data-element-type="onelinksmenu"
+                                                                        navigation_id="" data-nav-structure="HORIZONTAL"
+                                                                        wr="false" icon="true" surround="false"
+                                                                        navigation-id="unifiedNav">
+                                                                        <ul role="menubar"
+                                                                            class="unifiednav__container  "
+                                                                            data-auto="navigation-pages">
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_00  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Inicio
+        " data-auto="page-text-style">Inicio<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem" aria-haspopup="true"
+                                                                                data-sub-nav-menu="true"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/tuevent"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101766126  unifiednav__item_has-sub-nav"
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Tuevent
+        " data-auto="page-text-style">Tuevent<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                                <ul role="menu" aria-expanded="false"
+                                                                                    class="unifiednav__container unifiednav__container_sub-nav"
+                                                                                    data-depth="0"
+                                                                                    data-auto="sub-pages">
+                                                                                    <li role="menuitem"
+                                                                                        class=" unifiednav__item-wrap "
+                                                                                        data-auto="more-pages"
+                                                                                        data-depth="1"> <a
+                                                                                            href="/eventos"
+                                                                                            class="unifiednav__item  dmUDNavigationItem_010101708606  "
+                                                                                            target=""
+                                                                                            data-target-page-alias="">
+                                                                                            <span class="nav-item-text "
+                                                                                                data-link-text="
+           Eventos
+          " data-auto="page-text-style">Eventos<span class="icon icon-angle-right"></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li role="menuitem"
+                                                                                        class=" unifiednav__item-wrap "
+                                                                                        data-auto="more-pages"
+                                                                                        data-depth="1"> <a
+                                                                                            href="/comunicación"
+                                                                                            class="unifiednav__item  dmUDNavigationItem_010101866246  "
+                                                                                            target=""
+                                                                                            data-target-page-alias="">
+                                                                                            <span class="nav-item-text "
+                                                                                                data-link-text="
+           Comunicación
+          " data-auto="page-text-style">Comunicaci&oacute;n<span class="icon icon-angle-right"></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li role="menuitem"
+                                                                                        class=" unifiednav__item-wrap "
+                                                                                        data-auto="more-pages"
+                                                                                        data-depth="1"> <a
+                                                                                            href="/producción-stands-mobiliario"
+                                                                                            class="unifiednav__item  dmUDNavigationItem_01010151652  "
+                                                                                            target=""
+                                                                                            data-target-page-alias="">
+                                                                                            <span class="nav-item-text "
+                                                                                                data-link-text="
+           Producción
+          " data-auto="page-text-style">Producci&oacute;n<span class="icon icon-angle-right"></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/portfolio"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_01010185231  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Portfolio
+        " data-auto="page-text-style">Portfolio<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/contacto"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101783271  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Sobre nosotros
+        " data-auto="page-text-style">Sobre nosotros<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/contactof789d7cb"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101456817  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Contacto
+        " data-auto="page-text-style">Contacto<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/blog_tuevent"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101607352  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Blog
+        " data-auto="page-text-style">Blog<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </nav>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow ">
+                                                <div class="dmRespColsWrapper">
+                                                    <div class="large-12 dmRespCol">
+                                                        <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None">
+                                                            <div class="titleLine display_None">
+                                                                <hr />
+                                                            </div>
+                                                            <!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts -->
+                                                            <div id="pageTitleText">
+                                                                <div class="innerPageTitle">Sabor Granada</div>
+                                                            </div>
+                                                            <div class="titleLine display_None">
+                                                                <hr />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div dmwrapped="true" id="dmFirstContainer"
+                                                class="dmBody u_dmStyle_template_sabor-granada dm-home-page"
+                                                themewaschanged="true">
+                                                <div id="allWrapper" class="allWrapper"><!-- navigation placeholders -->
+                                                    <div id="dm_content" class="dmContent" role="main">
+                                                        <div dm:templateorder="170"
+                                                            class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl"
+                                                            id="1716942098">
+                                                            <div class="u_1885042527 dmRespRow"
+                                                                style="text-align: center;" id="1885042527">
+                                                                <div class="dmRespColsWrapper" id="1936570174">
+                                                                    <div class="u_1681270400 dmRespCol small-12 medium-12 large-12"
+                                                                        id="1681270400" data-anim-desktop="fadeInUp">
+                                                                        <h2 class="u_1321182104 dmNewParagraph"
+                                                                            id="1321182104"
+                                                                            style="transition: opacity 1s ease-in-out;"
+                                                                            data-element-type="paragraph">
+                                                                            <div style="text-align: center;"><span
+                                                                                    style="font-weight: 600;">_Sabor
+                                                                                    Granada H&amp;T Sal&oacute;n de
+                                                                                    Innovaci&oacute;n en
+                                                                                    Hosteler&iacute;a</span></div>
+                                                                            <div style="text-align: center;"><b style=""
+                                                                                    class="m-font-size-36 lh-1 font-size-48">
+                                                                                    <font
+                                                                                        style="color: rgb(238, 181, 0);">
+                                                                                        <span
+                                                                                            style="font-weight: 800;">M&aacute;laga
+                                                                                            2019</span>
+                                                                                    </font>
+                                                                                </b></div>
+                                                                            <div style="text-align: center;"><br />
+                                                                            </div>
+                                                                            <font></font>
+                                                                        </h2>
+                                                                        <h4 class="dmNewParagraph"
+                                                                            data-element-type="paragraph"
+                                                                            id="1971690327"
+                                                                            style="transition: opacity 1s ease-in-out;">
+                                                                            <div style="text-align: center;"><span
+                                                                                    style="font-weight: 300;">Febrero
+                                                                                    2019</span></div>
+                                                                        </h4>
+                                                                        <div class="u_1440505187 dmNewParagraph"
+                                                                            id="1440505187"
+                                                                            style="transition: none; display: block;">
+                                                                            <div style="text-align: center;">
+                                                                                Organizaci&oacute;n integral del stand
+                                                                                para Sabor Granada en H&amp;T
+                                                                                Sal&oacute;n de Innovaci&oacute;n en
+                                                                                Hosteler&iacute;a en M&aacute;laga</div>
+                                                                            <div>
+                                                                                <font style="color: rgb(56, 56, 56);">
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="u_1202658461 flex-container dmImageSlider dmNoMargin dmNoMark"
+                                                                            data-widget-type="imageSlider"
+                                                                            dmle_volatile_widget="true"
+                                                                            data-element-type="dSliderId"
+                                                                            id="1202658461">
+                                                                            <div class="flexslider ed-version nav-layout-2 arrows-visible"
+                                                                                sliderscriptparams="{'stretch':true,'animation':true,'randomize':false,'directionNav':true,'isAutoPlay':true,'isFade':true,'controlNav':false,'slideshowSpeed':7000,'animationDuration':600,'pausePlay':true}"
+                                                                                id="1865423228">
+                                                                                <ul class="slides" id="1529219221">
+                                                                                    <li layout="center"
+                                                                                        position="center"
+                                                                                        animation="fadeInUp"
+                                                                                        show-content="false"
+                                                                                        color-overlay="true"
+                                                                                        text-background="true"
+                                                                                        id="1958005789"
+                                                                                        class="u_1958005789"
+                                                                                        show-caption="false"><img
+                                                                                            dm="true"
+                                                                                            src="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Malaga_2019_tuevent_showcooking_1-1920w.jpeg?Expires=1773750325&Signature=LPwGFla~YKY~QRlj-ah3JreLU2emwWZWjDoQ5J8xCDdigbaURb4pkos06l~zkdDJet8MBjS9ZD5aXfeXJht0jW9SQDaTDoHF5Uu2wSQ3f4f8s0Z~asBqa0zLFr~gTUxxfoAHTrM1-WNNh5RCUh28~6N-psmQg49Wci41N6UnzGCg-EG8I2D5jRo1XWeTcNigA-XoIAPztrqipk8pfQRjapiHWkvhJFXCjE72JFUCEl8oAzAjExp9RhkcF0oVMDL8BGVWMpfyTB48tCJA3HXwMaLKtrHkNFcgZ3fuuSNGKLU1rmYzaXvt0XYrqxAD6hq1nzEW3C02TSDQZuQ3VKEHTQ__&Key-Pair-Id=K2NXBXLF010TJW"
+                                                                                            id="1745250212" class=""
+                                                                                            onerror="handleImageLoadError(this)" />
+                                                                                        <div class="color-overlay"
+                                                                                            id="1565173290"></div>
+                                                                                        <div class="slide-inner"
+                                                                                            id="1699514453">
+                                                                                            <div class="text-wrapper"
+                                                                                                id="1684910930">
+                                                                                                <h3 class="slide-title u_1875086163"
+                                                                                                    id="1875086163">
+                                                                                                </h3>
+                                                                                                <p class="slide-text u_1029413741"
+                                                                                                    id="1029413741"></p>
+                                                                                            </div>
+                                                                                            <div class="slide-button dmWidget clearfix slide-button-invisible"
+                                                                                                id="1737271500"> <span
+                                                                                                    class="iconBg"
+                                                                                                    id="1871750640">
+                                                                                                    <span
+                                                                                                        class="icon hasFontIcon icon-star"
+                                                                                                        id="1980917534"></span>
+                                                                                                </span>
+                                                                                                <span class="text"
+                                                                                                    id="1401334817"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li layout="center"
+                                                                                        position="center"
+                                                                                        animation="fadeInUp"
+                                                                                        show-content="false"
+                                                                                        color-overlay="true"
+                                                                                        text-background="true"
+                                                                                        id="1323603152"
+                                                                                        class="u_1323603152"
+                                                                                        show-caption="false"><img
+                                                                                            dm="true"
+                                                                                            src="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_H%26T_Malaga_2019_Tuevent_Showcooking-b05db31b-1920w.jpg?Expires=1773750325&Signature=oViUP9IpD8hJxQPiYFSuubIwuNlCuj5FGnCLZ9CFWy~l88BRUD-yv9uA8oGMcSM32TvFErTct3YgbaX3cvkVoiThMqcxfdc8IjuWv5fNdJA2NzFQ0KDNisFcZ8QigOsMy3EazJYfh8SE2sXP~sSth~3WugLAV6kITh0gxnJO2Jqj9~Ty6tAr9qp61T8pyWO4rNKOxoyR-kYozC5T0mLn-o-TPyX8nvka-vciWvfpb0x1IY2Ctn26IJ6Covs5Jt8MlW-sf69asOSOKmFeK0rSO-rBgnVoan4tiu9pOWuKZlasKvgSY24Ke1UokijHdMItbQ3e7IVmco27A~Z0TnVAaQ__&Key-Pair-Id=K2NXBXLF010TJW"
+                                                                                            id="1037457478" class=""
+                                                                                            onerror="handleImageLoadError(this)" />
+                                                                                        <div class="color-overlay"
+                                                                                            id="1134551688"></div>
+                                                                                        <div class="slide-inner"
+                                                                                            id="1489973029">
+                                                                                            <div class="text-wrapper"
+                                                                                                id="1355244450">
+                                                                                                <h3 class="slide-title u_1276298668"
+                                                                                                    id="1276298668">
+                                                                                                </h3>
+                                                                                                <p class="slide-text u_1661655864"
+                                                                                                    id="1661655864"></p>
+                                                                                            </div>
+                                                                                            <div class="slide-button dmWidget clearfix slide-button-invisible"
+                                                                                                id="1470530691"> <span
+                                                                                                    class="iconBg"
+                                                                                                    id="1887623774">
+                                                                                                    <span
+                                                                                                        class="icon hasFontIcon icon-star"
+                                                                                                        id="1726580346"></span>
+                                                                                                </span>
+                                                                                                <span class="text"
+                                                                                                    id="1624150908"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h4 class="u_1794567936 dmNewParagraph"
+                                                                            id="1794567936"
+                                                                            style="transition: none; display: block;"
+                                                                            data-element-type="paragraph"><span></span>
+                                                                            <div style="text-align: left;"><span
+                                                                                    style="font-weight: 300;"
+                                                                                    class="font-size-20 lh-1">Nuestra
+                                                                                    <span style="font-weight: 600;">
+                                                                                        <font
+                                                                                            style="color: rgb(238, 181, 0);">
+                                                                                            propuesta de valor</font>
+                                                                                    </span></span></div>
+                                                                        </h4>
+                                                                        <div class="u_1144088973 dmNewParagraph"
+                                                                            id="1144088973"
+                                                                            style="transition: none; display: block;">
+                                                                            <div style="">&nbsp;Sabor Granada es un de
+                                                                                los proyectos m&aacute;s ambiciosos en
+                                                                                los que nos hemos involucrado. Desde
+                                                                                2017 estamos trabajando con ellos en
+                                                                                proyectos como el <span
+                                                                                    style="font-weight: 600;">Mercadillo
+                                                                                    Navide&ntilde;o en Granada, en
+                                                                                    Sal&oacute;n de Gourmets en Madrid o
+                                                                                    Andaluc&iacute;a Sabor en
+                                                                                    Sevilla.</span></div>
+                                                                            <div style=""><br /></div>
+                                                                            <div style="">Tuevent se encarga de la
+                                                                                gesti&oacute;n integral del stand,
+                                                                                dise&ntilde;amos la imagen del evento,
+                                                                                la plasmamos en cada una de las
+                                                                                &aacute;reas y los stands coexpositores,
+                                                                                generamos todo el material audiovisual
+                                                                                (fotograf&iacute;a y v&iacute;deo para
+                                                                                su difusi&oacute;n en redes sociales),
+                                                                                adaptamos los espacios y llevamos todo
+                                                                                el seguimiento de las empresas
+                                                                                expositoras.</div>
+                                                                        </div>
+                                                                        <div class="u_1330879603 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp photo-gallery-done text-layout-over captionAlignment-center_center photoGallery"
+                                                                            galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}"
+                                                                            data-desktop-layout="square"
+                                                                            data-desktop-columns="4"
+                                                                            data-element-type="dPhotoGalleryId"
+                                                                            data-desktop-text-layout="over"
+                                                                            id="1330879603" data-placeholder="false"
+                                                                            data-rows-to-show="100"
+                                                                            data-tablet-columns="4"
+                                                                            data-mobile-layout="square"
+                                                                            data-mobile-columns="1"
+                                                                            data-mobile-text-layout="fixed"
+                                                                            data-mobile-caption-alignment="bottom_center"
+                                                                            data-image-hover-effect="zoomout"
+                                                                            data-image-animation="fadeInUp">
+                                                                            <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow"
+                                                                                id="1362986591"></div>
+                                                                            <div class="layout-container square">
+                                                                                <div class="photogallery-row "
+                                                                                    data-index="">
+                                                                                    <div class="photogallery-column column-4"
+                                                                                        data-index="0">
+                                                                                        <div index="0"
+                                                                                            class="photoGalleryThumbs animated  "
+                                                                                            data-index="0">
+                                                                                            <div class="thumbnailInnerWrapper"
+                                                                                                style="opacity: 1;">
+                                                                                                <div
+                                                                                                    class="image-container revealed">
+                                                                                                    <a data-dm-multisize-attr="temp"
+                                                                                                        aria-label=""
+                                                                                                        data-dm-force-device="mobile"
+                                                                                                        class="u_1088886951"
+                                                                                                        data-image-url="https://cdn.website-editor.net/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/Sabor_Granada_Tueven_Salon_malaga.jpeg"
+                                                                                                        style="background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Tueven_Salon_malaga-640w.jpeg?Expires=1773750325&Signature=MfVpXcGIBmgLbvcTM1bO30X7lbwYwL-saYuFGVUvlyHmkM8LXjxnJB9HYFwFz67RwDwXZ3fqUAU2hMOXMe6LN04ViVp5ehBv0F06TS30z8JPh0Fy9bnxka~K8GKolPqQ2zGKa7nX9zNK324vFb3cDPxWsoUKD8ijK19TiyfcVfyluSoQzmg3jC8Kc6C8NbtKXcSwdGp7GqVi3UEXeQ9K7q8~OSUaBMZ5YJq2pyyvexzQarguGKvGwcmd5wJNXlZYXtYTAhnFm0QzsDKDtFHisoLL1Hw6uenmi8ZgPY8Lmp~y9hSv0jcjkeKQtb6U7GYYcQV-fjkCMmqug8aK02S40Q__&Key-Pair-Id=K2NXBXLF010TJW');"><img
+                                                                                                            id="1016792743"
+                                                                                                            data-src="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Tueven_Salon_malaga-1920w.jpeg?Expires=1773750325&Signature=UF-vsL~Dl0zzKahGBuvXv3gHMlBGVECoVdWLAlMw~SXSYcEmSEGBWyHRrzYK2gxToJ9vHeC-2~MxdkcWPoQwzzss4t4rftHl8b62CQyP7fVCaCLWo3-CUWWTe5iz6NBlrNcBsUhEUKbushwSPhz-ueEXG1BNvsjw57MAVu-94tQbZRojIiTSDJYSDiayq17VnCM2F5PTzVkGAEZfEhiiLLLMqfjnsTHpoX8wmOdukpcwZeUA25EfEMZ9FtZrFwcrRRuveCGJQPf62AtE~0vLCmU-lD35YAoMK-zjAsOd35Sb8q1EaqgZP-YF0fCaJ8SVVw4E-DxqKOrWq~UyKU9UGA__&Key-Pair-Id=K2NXBXLF010TJW"
+                                                                                                            alt=""
+                                                                                                            aria-label=""
+                                                                                                            onerror="handleImageLoadError(this)" /></a>
+                                                                                                </div>
+                                                                                                <div id="1477120619"
+                                                                                                    class="caption-container u_1477120619"
+                                                                                                    style=""> <span
+                                                                                                        class="caption-inner">
+                                                                                                        <a id="1215587976"
+                                                                                                            class="caption-button dmWidget  clearfix u_1215587976"
+                                                                                                            href="https://dp-cdn.multiscreensite.com/d_gallery/firstImages/a_City_skyline_1600_754_d.jpg"
+                                                                                                            style="">
+                                                                                                            <span
+                                                                                                                class="iconBg">
+                                                                                                                <span
+                                                                                                                    class="icon hasFontIcon "></span>
+                                                                                                            </span>
+                                                                                                            <span
+                                                                                                                class="text">Button</span>
+                                                                                                        </a>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="photogallery-column column-4"
+                                                                                        data-index="1">
+                                                                                        <div index="1"
+                                                                                            class="photoGalleryThumbs animated  "
+                                                                                            data-index="1">
+                                                                                            <div class="thumbnailInnerWrapper"
+                                                                                                style="opacity: 1;">
+                                                                                                <div
+                                                                                                    class="image-container revealed">
+                                                                                                    <a data-dm-multisize-attr="temp"
+                                                                                                        aria-label=""
+                                                                                                        data-dm-force-device="mobile"
+                                                                                                        class="u_1767685232"
+                                                                                                        data-image-url="https://cdn.website-editor.net/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/Sabor_Granada_Sal%C3%B3n_innovaci%C3%B3n_hosteler%C3%ADa_malaga_tuevent.jpeg"
+                                                                                                        style="background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Sal%C3%B3n_innovaci%C3%B3n_hosteler%C3%ADa_malaga_tuevent-640w.jpeg?Expires=1773750325&Signature=qXG588Ol0WJzJGw-arm8N7wRBVQWLw-hReq3MFpIMNG7MwMs9GO0wTbLh~9WaSgxnXIoo3J1vzid2o1FoocfXBjZTw6PXRfoX9GoegGDiza2kt-vOQOSNz-9MzOjGI4ulhJO1eP8ky6WXJBLS03M8vW2XcZUF-EnBNx6s2M0QX4GPRhnrZbfKO-HgPaU501crmV5RzVVEyjeYKBOUz-nXQSzjaVzpIbQVNHJT10xScrXAxnDyVVKpownSsrn0r6fsMzfSXs1DSJJibOdOn1747FmQnuWcYWrwjJ4SDTZSHQF0g8f-E3Slg-3R3nzaMZgUZDPtzhxuhpYxapLfn3u0A__&Key-Pair-Id=K2NXBXLF010TJW');"><img
+                                                                                                            id="1469252105"
+                                                                                                            data-src="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Sal%C3%B3n_innovaci%C3%B3n_hosteler%C3%ADa_malaga_tuevent-1920w.jpeg?Expires=1773750325&Signature=Rch2X8keuc3TYmLBTJuMVmVVbu~aN0G3EY8xafSz3kuLHlFURnyAJboPufTSVTvxkftycxlLD1IufPoOqmiTQGOcJrc2at3IkT-qKdBnzZRNnCWvlfwnXxN~zQYAXvR4N~QQfbEBeSaywtYjxelyLX3ZhLGFyfKMeaCGFZ4CJKfHc~kflfnnWtSoAtu3KQ-d-qRsmy2L16rmDHKJiL0lA2rj~SF7dLdg0zUBVsKz7jjVPdoYCGNgjQJUSWwNMIIE-c6sWM7jLEDx6QfqfjLN91BYzyi8YhA0FZ6AO8ZIkURKDRgFJEPSEPb90DCx26MVBRIGo3h94tlXT7RXQ29DaQ__&Key-Pair-Id=K2NXBXLF010TJW"
+                                                                                                            alt=""
+                                                                                                            aria-label=""
+                                                                                                            onerror="handleImageLoadError(this)" /></a>
+                                                                                                </div>
+                                                                                                <div id="1449181947"
+                                                                                                    class="caption-container u_1449181947"
+                                                                                                    style="display:none">
+                                                                                                    <span
+                                                                                                        class="caption-inner">
+                                                                                                        <a id="1825872834"
+                                                                                                            class="caption-button dmWidget  clearfix u_1825872834"
+                                                                                                            href=""
+                                                                                                            style="">
+                                                                                                            <span
+                                                                                                                class="iconBg">
+                                                                                                                <span
+                                                                                                                    class="icon hasFontIcon "></span>
+                                                                                                            </span>
+                                                                                                            <span
+                                                                                                                class="text">Button</span>
+                                                                                                        </a>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="photogallery-column column-4"
+                                                                                        data-index="2">
+                                                                                        <div index="2"
+                                                                                            class="photoGalleryThumbs animated  "
+                                                                                            data-index="2">
+                                                                                            <div class="thumbnailInnerWrapper"
+                                                                                                style="opacity: 1;">
+                                                                                                <div
+                                                                                                    class="image-container revealed">
+                                                                                                    <a data-dm-multisize-attr="temp"
+                                                                                                        aria-label=""
+                                                                                                        data-dm-force-device="mobile"
+                                                                                                        class="u_1787827279"
+                                                                                                        data-image-url="https://cdn.website-editor.net/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/Sabor_Granada_Tuevent_Sal%C3%B3n_innovaci%C3%B3n_malaga.jpeg"
+                                                                                                        style="background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Tuevent_Sal%C3%B3n_innovaci%C3%B3n_malaga-640w.jpeg?Expires=1773750325&Signature=ejQRG~y5kuUPU5gixE64ldLfSIkL03hECjBLVGWOtulafpH5FBj9dbVF40B57QoxoD7vMLJ4VQ6uih0cmcpnqU2eseSlAuUHyqY~3D4GRdI0uJB7zHXaLT4a1df93uLRcMQzUSArO8ifkOsoELSUgsMrfiOMHQod9wbiVSSr1hvph-dCZL2SGXA3DRX2ZuWjs8Nur68i49TvzZR64~Zo7NRNU1NSiEU8uKCQlkoOo8jiNFhBa5je9NO~FPIOrisBF-ulyj52pZHd7w1tuXnsE4FNNs1wCenKgdP9z7bma2JopTCbHMew-WVXtpNRpplf1tbn04gADLwJIs6-aWNl4Q__&Key-Pair-Id=K2NXBXLF010TJW');"><img
+                                                                                                            id="1331106619"
+                                                                                                            data-src="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Sabor_Granada_Tuevent_Sal%C3%B3n_innovaci%C3%B3n_malaga-1920w.jpeg?Expires=1773750325&Signature=eu51DdRP3dl3jdlxpslEKLpEQsWUfWt1Bnbuk6gxUVnihiL9Ga7n3OrzIYbP7R-HmZPT32qRx6hGLTlKZpV1OP39ze806s4se6Sn7wm2s~C8~IFzBCx~f6ZMoAY2Qmzz~53X51LQLO0gpYq~8rngHGJgsmH0uSolrU4etzeHGYrtRwi-8x4Ol~pGe45p2foo1Zke4SdwN-5BqDeCGk7dIyiO6b3PCAwEWzOV5LA8GWv2K8pOdpryftJqnqgisddPyktsJnvArOOSNLrXekltqi2GaWchTRDQC0AF8QQmaVaXaUXknJbRRlI9xwJfClRxrlKmOzLNjvzo5~44gXE~mg__&Key-Pair-Id=K2NXBXLF010TJW"
+                                                                                                            alt=""
+                                                                                                            aria-label=""
+                                                                                                            onerror="handleImageLoadError(this)" /></a>
+                                                                                                </div>
+                                                                                                <div id="1362182989"
+                                                                                                    class="caption-container u_1362182989"
+                                                                                                    style="display:none">
+                                                                                                    <span
+                                                                                                        class="caption-inner">
+                                                                                                        <a id="1213590634"
+                                                                                                            class="caption-button dmWidget  clearfix u_1213590634"
+                                                                                                            href=""
+                                                                                                            style="">
+                                                                                                            <span
+                                                                                                                class="iconBg">
+                                                                                                                <span
+                                                                                                                    class="icon hasFontIcon "></span>
+                                                                                                            </span>
+                                                                                                            <span
+                                                                                                                class="text">Button</span>
+                                                                                                        </a>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="photogallery-column column-4"
+                                                                                        data-index="3">
+                                                                                        <div index="3"
+                                                                                            class="photoGalleryThumbs animated  "
+                                                                                            data-index="3">
+                                                                                            <div class="thumbnailInnerWrapper"
+                                                                                                style="opacity: 1;">
+                                                                                                <div
+                                                                                                    class="image-container revealed">
+                                                                                                    <a data-dm-multisize-attr="temp"
+                                                                                                        aria-label=""
+                                                                                                        data-dm-force-device="mobile"
+                                                                                                        class="u_1625427565"
+                                                                                                        data-image-url="https://cdn.website-editor.net/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/Tuevent_Showcooking.jpeg"
+                                                                                                        style="background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Tuevent_Showcooking-640w.jpeg?Expires=1773750325&Signature=s99NK7zfmxbp2egpC1EkQXszpIt1XyXv71gr4vTvC9zv~1zMrJTEGTdbTvMEuZfb-aDzdgckrSSiHov4iHoomkWI~UFsh1bez-f2Kq4nW0R1kU9hGGXPhoefjpyI~mq0InecW6QCTnoBtFtp8u1sXbXhTkzDCGqw2yqzn~TYhauKkMaJ1pM93JOnAPGppYrw60IsbVo~v7sk6q1qs-QiC1DuO1rhwtnWuhY-8CPzGngyvk8NCMne~Opv5cVEK35cpHGzU0KIQ4QxrSiHhizAS3J3bXLWJLbly5qXSInUdevwvh8ikmP-vAaUEd5nm845dD5K~6~B0J6PHxuEAy4DVw__&Key-Pair-Id=K2NXBXLF010TJW');"><img
+                                                                                                            id="1847650586"
+                                                                                                            data-src="https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Tuevent_Showcooking-1920w.jpeg?Expires=1773750325&Signature=O1gqu5bhbwiWj71ztSSHB4ZLSderk1aGYuegY69dctVAhDpU5xzk5NlLw7hsem0S8ZvUlW9BXLSv0ONiJpFo5fAjReffOOG1WtO~XpwZpsvyWdGOLtsQT2swuKnozD0YoVnuzr1YkUCZHSEPSXE-s3mhUeXP~llbtoPG7p~S7YGhHG5uwmCHs4H6T5~dR1C1fGH5uMGEpEQ7hVtfdtWZL2VLONsXUEvLFocT5TistJZkWBBp4DmYHgvd6vTPf8QyEhD14z6gcNVxw8M3AhnbIv0piGMcvzXi~LRJ5lXsmkr9UnHUQd7iLtGrIu~rlYbLUTC3hHVEt1gcJYtHjW3DxA__&Key-Pair-Id=K2NXBXLF010TJW"
+                                                                                                            alt=""
+                                                                                                            aria-label=""
+                                                                                                            onerror="handleImageLoadError(this)" /></a>
+                                                                                                </div>
+                                                                                                <div id="1363413238"
+                                                                                                    class="caption-container u_1363413238"
+                                                                                                    style="display:none">
+                                                                                                    <span
+                                                                                                        class="caption-inner">
+                                                                                                        <a id="1862305143"
+                                                                                                            class="caption-button dmWidget  clearfix u_1862305143"
+                                                                                                            href=""
+                                                                                                            style="">
+                                                                                                            <span
+                                                                                                                class="iconBg">
+                                                                                                                <span
+                                                                                                                    class="icon hasFontIcon "></span>
+                                                                                                            </span>
+                                                                                                            <span
+                                                                                                                class="text">Button</span>
+                                                                                                        </a>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h4 class="u_1753836395 dmNewParagraph"
+                                                                            id="1753836395"
+                                                                            style="transition: none; display: block;"
+                                                                            data-element-type="paragraph"><span
+                                                                                style="font-weight: 300;">Todo el</span>
+                                                                            <font style="color: rgb(238, 181, 0);">Sabor
+                                                                                de Granada</font>
+                                                                        </h4>
+                                                                        <div class="u_1970845985 dmNewParagraph"
+                                                                            id="1970845985"
+                                                                            style="transition: none; display: block;">
+                                                                            <div style="">Nos enorgullece formar parte
+                                                                                de este tipo de eventos, con los que
+                                                                                disfrutamos de principio a fin y con los
+                                                                                que nos sentimos tan identificados.
+                                                                                Acompa&ntilde;ar a Sabor Granada en cada
+                                                                                uno de sus proyectos es todo un placer
+                                                                                para Tuevent</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dmFooterContainer">
+                                                <div id="fcontainer" class="f_hcontainer dmFooter p_hfcontainer">
+                                                    <div dm:templateorder="250" class="dmFooterResp generalFooter"
+                                                        id="1943048428">
+                                                        <div class="u_1103197572 dmRespRow" style="text-align: center;"
+                                                            id="1103197572">
+                                                            <div class="dmRespColsWrapper" id="1239102101">
+                                                                <div class="dmRespCol small-12 large-6 medium-6"
+                                                                    id="1339518621">
+                                                                    <h3 class="u_1922243175 dmNewParagraph"
+                                                                        id="1922243175"
+                                                                        style="transition: opacity 1s ease-in-out;"
+                                                                        data-element-type="paragraph">
+                                                                        <div style="text-align: left;">
+                                                                            &iexcl;S&iacute;guenos!</div>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="dmRespCol large-6 medium-6 small-12"
+                                                                    id="1903234683">
+                                                                    <div class="u_1061371095 align-center text-align-center dmSocialHub gapSpacing"
+                                                                        id="1061371095" dmle_extension="social_hub"
+                                                                        data-element-type="social_hub" wr="true"
+                                                                        networks="" icon="true" surround="true"
+                                                                        adwords="">
+                                                                        <div class="socialHubWrapper">
+                                                                            <div class="socialHubInnerDiv "> <a
+                                                                                    href="mailto:info@tuevent.es"
+                                                                                    dm_dont_rewrite_url="true"
+                                                                                    aria-label="email"
+                                                                                    onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)">
+                                                                                    <span
+                                                                                        class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8"
+                                                                                        aria-hidden="true"
+                                                                                        data-hover-effect=""></span>
+                                                                                </a>
+                                                                                <a href="https://www.facebook.com/Tuevent-2151214134993816/"
+                                                                                    target="_blank"
+                                                                                    dm_dont_rewrite_url="true"
+                                                                                    aria-label="facebook"
+                                                                                    onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)">
+                                                                                    <span
+                                                                                        class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8"
+                                                                                        aria-hidden="true"
+                                                                                        data-hover-effect=""></span>
+                                                                                </a>
+                                                                                <a href="https://www.instagram.com/agencia_tuevent/"
+                                                                                    target="_blank"
+                                                                                    dm_dont_rewrite_url="true"
+                                                                                    aria-label="instagram"
+                                                                                    onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)">
+                                                                                    <span
+                                                                                        class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8"
+                                                                                        aria-hidden="true"
+                                                                                        data-hover-effect=""></span>
+                                                                                </a>
+                                                                                <a href="https://www.linkedin.com/company/tuevent/"
+                                                                                    target="_blank"
+                                                                                    dm_dont_rewrite_url="true"
+                                                                                    aria-label="linkedin"
+                                                                                    onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)">
+                                                                                    <span
+                                                                                        class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8"
+                                                                                        aria-hidden="true"
+                                                                                        data-hover-effect=""></span>
+                                                                                </a>
+                                                                                <a href="https://wa.me/+34687853096"
+                                                                                    target="_blank"
+                                                                                    dm_dont_rewrite_url="true"
+                                                                                    aria-label="whatsapp"
+                                                                                    onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)">
+                                                                                    <span
+                                                                                        class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style8"
+                                                                                        aria-hidden="true"
+                                                                                        data-hover-effect=""></span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u_1178671853 dmRespRow" id="1178671853">
+                                                            <div class="dmRespColsWrapper" id="1456379258">
+                                                                <div class="dmRespCol large-12 medium-12 small-12"
+                                                                    id="1876481976">
+                                                                    <div data-inject="gallery-pageDescription"
+                                                                        class="u_1587334537 dmNewParagraph"
+                                                                        id="1587334537"
+                                                                        style="transition: none 0s ease 0s; display: block;">
+                                                                        <div style="text-align: left;">
+                                                                            <font><span style=""
+                                                                                    class="font-size-16 lh-1">
+                                                                                    <font
+                                                                                        style="color: rgb(255, 255, 255);">
+                                                                                        _tu</font>
+                                                                                    <font
+                                                                                        style="color: rgb(238, 181, 0);">
+                                                                                        sue&ntilde;o</font>
+                                                                                    <font
+                                                                                        style="color: rgb(255, 255, 255);">
+                                                                                        / _tu</font>
+                                                                                    <font
+                                                                                        style="color: rgb(238, 181, 0);">
+                                                                                        inspiraci&oacute;n</font>
+                                                                                    <font
+                                                                                        style="color: rgb(255, 255, 255);">
+                                                                                        / _tu</font>
+                                                                                    <font
+                                                                                        style="color: rgb(238, 181, 0);">
+                                                                                        realidad</font>
+                                                                                </span></font>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u_1310941766 dmRespRow fullBleedChanged fullBleedMode"
+                                                            style="text-align: center;" id="1310941766">
+                                                            <div class="dmRespColsWrapper" id="1671435570">
+                                                                <div class="u_1400256615 dmRespCol small-12 medium-6 large-6"
+                                                                    id="1400256615">
+                                                                    <h5 class="u_1497801298 dmNewParagraph"
+                                                                        data-element-type="paragraph" id="1497801298"
+                                                                        style="transition: none 0s ease 0s;">
+                                                                        <div>
+                                                                            <font style="color: rgb(255, 255, 255);">
+                                                                                <b><span
+                                                                                        style="font-weight: 700;"></span></b>
+                                                                            </font>
+                                                                        </div>
+                                                                        <font style=""><span style="font-weight: 700;">
+                                                                                <div style="text-align: left; ">
+                                                                                    <font
+                                                                                        style="color: rgb(255, 255, 255);">
+                                                                                        <b style=""><span
+                                                                                                style="font-weight: inherit;"
+                                                                                                class="font-size-14 lh-1">Enlaces
+                                                                                                &uacute;tiles</span></b>
+                                                                                    </font>
+                                                                                </div>
+                                                                            </span></font>
+                                                                        <div>
+                                                                            <font style="color: rgb(204, 204, 204);">
+                                                                            </font>
+                                                                        </div><span style="font-weight: 300;">
+                                                                            <div><b>
+                                                                                    <font
+                                                                                        style="color: rgb(204, 204, 204);">
+                                                                                    </font>
+                                                                                </b></div>
+                                                                        </span>
+                                                                        <div><b>
+                                                                                <font
+                                                                                    style="color: rgb(204, 204, 204);">
+                                                                                </font>
+                                                                            </b></div>
+                                                                    </h5>
+                                                                    <nav class="u_1113218551 unifiednav_vertical effect-none main-navigation unifiednav dmLinksMenu"
+                                                                        role="navigation"
+                                                                        layout-main="vertical_nav_layout_4"
+                                                                        layout-sub=""
+                                                                        data-show-vertical-sub-items="HOVER"
+                                                                        id="1113218551" dmle_extension="onelinksmenu"
+                                                                        data-element-type="onelinksmenu"
+                                                                        data-logo-src="https://cdn.website-editor.net/00cbb981216048049f7166bc84478f36/dms3rep/multi/desktop/logo-02.svg"
+                                                                        alt="" data-nav-structure="VERTICAL" wr="true"
+                                                                        icon="true" surround="true" adwords=""
+                                                                        navigation-id="unifiedNav">
+                                                                        <ul role="menubar"
+                                                                            class="unifiednav__container  "
+                                                                            data-auto="navigation-pages">
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_00  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Inicio
+        " data-auto="page-text-style">Inicio<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem" aria-haspopup="true"
+                                                                                data-sub-nav-menu="true"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/tuevent"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101766126  unifiednav__item_has-sub-nav"
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Tuevent
+        " data-auto="page-text-style">Tuevent<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                                <ul role="menu" aria-expanded="false"
+                                                                                    class="unifiednav__container unifiednav__container_sub-nav"
+                                                                                    data-depth="0"
+                                                                                    data-auto="sub-pages">
+                                                                                    <li role="menuitem"
+                                                                                        class=" unifiednav__item-wrap "
+                                                                                        data-auto="more-pages"
+                                                                                        data-depth="1"> <a
+                                                                                            href="/eventos"
+                                                                                            class="unifiednav__item  dmUDNavigationItem_010101708606  "
+                                                                                            target=""
+                                                                                            data-target-page-alias="">
+                                                                                            <span class="nav-item-text "
+                                                                                                data-link-text="
+           Eventos
+          " data-auto="page-text-style">Eventos<span class="icon icon-angle-right"></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li role="menuitem"
+                                                                                        class=" unifiednav__item-wrap "
+                                                                                        data-auto="more-pages"
+                                                                                        data-depth="1"> <a
+                                                                                            href="/comunicación"
+                                                                                            class="unifiednav__item  dmUDNavigationItem_010101866246  "
+                                                                                            target=""
+                                                                                            data-target-page-alias="">
+                                                                                            <span class="nav-item-text "
+                                                                                                data-link-text="
+           Comunicación
+          " data-auto="page-text-style">Comunicaci&oacute;n<span class="icon icon-angle-right"></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li role="menuitem"
+                                                                                        class=" unifiednav__item-wrap "
+                                                                                        data-auto="more-pages"
+                                                                                        data-depth="1"> <a
+                                                                                            href="/producción-stands-mobiliario"
+                                                                                            class="unifiednav__item  dmUDNavigationItem_01010151652  "
+                                                                                            target=""
+                                                                                            data-target-page-alias="">
+                                                                                            <span class="nav-item-text "
+                                                                                                data-link-text="
+           Producción
+          " data-auto="page-text-style">Producci&oacute;n<span class="icon icon-angle-right"></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/portfolio"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_01010185231  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Portfolio
+        " data-auto="page-text-style">Portfolio<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/contacto"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101783271  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Sobre nosotros
+        " data-auto="page-text-style">Sobre nosotros<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/contactof789d7cb"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101456817  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Contacto
+        " data-auto="page-text-style">Contacto<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li role="menuitem"
+                                                                                class=" unifiednav__item-wrap "
+                                                                                data-auto="more-pages" data-depth="0">
+                                                                                <a href="/blog_tuevent"
+                                                                                    class="unifiednav__item  dmUDNavigationItem_010101607352  "
+                                                                                    target="" data-target-page-alias="">
+                                                                                    <span class="nav-item-text "
+                                                                                        data-link-text="
+         Blog
+        " data-auto="page-text-style">Blog<span class="icon icon-angle-down"></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </nav>
+                                                                </div>
+                                                                <div class="u_1662590111 dmRespCol small-12 medium-6 large-6"
+                                                                    id="1662590111">
+                                                                    <h5 class="u_1198779376 dmNewParagraph"
+                                                                        data-element-type="paragraph" id="1198779376"
+                                                                        style="transition: opacity 1s ease-in-out;">
+                                                                        <div>
+                                                                            <font style="color: rgb(255, 255, 255);">
+                                                                                <b><span
+                                                                                        style="font-weight: 900;"></span></b>
+                                                                            </font>
+                                                                        </div><span style="font-weight: 700;">
+                                                                            <font style="">
+                                                                                <div style="">
+                                                                                    <font
+                                                                                        style="color: rgb(255, 255, 255);">
+                                                                                        <b style=""><span
+                                                                                                style="font-weight: inherit;"
+                                                                                                class="font-size-14 lh-1 m-specific m-font-size-18">Informaci&oacute;n
+                                                                                                de contacto</span></b>
+                                                                                    </font>
+                                                                                </div>
+                                                                            </font>
+                                                                        </span>
+                                                                        <div>
+                                                                            <font style="color: rgb(204, 204, 204);">
+                                                                            </font>
+                                                                        </div><span style="font-weight: 300;">
+                                                                            <div><b>
+                                                                                    <font
+                                                                                        style="color: rgb(204, 204, 204);">
+                                                                                    </font>
+                                                                                </b></div>
+                                                                        </span>
+                                                                        <div><b>
+                                                                                <font
+                                                                                    style="color: rgb(204, 204, 204);">
+                                                                                </font>
+                                                                            </b></div>
+                                                                    </h5>
+                                                                    <h5 class="u_1766181806 dmNewParagraph"
+                                                                        data-element-type="paragraph" id="1766181806"
+                                                                        style="transition: opacity 1s ease-in-out;">
+                                                                        <font style="color: rgb(255, 255, 255);"
+                                                                            class="m-specific lh-1 m-font-size-18"><span
+                                                                                style="">+34 629 544 399</span><br />
+                                                                        </font>
+                                                                        <div><span style=""
+                                                                                class="m-specific lh-1 m-font-size-18">
+                                                                                <font
+                                                                                    style="color: rgb(255, 255, 255);">
+                                                                                    info@tuevent.es</font>
+                                                                            </span></div>
+                                                                        <div><span style="color: rgb(255, 255, 255);"
+                                                                                class="m-specific lh-1 m-font-size-18">SEDE&nbsp;
+                                                                                GRANADA&nbsp;&nbsp;<span
+                                                                                    style="font-weight: 400;">C/ Brisas
+                                                                                    12. Albolote, Granada</span></span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <font color="#ffffff"><span
+                                                                                    style="font-weight: 700;"><span
+                                                                                        style=""
+                                                                                        class="m-specific lh-1 m-font-size-18">OFICINA
+                                                                                        MADRID&nbsp;<span
+                                                                                            style="font-weight: 400;">Calle
+                                                                                            del Conde de Xiquena 8, 4 A,
+                                                                                            28004
+                                                                                            Madrid</span></span></span>
+                                                                            </font>
+                                                                        </div>
+                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u_1223432986 dmRespRow" id="1223432986">
+                                                            <div class="dmRespColsWrapper" id="1630351547">
+                                                                <div class="dmRespCol small-12 large-6 medium-6"
+                                                                    id="1608296634">
+                                                                    <h5 class="u_1761182195 dmNewParagraph"
+                                                                        data-element-type="paragraph" id="1761182195"
+                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                        <font color="#ffffff"><span
+                                                                                style="font-size: 14px;">Tuevent es una
+                                                                                empresa asociada en AJE GRANADA</span>
+                                                                        </font>
+                                                                    </h5>
+                                                                </div>
+                                                                <div class="dmRespCol large-6 medium-6 small-12 u_1083222722 empty-column"
+                                                                    id="1083222722"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u_1018948455 dmRespRow" id="1018948455">
+                                                            <div class="dmRespColsWrapper" id="1520903802">
+                                                                <div class="u_1062076243 dmRespCol small-12 medium-12 large-12"
+                                                                    id="1062076243">
+                                                                    <div data-inject="gallery-pageDescription"
+                                                                        class="u_1806595826 dmNewParagraph"
+                                                                        id="1806595826" data-styletopreserve="{"
+                                                                        background-image="" :="">
+                                                                        <div style="text-align: left;"><b
+                                                                                style="font-size: 1em;">
+                                                                                <font
+                                                                                    style="color: rgb(255, 255, 255);">
+                                                                                    <span style="font-weight: 200;"
+                                                                                        class="font-size-13 lh-1">
+                                                                                        <font style=""><a
+                                                                                                href="/aviso-legal"
+                                                                                                runtime_url="/aviso-legal"
+                                                                                                style="color: rgb(255, 255, 255);">Aviso
+                                                                                                legal</a>
+                                                                                            | <a href="/politica_de_privacidad"
+                                                                                                runtime_url="/politica_de_privacidad"
+                                                                                                style="color: rgb(255, 255, 255);">Pol&iacute;tica
+                                                                                                de privacidad</a>
+                                                                                            |</font>
+                                                                                        <a href="/politica_de_cookies"
+                                                                                            runtime_url="/politica_de_cookies"
+                                                                                            style="color: rgb(255, 255, 255);">Pol&iacute;tica
+                                                                                            de cookies</a>
+                                                                                    </span>
+                                                                                </font>
+                                                                            </b></div>
+                                                                    </div>
+                                                                    <div data-inject="gallery-pageDescription"
+                                                                        class="u_1037027168 dmNewParagraph"
+                                                                        id="1037027168"
+                                                                        style="transition: none 0s ease 0s; display: block;">
+                                                                        <div style="text-align: left;"><b style="">
+                                                                                <font
+                                                                                    style="color: rgb(255, 255, 255);">
+                                                                                    <span style="font-weight: 200;"
+                                                                                        class="font-size-13 lh-1">2019
+                                                                                        tuevent &copy;&nbsp;</span>
+                                                                                </font>
+                                                                            </b><b style="font-size: 1em;">
+                                                                                <font
+                                                                                    style="color: rgb(255, 255, 255);">
+                                                                                    <span style="font-weight: 200;"
+                                                                                        class="font-size-13 lh-1">Copyright
+                                                                                        | Todos los derechos</span>
+                                                                                </font>
+                                                                            </b></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="1236746004" dmle_extension="powered_by"
+                                                        data-element-type="powered_by" icon="true" surround="false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var isWLR = true;
+
+        window.customWidgetsFunctions = {};
+        window.customWidgetsStrings = {};
+        window.collections = {};
+        window.currentLanguage = "SPANISH"
+        window.isSitePreview = false;
+    </script>
+    <script type="text/javascript">
+
+        var d_version = "production_6182";
+        var build = "2026-02-15T09_48_34";
+        window['v' + 'ersion'] = d_version;
+
+        function buildEditorParent() {
+            window.isMultiScreen = true;
+            window.editorParent = {};
+            window.previewParent = {};
+            window.assetsCacheQueryParam = "?version=2026-02-15T09_48_34";
+            try {
+                var _p = window.parent;
+                if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                    window.editorParent = _p;
+                } else if (_p.isSitePreview) {
+                    window.previewParent = _p;
+                }
+            } catch (e) {
+
+            }
+        }
+
+        buildEditorParent();
+    </script>
+
+    <script type="text/javascript" id='d-js-jquery'
+        src="https://static-cdn.website-editor.net/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script>
+        var _jquery = window.$;
+
+        var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+        jqueryAliases.forEach((alias) => {
+            Object.defineProperty(window, alias, {
+                get() {
+                    return _jquery;
+                },
+                set() {
+                    console.warn("Trying to over-write the global jquery object!");
+                }
+            });
+        });
+        window.jQuery.migrateMute = true;
+    </script>
+    <script>
+        window.cookiesNotificationMarkupPreview = ' <div>Este sitio web utiliza cookies para proporcionarle la mejor experiencia en l&iacute;nea. Al utilizar nuestro sitio web, acepta el uso de cookies. <a href=\"\/privacy\" target=\"_blank\">M&aacute;s informaci&oacute;n<\/a>.<\/div> \n';
+    </script>
+
+    <script id='d-js-params'>
+        window.INSITE = window.INSITE || {};
+        window.INSITE.device = "desktop";
+
+        window.rtCommonProps = {};
+        rtCommonProps["rt.ajax.ajaxScriptsFix"] = true;
+        rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+        rtCommonProps["runtimecollector.url"] = 'https://rtc.website-editor.net';
+        rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+        rtCommonProps["inlineEditGrid.snap"] = true;
+        rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+        rtCommonProps["rt.pushnotifs.force.button"] = true;
+        rtCommonProps["common.mapbox.token"] = 'TU_TOKEN_AQUI';
+        rtCommonProps["common.mapbox.js.override"] = false;
+        rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+        rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+        rtCommonProps["isCoverage.test"] = false;
+        rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+        rtCommonProps["common.resources.dist.cdn"] = true;
+        rtCommonProps["common.build.dist.folder"] = 'production/6182';
+        rtCommonProps["common.resources.cdn.host"] = 'https://static-cdn.website-editor.net';
+        rtCommonProps["common.resources.folder"] = 'https://static-cdn.website-editor.net/mnlt/production/6182';
+        rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.enabled"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] = true;
+        rtCommonProps["feature.flag.sites.google.analytics.gtag"] = true;
+        rtCommonProps["feature.flag.runOnReadyNewTask"] = true;
+        rtCommonProps["isAutomation.test"] = false;
+        rtCommonProps["booking.cal.api.domain"] = 'api.cal.com';
+
+
+        rtCommonProps['common.mapsProvider'] = 'mapbox';
+
+        rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+        rtCommonProps['common.geocodeProvider'] = 'mapbox';
+        rtCommonProps['server.for.resources'] = '';
+        rtCommonProps['feature.flag.lazy.widgets'] = true;
+        rtCommonProps['feature.flag.single.wow'] = false;
+        rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+        rtCommonProps['feature.flag.mark.anchors'] = true;
+        rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+        rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+        rtCommonProps["images.sizes.small"] = 160;
+        rtCommonProps["images.sizes.mobile"] = 640;
+        rtCommonProps["images.sizes.tablet"] = 1280;
+        rtCommonProps["images.sizes.desktop"] = 1920;
+        rtCommonProps["modules.resources.cdn"] = true;
+        rtCommonProps["import.images.storage.imageCDN"] = 'https://le-cdn.website-editor.net/';
+        rtCommonProps["feature.flag.runtime.inp.threshold"] = 150;
+        rtCommonProps["feature.flag.performance.logs"] = true;
+        rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+        rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+        rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+        // feature flags that's used out of runtime module (in  legacy files)
+        rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] = true;
+
+        window.rtFlags = {};
+        rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] = false;
+        rtFlags["scripts.widgetCount.enabled"] = true;
+        rtFlags["fnb.animations.tracking.enabled"] = true;
+        rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+        rtFlags["ecom.ecwid.accountPage.emptyBaseUrl.enabled"] = true;
+        rtFlags["ecom.ecwid.pages.links.disable.listeners"] = true;
+        rtFlags["ecom.ecwid.storefrontV3.enabled"] = false;
+        rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+        rtFlags["feature.flag.photo.gallery.exact.size"] = true;
+        rtFlags["geocode.search.localize"] = false;
+        rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] = false;
+        rtFlags["twitter.heightLimit.enabled"] = true;
+        rtFlags["runtime.lottieOverflow"] = false;
+        rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+        rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] = false;
+        rtFlags["flex.animation.design.panel.layout"] = true;
+        rtFlags["runtime.cwv.report.cls.enabled"] = false;
+        rtFlags["runtime.cwv.report.lcp.enabled"] = false;
+        rtFlags["contact.form.useActiveForm"] = true;
+        rtFlags["contact.form.custom.errors.enabled"] = false;
+        rtFlags["runtime.ssr.productStore.internal.observer"] = true;
+        rtFlags["runtime.ssr.productCustomizations"] = true;
+        rtFlags["runtime.ssr.runtime.filter-sort.newFilterSortWidgetWithOptions.enabled"] = false;
+        rtFlags["runtime.ssr.ssrSlider.jumpThreshold.enabled"] = true;
+    </script>
+    <script
+        src="https://static-cdn.website-editor.net/mnlt/production/6182/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"
+        id="d-js-core"></script>
+    <!-- End of HEAD RT JS Include -->
+    <script>
+
+        $(window).bind("orientationchange", function (e) {
+            $.layoutManager.initLayout();
+
+        });
+        $(document).resize(function () {
+
+        });
+    </script>
+    <script type="text/javascript" id="d_track_campaign">
+        (function () {
+            if (!window.location.search) {
+                return;
+            }
+            const cleanParams = window.location.search.substring(1); // Strip ?
+            const queryParams = cleanParams.split('&');
+
+            const expires = 'expires=' + new Date().getTime() + 24 * 60 * 60 * 1000;
+            const domain = 'domain=' + window.location.hostname;
+            const path = "path=/";
+
+            queryParams.forEach((param) => {
+                const [key, value = ''] = param.split('=');
+                if (key.startsWith('utm_')) {
+                    const cookieName = "_dm_rt_" + key.substring(4);
+                    const cookie = cookieName + "=" + value;
+                    const joined = [cookie, expires, domain, path].join(";");
+                    document.cookie = joined;
+                }
+            });
+        }());
+    </script>
+    <script type="text/javascript">
+        var _dm_gaq = {};
+        var _gaq = _gaq || [];
+        var _dm_insite = [];
+    </script>
+
+    <script type="text/javascript" id="d_track_sp">
+        ; (function (p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i); p[i] = function () {
+                    (p[i].q = p[i].q || []).push(arguments)
+                }; p[i].q = p[i].q || []; n = l.createElement(o); g = l.getElementsByTagName(o)[0]; n.async = 1;
+                n.src = w; g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "//d1dxoqu0t5mb7j.cloudfront.net/sp-2.0.0-dm-0.1.min.js", "snowplow"));
+        window.dmsnowplow = window.snowplow;
+
+        dmsnowplow('newTracker', 'cf', 'd1dxoqu0t5mb7j.cloudfront.net', {
+            appId: '78591e54e95f4111804b6550648d0bbe'
+        });
+
+        requestAnimationFrame(() => {
+            dmsnowplow('trackPageView');
+            _dm_insite.forEach((rule) => {
+                if (rule.actionName !== "popup") {
+                    dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+                }
+                window?.waitForDeferred?.('dmAjax', () => {
+                    $.DM.events.trigger('event-ruleTriggered', { value: rule });
+                });
+            });
+        });
+    </script>
+    <div style="display:none;" id="P6iryBW0Wu"></div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="pswp__bg"></div>
+
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Cerrar (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Compartir"></button>
+                    <button class="pswp__button pswp__button--fs" title="Activar pantalla completa"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Acercar/alejar"></button>
+
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Anterior (flecha izquierda)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Siguiente (flecha derecha)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fb-root" data-locale="es_ES"></div>
+    <div class="dmPopupMask" id="dmPopupMask"></div>
+    <div id="dmPopup" class="dmPopup">
+        <div class="dmPopupCloseWrapper">
+            <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div>
+        </div>
+        <div class="dmPopupTitle"> <span></span> Share by:</div>
+        <div class="data"></div>
+    </div>
+    <script id="d_track_personalization">
+        window?.waitForDeferred?.('dmAjax', () => {
+            window.expireDays = 365;
+            window.visitLength = 30 * 60000;
+            $.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+            setSmartSiteCookiesInternal("dm_this_page_view", "dm_last_page_view", "dm_total_visits", "dm_last_visit");
+        });
+    </script>
+    <script type="text/javascript">
+
+        Parameters.NavigationAreaParams.MoreButtonText = '......';
+
+        Parameters.NavigationAreaParams.LessButtonText = '......';
+        Parameters.HomeLinkText = 'Home';
+    </script>
+    <script>
+        function call1and1Tracking() {
+            var externalId = dmAPI.getSiteExternalId();
+            var siteName = dmAPI.getSiteName();
+            var src = 'https://integration.mywebsite-editor.com/dakota-snippet-service/snippet/integration/snippet.js?sitename=' + siteName + '&external_uid=' + externalId + '&mode=visit'
+            var tracking = document.createElement('script');
+            tracking.setAttribute('src', src);
+            document.head.appendChild(tracking);
+        }
+        call1and1Tracking();
+    </script>
+
+    <!-- Footer -->
+    <div id="common-footer"></div>
+
+</body>
+
+</html>
