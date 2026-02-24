@@ -321,8 +321,11 @@ h6 {
 }
 
 .dmRespCol {
-    padding: 0 15px;
-    flex: 0 0 auto;
+    background-color: transparent !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 20px !important;
+    margin-bottom: 30px;
 }
 
 .fullBleedChanged.fullBleedMode {
@@ -2484,6 +2487,32 @@ h6 {
 }
 
 /* Eventos Services Backgrounds */
+
+.section-bg-proveedores,
+.section-bg-marketing,
+.section-bg-cientifica,
+.section-bg-asistentes,
+.section-bg-exposicion,
+.section-bg-desarrollo,
+.section-bg-protocolo,
+.section-bg-incentivos,
+.section-bg-tecnologia,
+.section-bg-audiovisual,
+.section-bg-presupuestario,
+.section-bg-logistica,
+.section-bg-dmc,
+.section-bg-produccion-integral {
+    background-repeat: no-repeat !important;
+    background-size: 60px !important; 
+    background-position: left top !important; 
+    padding-left: 80px !important; 
+    padding-top: 0 !important;
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .section-bg-proveedores {
     background-image: url('../images/clonados/PROVEEDORES-1920w.jpg') !important;
 }
@@ -2548,41 +2577,69 @@ h6 {
     background-color: #333;
     /* Fallback */
     background-blend-mode: overlay;
+    position: relative;
     padding: 120px 20px;
     text-align: center;
     color: white;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+    background-blend-mode: overlay;
+    animation: heroFade 15s infinite;
+}
+
+@keyframes heroFade {
+    0%, 30% {
+        background-image: url('../images/eventos/CongresoGepac_Stand_Gepac_Kolors2018_1_-ce79939f.JPG');
+    }
+    33%, 63% {
+        background-image: url('../images/eventos/Feria_del_corredor_2019_decathlon_stand_tuevent_3.jpg');
+    }
+    66%, 96% {
+        background-image: url('../images/eventos/Guadalinfo2018_Cordoba_Robot_Lona_Tuevent.jpg');
+    }
+    100% {
+        background-image: url('../images/eventos/CongresoGepac_Stand_Gepac_Kolors2018_1_-ce79939f.JPG');
+    }
 }
 
 .eventos-hero-title {
-    font-size: 40px;
-    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
     margin-bottom: 30px;
+    text-transform: none;
+    letter-spacing: -1px;
 }
 
 .btn-dossier {
+    font-family: 'Montserrat', sans-serif;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+    background: white;
+    color: black;
+    border: 1px solid rgb(73, 73, 73);
     padding: 12px 30px;
     font-size: 16px;
-    text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .btn-dossier:hover {
-    background: white;
+    opacity: 0.8;
+    border-color: white;
     color: black;
 }
 
 .eventos-intro-section {
     padding: 60px 20px;
     text-align: left;
-    max-width: 800px;
+    max-width: 960px;
+    position: relative;
     margin: 0 auto;
+    width: 100%;
 }
 
 .intro-strong {
@@ -2591,8 +2648,10 @@ h6 {
 }
 
 .eventos-intro-section p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: 'Montserrat', "Montserrat Fallback";
+    color: rgba(64, 64, 64, 1);
+    font-size: 20px;
+    line-height: 150%;
     margin-bottom: 15px;
 }
 
@@ -2602,12 +2661,15 @@ h6 {
 }
 
 .quote-text {
+    color: rgba(64, 64, 64, 1);
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 40px;
-    max-width: 900px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid rgba(64, 64, 64, 1);
+    padding: 20px;
 }
 
 .on-360 {
@@ -4173,4 +4235,202 @@ h6 {
 
 body.modal-open {
     overflow: hidden;
+}
+
+/* -- SECCIÓN DE Servicios de Eventos -- */
+
+.servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 80px 120px;
+    padding: 80px 40px;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.servicio-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    background-repeat: no-repeat !important;
+    background-size: 140px auto !important;
+    background-position: 0px 0px !important;
+    padding-left: 180px !important;
+    min-height: 160px;
+    background-color: transparent !important;
+}
+
+.servicio-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.servicio-texto h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+    color: #000;
+}
+
+.servicio-texto p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(115, 113, 113);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .servicios-contenedor {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+.seccion-servicios-completa {
+    padding: 60px 4%;
+    background-color: #ffffff;
+}
+
+.titulo-servicios {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #000;
+}
+
+.servicios-grid-principal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 60px 40px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.servicio-card {
+    display: flex;
+    align-items: flex-start;
+    background-repeat: no-repeat !important;
+    background-size: 110px auto !important;
+    background-position: left 5px !important;
+    padding-left: 130px !important;
+    min-height: 120px;
+}
+
+.servicio-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: #000;
+    line-height: 1.2;
+}
+
+.servicio-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsivo: 2 columnas en tablets y 1 en móviles */
+@media (max-width: 1100px) {
+    .servicios-grid-principal {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-grid-principal {
+        grid-template-columns: 1fr;
+    }
+    .servicio-card {
+        background-position: center top !important;
+        padding-left: 0 !important;
+        padding-top: 130px !important;
+        text-align: center;
+    }
+}
+
+/* -- SECCIÓN DE GALERÍA DE EVENTOS -- */
+.galeria-mosaico {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.mosaico-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.evento-item {
+    position: relative;
+    flex: 1 0 25%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.evento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.cuadrado-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    transition: all 0.4s ease;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.cuadrado-central h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.evento-item:hover img {
+    transform: scale(1.1);
+}
+
+.evento-item:hover .cuadrado-central {
+    background-color: rgba(255, 204, 0, 0.85);
+}
+
+@media (max-width: 1200px) {
+    .evento-item {
+        flex: 1 0 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .evento-item {
+        flex: 1 0 100%;
+        height: 350px;
+    }
 }
