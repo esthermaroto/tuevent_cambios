@@ -3831,3 +3831,109 @@ h6 {
 }
 
 /* P&aacute;gina Aviso Legal */
+
+/* Collage Fotos */
+
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0; 
+    padding: 0;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.foto {
+    position: relative;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.item-grande {
+    grid-row: span 2;
+}
+
+.item-largo {
+    grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+    .collage-container {
+        grid-template-columns: 1fr;
+    }
+    .item-grande, .item-largo {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
+
+.proyecto-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyecto-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+}
+
+.boton-enlace {
+    background-color: #d4a000;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* EFECTOS AL PASAR EL RATÓN */
+.proyecto-container:hover img {
+    transform: scale(1.1);
+    filter: opacity(0.5);
+}
+
+.proyecto-container:hover .overlay-link {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.proyecto-container:hover .boton-enlace {
+    opacity: 1;
+    transform: scale(1);
+}
