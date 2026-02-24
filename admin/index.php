@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // admin/index.php
 session_start();
 if (!isset($_SESSION['admin_logged_in'])) {
@@ -33,7 +33,7 @@ $posts = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Blog - Admin</title>
+    <title>Gesti&oacute;n de Blog - Admin</title>
     <style>
         :root { --primary: #f39c12; --dark: #2c3e50; --light: #ecf0f1; }
         body { font-family: sans-serif; background: #f4f7f6; margin: 0; padding: 0; }
@@ -56,7 +56,7 @@ $posts = $stmt->fetchAll();
         <h1>Panel Blog</h1>
         <div>
             <span>Hola, <?php echo htmlspecialchars($_SESSION['admin_user']); ?></span>
-            <a href="logout.php" class="btn btn-logout">Cerrar Sesión</a>
+            <a href="logout.php" class="btn btn-logout">Cerrar Sesi&oacute;n</a>
         </div>
     </header>
     <div class="container">
@@ -69,7 +69,7 @@ $posts = $stmt->fetchAll();
                 <tr>
                     <th>Fecha</th>
                     <th>Imagen</th>
-                    <th>Título</th>
+                    <th>T&iacute;tulo</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -85,13 +85,13 @@ $posts = $stmt->fetchAll();
                     <td><?php echo htmlspecialchars($post['titulo']); ?></td>
                     <td class="actions">
                         <a href="post_edit.php?id=<?php echo $post['id']; ?>" class="btn btn-edit">Editar</a>
-                        <a href="index.php?delete=<?php echo $post['id']; ?>" class="btn btn-delete" onclick="return confirm('¿Seguro que quieres eliminar este post?')">Eliminar</a>
+                        <a href="index.php?delete=<?php echo $post['id']; ?>" class="btn btn-delete" onclick="return confirm('&iquest;Seguro que quieres eliminar este post?')">Eliminar</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
                 <?php if (empty($posts)): ?>
                 <tr>
-                    <td colspan="4" style="text-align: center;">No hay entradas aún.</td>
+                    <td colspan="4" style="text-align: center;">No hay entradas a&uacute;n.</td>
                 </tr>
                 <?php endif; ?>
             </tbody>
@@ -99,3 +99,5 @@ $posts = $stmt->fetchAll();
     </div>
 </body>
 </html>
+
+

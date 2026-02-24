@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // post.php
 require_once 'includes/db.php';
 
@@ -21,8 +21,8 @@ $footer = file_get_contents('includes/footer.html');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($post['titulo']); ?> - Blog Tuevent</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .post-container {
             max-width: 900px;
@@ -85,7 +85,7 @@ $footer = file_get_contents('includes/footer.html');
     <?php echo $header; ?>
 
     <main class="post-container">
-        <a href="blog.php" class="back-link">← Volver al blog</a>
+        <a href="blog.php" class="back-link">Volver al blog</a>
         
         <header class="post-header">
             <div class="post-meta"><?php echo date('d / m / Y', strtotime($post['fecha_publicacion'])); ?></div>
@@ -103,7 +103,8 @@ $footer = file_get_contents('includes/footer.html');
 
     <?php echo $footer; ?>
     
-    <script src="js/jquery.min.js"></script>
-    <script src="js/navigation.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </body>
 </html>
+
