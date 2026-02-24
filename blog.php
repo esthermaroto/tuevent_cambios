@@ -17,8 +17,7 @@ $footer = file_get_contents('includes/footer.html');
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <?php echo $header; ?>
@@ -45,14 +44,14 @@ $footer = file_get_contents('includes/footer.html');
                     <div class="blog-entry-date"><?php echo date('d/m/Y', strtotime($post['fecha_publicacion'])); ?></div>
                     <h2 class="blog-entry-title"><?php echo htmlspecialchars($post['titulo']); ?></h2>
                     <div class="blog-entry-excerpt"><?php echo $excerpt; ?></div>
-                    <span class="btn-read-more">Ver m&aacute;s â†&rsquo;</span>
+                    <span class="btn-read-more">Ver más </span>
                 </div>
             </a>
         <?php endforeach; ?>
 
         <?php if (empty($posts)): ?>
             <div style="text-align: center; width: 100%; padding: 100px 0;">
-                <h3>Pr&oacute;ximamente nuevas entradas...</h3>
+                <h3>Proximamente nuevas entradas...</h3>
             </div>
         <?php endif; ?>
     </main>

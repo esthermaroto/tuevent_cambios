@@ -85,7 +85,7 @@ $footer = file_get_contents('includes/footer.html');
     <?php echo $header; ?>
 
     <main class="post-container">
-        <a href="blog.php" class="back-link">â† Volver al blog</a>
+        <a href="blog.php" class="back-link">Volver al blog</a>
         
         <header class="post-header">
             <div class="post-meta"><?php echo date('d / m / Y', strtotime($post['fecha_publicacion'])); ?></div>
