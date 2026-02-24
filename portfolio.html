@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Tuevent</title>
     <meta name="description" content="Portfolio de proyectos llevados a cabo por Tuevent">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=1770315462">
-    
-    <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
 
-        /* --- Hero Section --- */
-        .portfolio-hero-section {
-            padding: 70px 20px 40px;
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* =============================================
+           HERO SECTION (equivalente a u_1623003300 + u_1621696814)
+           ============================================= */
+        .dmRespRow {
+            width: 100%;
+        }
+
+        .u_1623003300 {
+            padding: 70px 20px 10px;
             text-align: center;
             background: #fff;
         }
-        
-        /* --- Portfolio Grid Section --- */
-        .portfolio-grid-section {
+
+        .u_1621696814 {
+            padding: 40px 20px 60px;
+            text-align: center;
+            background: #fff;
+            line-height: 1.3;
+        }
+
+        /* =============================================
+           GRID DE TARJETAS (fullBleedMode rows)
+           ============================================= */
+        .dmRespRowsWrapper {
             width: 100%;
             background: #000;
         }
 
-        .portfolio-grid {
+        .fullBleedMode .dmRespColsWrapper {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
         }
 
-        /* TARJETAS */
-        .portfolio-card {
+        /* TARJETA (equivalente a dmRespCol hasBackgroundOverlay medium-6 large-6) */
+        .dmRespCol.hasBackgroundOverlay {
             position: relative;
-            width: 50%; 
-            height: 525px; 
+            width: 50%;
+            height: 525px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -43,41 +66,47 @@
             background-color: #000;
         }
 
-        /* CAPA DE IMAGEN (Para que el gris no afecte al botón) */
-        .portfolio-card::before {
+        /* CAPA DE IMAGEN en escala de grises */
+        .dmRespCol.hasBackgroundOverlay::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: inherit; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: inherit;
             background-size: cover;
             background-position: center;
-            filter: grayscale(100%); 
+            filter: grayscale(100%);
             z-index: 1;
             transition: transform 0.5s ease;
         }
 
         /* Overlay oscuro para legibilidad */
-        .portfolio-card::after {
+        .dmRespCol.hasBackgroundOverlay::after {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.25); 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
             z-index: 2;
         }
 
-        /* CONTENEDOR DE LA CAJA */
-        .button-wrapper {
+        /* CONTENEDOR DEL BOTÓN (equivalente a dmWwr) */
+        .dmWwr {
             position: relative;
-            z-index: 3; 
-            width: 320px; 
+            z-index: 3;
+            width: 320px;
             height: 290px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        /* LA CAJA DEL NOMBRE */
-        .portfolio-card-button {
+        /* BOTÓN / ENLACE (equivalente a dmButtonLink dmOnlyButton) */
+        .dmButtonLink {
             width: 100%;
             height: 100%;
             display: flex;
@@ -87,8 +116,8 @@
             box-sizing: border-box;
             color: #ffffff !important;
             text-decoration: none;
-            font-weight: 700; 
-            font-size: 45px;  
+            font-weight: 700;
+            font-size: 45px;
             line-height: 1.1;
             text-align: center;
             transition: all 0.3s ease;
@@ -96,89 +125,210 @@
             border: 0px solid transparent;
         }
 
-        .portfolio-card-button:hover {
-            background-color: #eeb50080 !important; 
+        .dmButtonLink:hover {
+            background-color: #eeb50080 !important;
             color: #ffffff !important;
             transform: scale(1.05);
         }
 
-        /* Desfase visual */
-        .portfolio-card:nth-child(odd) .button-wrapper { transform: translateX(-15px); }
-        .portfolio-card:nth-child(even) .button-wrapper { transform: translateX(15px); }
+        /* Desfase visual alternado */
+        .dmRespCol.hasBackgroundOverlay:nth-child(odd) .dmWwr {
+            transform: translateX(-15px);
+        }
 
-        /* Responsive */
+        .dmRespCol.hasBackgroundOverlay:nth-child(even) .dmWwr {
+            transform: translateX(15px);
+        }
+
+        /* =============================================
+           RESPONSIVE
+           ============================================= */
         @media (max-width: 768px) {
-            .portfolio-card { width: 100%; height: 450px; }
-            .button-wrapper { width: 220px; height: 220px; transform: none !important; }
-            .portfolio-card-button { font-size: 24px; }
+            .dmRespCol.hasBackgroundOverlay {
+                width: 100%;
+                height: 450px;
+            }
+
+            .dmWwr {
+                width: 220px;
+                height: 220px;
+                transform: none !important;
+            }
+
+            .dmButtonLink {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="common-header"></div>
 
-    <section class="portfolio-hero-section">
-        <div style="text-align: center; margin-bottom: -8px;">
-            <span style="color: rgb(0, 0, 0); font-size: 30px; font-weight: 200;">Algunos de nuestros eventos te están esperando</span>
-        </div>
-        <div style="text-align: center;">
-            <span style="font-size: 36px; font-weight: 800; color: rgb(238, 181, 0);">¿Por qué no pasas y les echas un vistazo?</span>
-        </div>
-        <div style="margin-top: 100px; line-height: 1.3;">
-            <div style="text-align: center;"><span style="font-weight: 300; font-size: 35px; color: rgb(64, 64, 64);">Nuestros proyectos </span></div>
-            <div style="text-align: center;"><span style="font-weight: 400; font-size: 48px; color: rgb(64, 64, 64);">son el resultado </span></div>
-            <div style="text-align: center;"><span style="font-weight: 600; font-size: 34px; color: rgb(64, 64, 64);">de todo en lo que creemos: </span></div>
-            <div style="text-align: center;">
-                <span style="font-weight: 900; font-size: 60px; color: rgb(107, 107, 107);">_TUS </span>
-                <span style="font-weight: 900; font-size: 60px; color: #eaaf0a;">IDEAS</span>
+    <!-- ================================================
+         HERO: "Algunos de nuestros eventos..."
+         Equivalente a u_1623003300 dmRespRow
+         ================================================ -->
+    <div class="dmRespRow u_1623003300">
+        <div class="dmRespColsWrapper" id="1764604397">
+            <div class="dmRespCol large-12 medium-12 small-12" id="1806406566">
+                <h3 class="dmNewParagraph" data-element-type="paragraph">
+                    <div style="text-align: center;">
+                        <span style="color: rgb(0, 0, 0); font-size: 30px; font-weight: 200;">Algunos de nuestros
+                            eventos te están esperando</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 36px; font-weight: 800;">
+                            <font style="color: rgb(238, 181, 0);">¿Por qué no pasas y les echas un vistazo?</font>
+                        </span>
+                    </div>
+                </h3>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="portfolio-grid-section">
-        <div class="portfolio-grid">
-            <div class="portfolio-card" style="background-image: url('images/biotech.jpg');">
-                <div class="button-wrapper">
-                    <a href="portfolio/biotech-open-innovation.html" class="portfolio-card-button">Biotech Open Innovation</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/feria-corredor.jpg');">
-                <div class="button-wrapper">
-                    <a href="feria-del-corredor-granada-2019.html" class="portfolio-card-button">Feria del Corredor</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/salon-estudiantil/paraninfo.jpg');">
-                <div class="button-wrapper">
-                    <a href="salon-estudiantil-universidad-granada.html" class="portfolio-card-button">IV Salón Estudiantil UGR</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/guadalinfo.jpg');">
-                <div class="button-wrapper">
-                    <a href="guadalinfo-en-ruta.html" class="portfolio-card-button">Guadalinfo en ruta</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/vinoble.jpg');">
-                <div class="button-wrapper">
-                    <a href="vinoble-2018.html" class="portfolio-card-button">Salón Internacional de Vinos Nobles</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/sabor-granada/showcooking-2.jpg');">
-                <div class="button-wrapper">
-                    <a href="sabor-granada.html" class="portfolio-card-button">Sabor Granada</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/gepac/stand-gepac.jpg');">
-                <div class="button-wrapper">
-                    <a href="congreso-gepac.html" class="portfolio-card-button">CONGRESO GEPAC</a>
-                </div>
-            </div>
-            <div class="portfolio-card" style="background-image: url('images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');">
-                <div class="button-wrapper">
-                    <a href="sabor-granada-andalucia.html" class="portfolio-card-button">Sabor Granada en Andalucía Sabor</a>
-                </div>
+    <!-- ================================================
+         HERO: "Nuestros proyectos son el resultado..."
+         Equivalente a u_1621696814 dmRespRow fullBleedMode
+         ================================================ -->
+    <div class="dmRespRow u_1621696814 fullBleedChanged fullBleedMode" style="text-align: center;">
+        <div class="dmRespColsWrapper" id="1692313489">
+            <div class="dmRespCol small-12 medium-12 large-12 u_1966921612" id="1966921612">
+                <h3 class="dmNewParagraph" data-element-type="paragraph">
+                    <div style="text-align: center;">
+                        <div style="text-align: center;">
+                            <span style="font-weight: 300; font-size: 35px; color: rgb(64, 64, 64);">Nuestros
+                                proyectos&nbsp;</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="font-weight: 400; font-size: 48px; color: rgb(64, 64, 64);">son el
+                                resultado&nbsp;</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="font-weight: 600; font-size: 34px; color: rgb(64, 64, 64);">de todo en lo que
+                                creemos:&nbsp;</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="font-weight: 900; font-size: 60px;">
+                                <font style="color: rgb(107, 107, 107);">_TUS</font>&nbsp;<font color="#eaaf0a">IDEAS
+                                </font>
+                            </span>
+                        </div>
+                    </div>
+                </h3>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- ================================================
+         GRID DE PROYECTOS
+         Equivalente a dmRespRowsWrapper + filas fullBleedMode
+         ================================================ -->
+    <div class="dmRespRowsWrapper">
+
+        <!-- Fila 1: Biotech + Feria del Corredor (u_1957668110) -->
+        <div class="dmRespRow fullBleedChanged fullBleedMode u_1957668110" style="text-align: center;" id="1957668110">
+            <div class="dmRespColsWrapper" id="1598744562">
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1148740992 hasBackgroundOverlay"
+                    style="background-image: url('images/biotech.jpg');" id="1148740992">
+                    <div class="dmWwr" id="1236601114">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="portfolio/biotech-open-innovation.html">
+                            <span class="text">Biotech Open Innovation</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1551983719 hasBackgroundOverlay"
+                    style="background-image: url('images/feria-corredor.jpg');" id="1551983719">
+                    <div class="dmWwr" id="1684232794">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="feria-del-corredor-granada-2019.html">
+                            <span class="text">Feria del Corredor</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Fila 2: Salón Estudiantil + Guadalinfo (u_1110864883) -->
+        <div class="dmRespRow fullBleedChanged fullBleedMode u_1110864883" style="text-align: center;" id="1110864883">
+            <div class="dmRespColsWrapper" id="1227098643">
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1681267031 hasBackgroundOverlay"
+                    style="background-image: url('images/salon-estudiantil/paraninfo.jpg');" id="1681267031">
+                    <div class="dmWwr" id="1589298981">
+                        <a class="dmButtonLink dmOnlyButton align-center"
+                            href="salon-estudiantil-universidad-granada.html">
+                            <span class="text">IV Salón Estudiantil UGR</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1245532578 hasBackgroundOverlay"
+                    style="background-image: url('images/guadalinfo.jpg');" id="1245532578">
+                    <div class="dmWwr" id="1363147026">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="guadalinfo-en-ruta.html">
+                            <span class="text">Guadalinfo en ruta</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Fila 3: Vinoble + Sabor Granada (u_1405350576) -->
+        <div class="dmRespRow fullBleedChanged fullBleedMode u_1405350576" style="text-align: center;" id="1405350576">
+            <div class="dmRespColsWrapper" id="1572237574">
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1667432837 hasBackgroundOverlay"
+                    style="background-image: url('images/vinoble.jpg');" id="1667432837">
+                    <div class="dmWwr" id="1589472962">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="vinoble-2018.html">
+                            <span class="text">Salón Internacional de Vinos Nobles</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1564382787 hasBackgroundOverlay"
+                    style="background-image: url('images/sabor-granada/showcooking-2.jpg');" id="1564382787">
+                    <div class="dmWwr" id="1775855977">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="sabor-granada.html">
+                            <span class="text">Sabor Granada</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Fila 4: GEPAC + Sabor Andalucía (u_1199252834) -->
+        <div class="dmRespRow fullBleedChanged fullBleedMode u_1199252834" style="text-align: center;" id="1199252834">
+            <div class="dmRespColsWrapper" id="1913160523">
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1617552653 hasBackgroundOverlay"
+                    style="background-image: url('images/gepac/stand-gepac.jpg');" id="1617552653">
+                    <div class="dmWwr" id="1050224978">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="congreso-gepac.html">
+                            <span class="text">CONGRESO GEPAC</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dmRespCol small-12 medium-6 large-6 u_1764543810 hasBackgroundOverlay"
+                    style="background-image: url('images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');"
+                    id="1764543810">
+                    <div class="dmWwr" id="1388249588">
+                        <a class="dmButtonLink dmOnlyButton align-center" href="sabor-granada-andalucia.html">
+                            <span class="text">Sabor Granada en Andalucía Sabor</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div><!-- fin dmRespRowsWrapper -->
 
     <div id="common-footer"></div>
 
@@ -186,4 +336,5 @@
     <script src="js/load-common.js"></script>
     <script src="js/navigation.js"></script>
 </body>
+
 </html>
