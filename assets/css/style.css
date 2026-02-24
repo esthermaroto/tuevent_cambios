@@ -2172,6 +2172,48 @@ h6 {
     border-left: 5px solid #c62828;
 }
 
+/* Home Page Contact Form Section */
+.form-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.form-title h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.form-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+#contactFormIndex input[type="email"] {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contactFormIndex input[type="email"]:focus {
+    border-color: var(--color-primary);
+}
+
 /* Footer Precision Styling */
 .precision-footer {
     background: #1a1a1a;
@@ -2440,6 +2482,177 @@ h6 {
 .section-bg-guadalinfo {
     background-image: url('../images/guadalinfo.jpg') !important;
 }
+
+/* Eventos Services Backgrounds */
+.section-bg-proveedores {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/PROVEEDORES-1920w.jpg?Expires=1773737150&Signature=Yk1HHwA7MnsJZX0PmXCZ~ARdYRKhNK2fDieAdQ5azvIb0zqDK5PzRTFoTOweP~h3bMBHc~YUp2TtTT2LfgwcF9KaoA9yqXHrY26ezX1ZvVoeRVk5RECMDYbbT9g85bXoj1d0DPwOOA88KWkDfIqkxCGxw4S0kV53GztDxqYeW6oIX9-QBieu9dUVwldV7RM1KccrG4njFTLbCSCjr-27DvkrdH9PlGSyU7C1V2ZxUS1ENIJ0bWSmul0Msh16Gbg-OB~S~cAwo89kCSaGeSoTALVaPaiIkzPFo1pBPXg2ny9Qzo1F6WHIS0CkiljfjLUAS2wZp7dDpl7cxEmitZlFMQ__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-marketing {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/Marketing+ferial-1920w.jpg?Expires=1773737150&Signature=PtbKz5-nfm1~gPh7CEbPalovKThfH5MYGJ43FS37CKX~oO8pDXvHtUkL83YZcKZEIgg8Q7SWDOUU5BEMAoRSSd90mh7vpo9dZtWOxyz8kWQ8pNhvatKvbR-72kVrtrwhghJ0XrhhsFrochoyjqotVW5Y9x97O9G2G9vhpqL7~TA5LQm6d4vMWllW2rVC-Nn6xfGj5WIBo3jyj2HKJcXPvBoxJLKhTIlptQ5S8ro67VORC5C6N7Kg-gEv7eAgH-nH-ujwlIaJ10oKTaNh~2U0rjes6YT4WLuoe5fHzbyvdHv~Te1nW8XmRoDjJWaTuzYYUvZ4VJUZ9BYyvGj3cAAOYg__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-cientifica {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/AREA+CIENTIFICA-1920w.jpg?Expires=1773737150&Signature=Bc1vtZhsg0e656SP6cLa4NBvkr15W725pPwP26g8zdwNc8CO9foVal19Pft6uAEmCoQMiPP41J5Pqsrb3ht7fMdQmO0y4Cylr76J6xWlPmQNBcq6mgnAhCmjx5CKF-jpbQXPwz6bEw0GNV0KdbVRsMwd3tfvVbNcQdIcswepOsr5pE2ikQGOVtwddHWzQPPh61iFhauCAXfzvKXVHj43NfYJ9hKZJSGmg9VGSKoI5G13b0j3CTRc-RX2k4EyUHPKEc6dEibFOB1aWy9oOL6jqOVVtSy-mg8fAD3y4sivrm2tSRWIarZymqbm1o12W2E4vOGYUftpndofci3f4sbn5A__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-asistentes {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/GESTION+ASISTENTES-1920w.jpg?Expires=1773737150&Signature=tQ9IBvEnRJLucqiBBW-tY0Wv6u0C6mZLuqb6hQII~3WI9AIP1tSnO31B~ITxWoL-EYxtD3ifANNzQWKrCgIaP31U6d-HCQCLOPt~ZR0IQtQJOQpaZJkHWf7jGQoTqRqKhAY7rbwTrDCtYYNO39KN~dxkcP55CX9vCSweQw1lf1HzcayzOadmn7vmi-Ls3NvflMDL4frWCC8IxdeoD810fdWWwQDTxbvKdXju9KvzhPYk90~Ttugn6BQpacww7Lzw39DtCT7Aiqh24IiTXc-5dMgNECZ-qU8v66OE6h~gk5RYIy5meFnGVwE5a5~Cs2kVTjanQwP9vUVqn28l2g-7Hw__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-exposicion {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/EXPOSICI%C3%93N+COMERCIAL-1920w.jpg?Expires=1773737150&Signature=loG-80aOTAJrum~r3RFbvhv7nO-r7n33SF0ktXu7uMm8YYZ6ek~IwTbuheOhUyscqKzpBWE6A9qRBw7S424L23sBJPAnVSxmGqgUKGBnL2EU1X4cXmtiVKIAnqJmpmwOyM5Uoz9QhkRQA~iC7KSlqPo0n5rFHBetIFDuaQnh2fsHeM5gaZXiABb~mlL2sztUAmk~YA8cpRBDfab3EPJntsItHASYDt~8LqdrUskRRruN3Nxi7x-wPVdeSNR6F61MOagWKJJUmQXxC1P7mO~t2WlQhF8kMJoYZaRK6sjtNxW7HsMWQad2fQlvbI6XvI0e~rFQlOMpjdco1ZiYjWgh1Q__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-desarrollo {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/DISE%C3%91O+Y+DESARROLLO+WEB-1920w.jpg?Expires=1773737150&Signature=R6YVrHLbwnmlJuqCBCxV1rbW5aI6dPPlnaKPUSDwUmzv2BX2WU1G8eRvlzcIHI36wYf358HqXpXh7UhopzuDnE0AD5MQAoDvNzjDbsYK7~R7RUFXRR3nRVCyqu131LXj0PMlKH1bYMvpVKGYTdAqgLeZPBeDTEW7Ok3fFSrBXbvIjGbg7d9h16W7kwgZzhHyxr15JA-4u7ca83hzqC3IaLlnkd4GfK9CTZ1onwXKmHYzcLF1eitvaJzLi0fhdzOjkzTyYtyjroAL7fYffc2TDxf4RzJhULM9Pq26Wogz02pl4L4nkaO610onnSWL1GeqcVpNpiHhZv9G5UlCaxyiDw__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-protocolo {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/PROTOCOLO+Y+RELACIONES+INSTITUCIONALES-1920w.jpg?Expires=1773737150&Signature=K7Ojin9y7t0P3-vh8KX~8ZG~YXAZD9NH6Hj6N9FHOPKkW7ub5ggzu0U3x4lXOyIydwumWj2mlCl9zTliEIUaaNOskpLx8i3T9AWSkfVBC91-2UNLRnSpSgTxH-y~IgSBgx~swKMULUL3KDr3wne5zzWvVuTYwYlyN64k4VZiB1xqXwqX9-4aqv8Rn6MtqS4n5nlxSY-KfvBBh33XmwKGCcZ4jgCQBvckzr~VqOUsuxLlXeC4KbY8ikEjZx-daSFaTZ1omEiRHr8McldqLMDL1qfVZRCVFHUcrTnGGSRrekgfsJMZeX9yeFXzDFUHolA2-Bg775w9dICuZIbN3iWSvg__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-incentivos {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/EVENTOS+DE+INCENTIVOS-1920w.jpg?Expires=1773737150&Signature=UI9vZYOT6~KuJTuxATGObgghIqU4Z6skU7Dn~BcXHBP35B3meI9F1Os5jhRR5fT83VQfSM9PA5kikqAB9yAX8KIg-3fi8a49VTlnrMzAqq2W~JQEXW32foeSgr4pzD33-iiavFCeZPSzDt515zZCBj29Cx6aoYPYDMUVc0pKcdnZW5e5e2bB0CgvJh5QmGv1OFs3TXgpgWMJO5cNEVDNpDpoaRcJ3rpX7ZrZNDEP565vptiWHkt7DPlgVo43oFmati8f7Kgn-uoZB8BKFMtXweLw9qG7Gtn7~toVR7U7laX0iVXXWTIBIfw5EeILSsa~nf83C3hTqV4lcPpq8DefvA__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-tecnologia {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/TECNOLOGIA+APLICADA-1920w.jpg?Expires=1773737150&Signature=Tige1exN~k3-UdZOWrunaHTpWNyvCs2KfvFJ5obRYzRGQ8nacV0r1vF729OpdLblklxRpzDRe6QoJlOomJkn5~nJ8B8Nmtilbw5MugzM-ygCLx9HWgbKWmDFiTordAEWwRQYhqaYp7Piu46qQ3ReIDNuL1sJNfPwzD0DyRlLo6s4s8JJS2R4flutRjLtZol0kVfvloLWZCM4-VI4nNGi7LMm37ssAaKj3pMVMQqs0~X-IFYSPri4saUXFtz6Sgr6XONSBpQI2H0-8k0iA8wkZa8MKrFPzKaDWKVSRgylq0YU1OPi32FX6fr4Xb1gP8VULwPVNoCj7T3yUHqDplNtzA__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-audiovisual {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/PRODUCCI%C3%93N+AUDIOVISUAL-1920w.jpg?Expires=1773737150&Signature=rlVhhzrQ6y2qOCin59fiDfT34PR-Y5OiKf7BVm6Aa5~dv-bacPWrOMKT6p3umlWXgJVlJ6wGflH5WWgmKsXuiMrGCS1uqLbVLTfYw5nd7kLuUERt6WmQZBGrS6Jb66AIGAji3oYKw5ueONPnGm0JNXyBolgFA5c4yGFfHYJoSEGFDhr-YxR-PidXQvRCjL6Gcmr~oANDYFW2b6SDWHhgr9wW0CF5nl53HhaA~O4f92H68CJJ1Wz790cYD-YzCvLLjkG-sQURHerpPort63DCkIxY~kTbJbk16pwYcYHR~Dkr5DN7DbV1jibqCfxInIKD9MhxHXaWRtvWWn-3AOhb-g__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-presupuestario {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/CONTROL+PRESUPUESTARIO-1920w.jpg?Expires=1773737150&Signature=Y2PtslZ2zX8klztHGg2HHUlQth0QvarYmI3OsHJ857ODOOGfytdwPExjmLdRXMkfzslF0ccFOTzrBMl2uOuTh024~89k2M0UfDbUQAQzl~AXJnjDFotvDohS716~qR3VjOEUhEMuTmS5qB5iInNBGx9vRmyAdPU1spxNOQDVRId28uKR28g2U9yIGloZSxX7jar8dnpS7chOQgc3sVpCX4zSCvMTPuZaG3PwuyQtr1t1QWOQpS2UAQwUH~rzNLcTpumZ39KiqriyrGe2tBWtS5cvchrGmUdX-0NmZbUv3BswVRWllk8rLG50h7rMelhJiq8vvfxNBEKLHdMi7IUcTQ__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-logistica {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/LOG%C3%8DSTICA-1920w.jpg?Expires=1773737150&Signature=KKv3-kox65-5GWXfh1rinWi~RViGJKh4-SDYP0aceaOx-yL7Hkr2g6dK8T-qpLkHLK6iy0uH2UkTbg~iGBnorxycltIkiuCj2TAFDksodB6WF36UWC6iNgsIqFy0nNaZ03wFnwrHy9YoMv5mlc3H1t7LO26cRMOZ88urCwvnbvdPyeoe0ZY5IdSQtGXHdLrfEBd~~W6vV1TynUfaQtGbJItXCiWZVcwlwywUYS7fMrNJnPiG~EaGddsRg5T07Uswbnnrq5oPyycgbuQKsmzYam1CHDx4JIGgulkOGaEToY8zc-J26~pma9iP6-9qXW2jiSV7Q7Hen4mhiAsdufjx0g__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-dmc {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/WRRT6134-1920w.JPG?Expires=1773737150&Signature=PtCvCVb81U8LqiFNA4DNwMEiXzDXYG1DkG27GhO4ZTmdfTjm1VV~wuYwPIH2PEkaxobshlkavtEo9CXQMbFoGMjotCHAMT5lHFtdmqymiArj4O1gr1bh-WgJbtDpLPDMw-j4~aopDVvy4G8ccx-aMjHCzRDHYzRZWL60d06G4WJ0AxICzZ3dDqOCIOm8rb05U7Gk6HpxlJr7u64hH30kUPEsY8uqUIP1jXmwyK50nRx466tmW6z1eDuox-6YRxOu5rJrXfC9hgUabouumaEcxYKMtCBLHA7e8HVplDQ4m3WvGA2-7InNY-4OA2MXVB-pKIRVThWg6oHk5vDDebV5cA__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+.section-bg-produccion-integral {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/PROTOCOLO+Y+RELACIONES+INSTITUCIONALES-1920w.jpg?Expires=1773737150&Signature=K7Ojin9y7t0P3-vh8KX~8ZG~YXAZD9NH6Hj6N9FHOPKkW7ub5ggzu0U3x4lXOyIydwumWj2mlCl9zTliEIUaaNOskpLx8i3T9AWSkfVBC91-2UNLRnSpSgTxH-y~IgSBgx~swKMULUL3KDr3wne5zzWvVuTYwYlyN64k4VZiB1xqXwqX9-4aqv8Rn6MtqS4n5nlxSY-KfvBBh33XmwKGCcZ4jgCQBvckzr~VqOUsuxLlXeC4KbY8ikEjZx-daSFaTZ1omEiRHr8McldqLMDL1qfVZRCVFHUcrTnGGSRrekgfsJMZeX9yeFXzDFUHolA2-Bg775w9dICuZIbN3iWSvg__&Key-Pair-Id=K2NXBXLF010TJW') !important;
+}
+
+/* Eventos Additional Styling */
+.eventos-hero-section {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/PROTOCOLO+Y+RELACIONES+INSTITUCIONALES-2880w.jpg?Expires=1773737150&Signature=ZVukd7ONMOQk68x25kefZndOZrHQKfqBoAiIFMF3Z0uLJvd8uYxxG8vP8vgGA6XKS2Q6QGylRLSxDLuulDqZDGxn5PGTde0RXfA~E6KQQCrp~EthvEN1Ax78tG5lNpjz~bsH1WpDfJn-kF~avz1REWp7rjZ6GrUi9PjmgRi7OmCvTdyi-v4U1GVtVRzLJCD9bgM0N0-FkOHtGWc03khEbvT0jZOSlvlI25pz8BzIQ1IYv~GEtLskk4p0KfmYoffJp7krUL1hgzaJXTLmUrNjEt0P810g1eiIEfuQn3YZR7gt1niyl1EFipXeavGVg-o~cBwkKJAuQhwokwdEZX3urA__&Key-Pair-Id=K2NXBXLF010TJW');
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+    /* Fallback */
+    background-blend-mode: overlay;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+}
+
+.eventos-hero-title {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.btn-dossier {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-dossier:hover {
+    background: white;
+    color: black;
+}
+
+.eventos-intro-section {
+    padding: 60px 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-strong {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.eventos-intro-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.eventos-quote-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.quote-text {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.on-360 {
+    font-size: 40px;
+}
+
+.font-weight-black {
+    font-weight: 900;
+}
+
+.left-align {
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+}
+
+.services-main-title {
+    font-size: 38px;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.service-card {
+    min-height: 350px;
+}
+
+.dmRespCol.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.content-overlay.left-align h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.text-gray {
+    color: #a9a9a9 !important;
+}
+
+
 
 .text-gray {
     color: #737171 !important;
@@ -3166,7 +3379,9 @@ h6 {
 
 .bg-project-sabor-andalucia {
     background-image: url('../images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');
-}/* ---------------------------------- */
+}
+
+/* ---------------------------------- */
 /* BLOG PAGE LAYOUT (NUEVOS ESTILOS)  */
 /* ---------------------------------- */
 .blog-hero {
@@ -3309,30 +3524,210 @@ h6 {
     border-color: rgba(238, 181, 0, 0.7);
 }
 
+/* Comunicacion Page */
+.comunicacion-hero-section,
+.produccion-hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 245px 40px 15px;
+    text-align: center;
+    color: white;
+}
+
+.comunicacion-hero-section {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/WRRT6134-2880w.JPG');
+}
+
+.produccion-hero-section {
+    background-image: url('https://le-cdn.website-editor.net/s/78591e54e95f4111804b6550648d0bbe/dms3rep/multi/opt/FICZONE-1920w.jpeg');
+}
+
+.comunicacion-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.comunicacion-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.comunicacion-hero-title {
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.comunicacion-intro-section {
+    padding: 80px 20px;
+}
+
+.comunicacion-intro-section .intro-description {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-primary {
+    color: #EEB500;
+}
+
+.text-dark {
+    color: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-light-weight {
+    font-weight: 400;
+}
+
+.intro-highlight {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #737171;
+}
+
+.comunicacion-divider-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.divider-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.comunicacion-gallery-section {
+    padding: 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    width: 100%;
+}
+
+.gallery-item {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    background: rgba(238, 181, 0, 0.5);
+}
+
+.gallery-item-title {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.gallery-item:hover .gallery-item-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.full-width-item {
+    grid-column: 1 / -1;
+}
+
+.half-width-item {
+    grid-column: span 2;
+}
+
+.third-width-item {
+    grid-column: span 1;
+}
+
 /* MEDIA QUERIES (TODO UNIFICADO)     */
 /* ---------------------------------- */
 @media (max-width: 1024px) {
     .blog-hero {
         padding: 120px 0 50px;
     }
+
     .blog-hero h1 {
         font-size: 2.6rem;
     }
+
     .blog-hero p {
         font-size: 1rem;
     }
+
     .blog-container {
         margin: 30px auto 50px;
         gap: 30px;
     }
+
     .blog-entry.regular {
         width: 100%;
     }
+
     .blog-entry-image {
         height: 280px;
     }
+
     .blog-entry-title {
         font-size: 1.9rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .half-width-item {
+        grid-column: span 1;
     }
 }
 
@@ -3340,40 +3735,70 @@ h6 {
     .blog-hero {
         padding: 110px 0 40px;
     }
+
     .blog-hero h1 {
         font-size: 2rem;
     }
+
     .blog-hero p {
         font-size: 0.95rem;
     }
+
     .blog-container {
         margin: 25px auto 40px;
         padding: 0 16px;
         gap: 24px;
     }
+
     .blog-entry.featured,
     .blog-entry.regular {
         width: 100%;
     }
+
     .blog-entry-image,
     .regular .blog-entry-image {
         height: 220px;
     }
+
     .blog-entry-content {
         padding: 22px 18px 24px;
     }
+
     .blog-entry-title {
         font-size: 1.7rem;
     }
+
     .featured .blog-entry-title {
         font-size: 1.9rem;
     }
+
     .blog-entry-excerpt {
         -webkit-line-clamp: 4;
         font-size: 0.95rem;
     }
+
     .btn-read-more {
         font-size: 0.85rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width-item,
+    .half-width-item,
+    .third-width-item {
+        grid-column: 1 / -1;
+    }
+
+    .comunicacion-hero-section,
+    .produccion-hero-section {
+        padding: 180px 20px 15px;
+    }
+
+    .comunicacion-hero-title,
+    .produccion-hero-title {
+        font-size: 36px;
     }
 }
 
@@ -3381,20 +3806,25 @@ h6 {
     .blog-hero {
         padding: 100px 0 35px;
     }
+
     .blog-hero h1 {
         font-size: 1.8rem;
     }
+
     .blog-container {
         margin: 20px auto 30px;
         padding: 0 12px;
     }
+
     .blog-entry-image {
         height: 190px;
     }
+
     .blog-entry-title,
     .featured .blog-entry-title {
         font-size: 1.5rem;
     }
+
     .blog-entry-excerpt {
         -webkit-line-clamp: 5;
     }
