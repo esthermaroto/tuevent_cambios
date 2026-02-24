@@ -4,47 +4,554 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinoble 2018 - Tuevent</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Salón Internacional de los Vinos Nobles - Tuevent</title>
+    <meta name="description" content="Gestión y organización del evento Vinoble 2018 en el Alcázar de Jerez (Cádiz)">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css?v=1770315462">
+
+    <style>
+        body {
+            background-color: #fff !important;
+        }
+
+        /* =============================================
+           HERO
+           ============================================= */
+        .u_1885042527 {
+            padding: 70px 40px 30px;
+            text-align: center;
+            background: #fff;
+        }
+
+        /* Título principal */
+        .u_1321182104 {
+            margin: 0 0 0 0;
+            line-height: 1.2;
+        }
+
+        .u_1321182104 span {
+            font-size: 35px;
+            font-weight: 300;
+            color: #222;
+        }
+
+        .u_1321182104 .subtitle-year {
+            font-size: 60px;
+            font-weight: 700;
+            color: rgb(238, 181, 0);
+            display: block;
+            margin-top: 16px;
+        }
+
+        /* Fecha */
+        .dmNewParagraph.date-paragraph {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0;
+            color: #888;
+            margin: 80px 0 30px 0;
+            text-align: center;
+        }
+
+        /* Descripción breve */
+        .u_1440505187 {
+            font-size: 15px;
+            color: #3f3f3f;
+            max-width: 650px;
+            margin: 0 auto 0px auto;
+            text-align: center;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+
+        /* =============================================
+           SLIDER
+           ============================================= */
+        .slider-wrapper {
+            max-width: 100%;
+            margin: 0 auto 30px auto;
+        }
+
+        .slider-sq {
+            position: relative;
+            width: 100%;
+            height: 525px;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .u_1202658461 {
+            max-width: 100%;
+            margin: 0 auto 30px auto;
+        }
+
+        .flexslider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .flexslider .slides {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100%;
+        }
+
+        .flexslider .slides li {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .flexslider .slides li.flex-active-slide {
+            display: block;
+        }
+
+        /* Flechas del slider */
+        .flex-direction-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-direction-nav li a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: #fff;
+            text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            line-height: 1;
+            z-index: 10;
+            padding: 0 12px;
+            transition: opacity 0.2s;
+        }
+
+        .flex-direction-nav li a:hover {
+            opacity: 0.7;
+        }
+
+        .flex-prev {
+            left: 0;
+        }
+
+        .flex-next {
+            right: 0;
+        }
+
+        /* =============================================
+           CONTENIDO (propuesta de valor, galería, etc.)
+           ============================================= */
+        .content-wrapper {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 60px 0;
+        }
+
+        /* Encabezados de sección */
+        .u_1794567936,
+        .u_1753836395 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #000;
+            margin: 40px 0 0 0;
+            text-align: left;
+        }
+
+        .u_1794567936 font,
+        .u_1753836395 font {
+            color: rgb(238, 181, 0);
+            font-weight: 600;
+        }
+
+        /* Párrafos de contenido */
+        .u_1144088973,
+        .u_1970845985 {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+            margin: 20px 0 0 0;
+            text-align: left;
+        }
+
+        .u_1144088973 a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        /* =============================================
+           GALERÍA — 3 columnas cuadradas con espacio
+           ============================================= */
+        .u_1223532881 {
+            margin: 70px 0 30px 0;
+        }
+
+        .layout-container.square .photogallery-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .photogallery-column.column-3 {
+            flex: 1 1 calc(33.333%);
+            min-width: 0;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image-container a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container a:hover {
+            transform: scale(1.03);
+        }
+
+        /* =============================================
+           LIGHTBOX
+           ============================================= */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 48px;
+            color: #fff;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 10000;
+        }
+
+        .lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+            z-index: 10000;
+            user-select: none;
+        }
+
+        .lightbox-prev {
+            left: 0;
+        }
+
+        .lightbox-next {
+            right: 0;
+        }
+
+        .u_1371711402_container {
+            clear: both;
+        }
+
+        .square-thumb {
+            width: 370px !important;
+            height: 320px !important;
+            margin-bottom: 30px;
+        }
+
+        .square-thumb a {
+            height: 100% !important;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease;
+        }
+
+        .square-thumb a:hover {
+            transform: scale(1.05);
+        }
+
+        .caption-under {
+            text-align: center;
+            padding-left: 0;
+        }
+
+        .caption-title-bottom {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px !important;
+            font-weight: 700 !important;
+            color: #444 !important;
+            line-height: 1.3 !important;
+            margin: 0;
+        }
+
+    </style>
 </head>
 
 <body>
-    <!-- Header com&uacute;n -->
+    <!-- Header común -->
     <div id="common-header"></div>
 
-    <section class="hero-section section-bg-vinoble hero-p-100">
-        <div class="hero-content">
-            <h1 class="hero-title text-white">Vinoble 2018</h1>
-            <p class="font-size-24 mt-20">Evento Gastron&oacute;mico</p>
-        </div>
-    </section>
+    <main style="padding: 0 90px;">
+        <!-- ================================================
+             HERO
+             ================================================ -->
+        <div class="u_1885042527">
+            <h2 class="u_1321182104 dmNewParagraph" id="1321182104">
+                <div style="text-align: center;">
+                    <span style="font-weight: 300;">_El Salón Internacional</span>
+                </div>
+                <div style="text-align: center;">
+                    <span class="subtitle-year">Vinoble 2018</span>
+                </div>
+            </h2>
 
-    <section class="services-section">
-        <div class="dmHeaderResp">
-            <div class="service-item max-w-800">
-                <h2 class="service-title">Proyecto: Vinoble 2018</h2>
-                <div class="service-text">
-                    <p>Organizaci&oacute;n del evento gastron&oacute;mico Vinoble 2018, especializado en vinos dulces
-                        naturales.</p>
-                    <p>Este proyecto incluy&oacute; la gesti&oacute;n completa del evento, desde el dise&ntilde;o de la
-                        identidad visual hasta la producci&oacute;n de todos los elementos necesarios para el evento
-                        gastron&oacute;mico.</p>
+            <h4 class="dmNewParagraph date-paragraph" id="1971690327">
+                <div style="text-align: center;">
+                    <span style="font-weight: 300;">DE 3 AL 5 DE JUNIO</span>
+                </div>
+            </h4>
+
+            <div class="u_1440505187 dmNewParagraph" id="1440505187">
+                <div style="text-align: center;">El Salón Internacional</div>
+            </div>
+        </div>
+
+        <!-- ================================================
+         SLIDER
+         ================================================ -->
+        <div class="u_1202658461 flex-container dmImageSlider dmNoMargin" id="1202658461">
+            <div class="slider-sq">
+                <div class="flexslider" id="1865423228">
+                    <ul class="slides" id="1529219221">
+                        <li class="u_1958005789 dmCoverImgContainer flex-active-slide" id="1958005789"
+                            style="background-image: url('../assets/images/vinoble/vinoble-2.jpg');">
+                        </li>
+                        <li class="u_1323603152 dmCoverImgContainer" id="1323603152"
+                            style="background-image: url('../assets/images/vinoble/carpa-lona.jpg');">
+                        </li>
+                    </ul>
+                    <ul class="flex-direction-nav">
+                        <li><a class="flex-prev" href="#" id="flexPrev">&#8249;</a></li>
+                        <li><a class="flex-next" href="#" id="flexNext">&#8250;</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer com&uacute;n -->
+        <!-- ================================================
+         CONTENIDO
+         ================================================ -->
+        <div class="content-wrapper">
+
+            <h4 class="u_1794567936 dmNewParagraph" id="1794567936">
+                <span style="font-weight: 300; color: rgb(0, 0, 0);">Nuestra</span>
+                <font style="color: rgb(238, 181, 0);">propuesta de valor</font>
+            </h4>
+
+            <div class="u_1144088973 dmNewParagraph" id="1144088973">
+                <div>
+                    <a href="http://www.vinoble.org/node/2/pdf" target="_blank">Vinoble 2018</a>
+                    fue para Tuevent un reto, tuvimos que hacernos cargo de toda la
+                    <span style="font-weight: 600;">gestión, organización y diseño del evento</span>.
+                    Dotamos el <span style="font-weight: 600;">Alcázar del Genil de una personalidad elegante y única
+                        con una gran lona de impresión digital de 15x5 metros.
+                        <span style="font-weight: 400;">Nos hicimos cargo del</span> mobiliario (barriles, vitrinas y
+                        mesas),
+                        el servicio de copas y la traducción.</span>&nbsp;Todo esto, acompañado de sus
+                    <span style="font-weight: 600;">auxiliares y técnicos audiovisuales</span>.
+                </div>
+            </div>
+
+            <!-- Galería 3 columnas -->
+            <div class="u_1223532881 dmPhotoGallery" id="1223532881">
+                <div class="layout-container square">
+                    <div class="photogallery-row">
+
+                        <div class="photogallery-column column-3" data-index="0">
+                            <div class="photoGalleryThumbs animated fadeInUp">
+                                <div class="thumbnailInnerWrapper">
+                                    <div class="image-container">
+                                        <a class="u_1883860982"
+                                            href="../assets/images/vinoble/Vinoble_2018_tuevent_vitrinas.JPG"
+                                            style="background-image: url('../assets/images/vinoble/Vinoble_2018_tuevent_vitrinas.JPG');"
+                                            aria-label="Vinoble 2018 - vitrinas">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="photogallery-column column-3" data-index="1">
+                            <div class="photoGalleryThumbs animated fadeInUp">
+                                <div class="thumbnailInnerWrapper">
+                                    <div class="image-container">
+                                        <a class="u_1425444968"
+                                            href="../assets/images/vinoble/Vinoble2018_tuevent_showcooking.jpg"
+                                            style="background-image: url('../assets/images/vinoble/Vinoble2018_tuevent_showcooking.jpg');"
+                                            aria-label="Vinoble 2018 - showcooking">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="photogallery-column column-3" data-index="2">
+                            <div class="photoGalleryThumbs animated fadeInUp">
+                                <div class="thumbnailInnerWrapper">
+                                    <div class="image-container">
+                                        <a class="u_1413106904"
+                                            href="../assets/images/vinoble/Vinoble2018_tuevent_5.jpg"
+                                            style="background-image: url('../assets/images/vinoble/Vinoble2018_tuevent_5.jpg');"
+                                            aria-label="Vinoble 2018 - imagen 3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="u_1753836395 dmNewParagraph" id="1753836395">
+                <span style="font-weight: 300; color: rgb(0, 0, 0);">El Alcázar del Genil,</span>
+                <font style="color: rgb(238, 181, 0);">un emplazamiento único</font>
+            </h4>
+
+            <div class="u_1970845985 dmNewParagraph" id="1970845985">
+                <div>
+                    Vinoble 2018 cobra toda su esencia gracias al lugar donde está emplazado. El salón trata de darle
+                    <span style="font-weight: 600;">visibilidad a los vinos complejos y especiales</span>
+                    que, pese a ser concebidos como los mejores vinos del mundo, están desplazados por los vinos más
+                    jóvenes y comerciales.
+                </div>
+                <div>
+                    Nuestra misión fue precisamente esa,&nbsp;
+                    <span style="font-weight: 600;">fusionar tradición, espacio, color, sabor, aroma e historia en un
+                        único
+                        evento.</span>
+                </div>
+            </div>
+
+            <div class="u_1371711402_container" style="margin-top: 100px; padding-bottom: 60px;">
+    <h3 class="u_1371711402" style="text-align: center; font-family: 'Montserrat'; font-weight: 700; color: #777; font-size: 22px; margin-bottom: 40px; padding-right: 10%;">
+        Proyectos relacionados
+    </h3>
+
+    <div class="photogallery-row" style="display: flex; justify-content: flex-start;">
+        <div class="photogallery-column column-3" style="width: 370px; flex: none;">
+            <div class="photoGalleryThumbs animated fadeInUp">
+                <div class="thumbnailInnerWrapper">
+                    <div class="image-container square-thumb">                        <a class="u_1799102938" 
+                           style="background-image: url('../assets/images/sabor-granada/showcooking-2.jpg');"
+                           href="/assets/images/sabor-granada/showcooking-2.jpg">
+                        </a>
+                    </div>
+                    
+                    <div class="caption-under" style="text-align: center; padding: 0;">
+                        <h3 class="caption-title-bottom">
+                            Sabor Granada en H&amp;T<br>Sal&oacute;n de Innovaci&oacute;n en hosteler&iacute;a
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer común -->
     <div id="common-footer"></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
 
     <!-- JavaScript -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/load-common.js"></script>
     <script src="../assets/js/navigation.js"></script>
+    <script>
+        (function () {
+            const slides = document.querySelectorAll('.flexslider .slides li');
+            const prevBtn = document.getElementById('flexPrev');
+            const nextBtn = document.getElementById('flexNext');
+            let current = 0;
+            let timer;
+
+            function showSlide(index) {
+                slides.forEach(function (s) { s.classList.remove('flex-active-slide'); });
+                slides[index].classList.add('flex-active-slide');
+            }
+
+            function next() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+
+            function prev() {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            }
+
+            function startAutoplay() { timer = setInterval(next, 7000); }
+            function resetAutoplay() { clearInterval(timer); startAutoplay(); }
+
+            if (prevBtn) prevBtn.addEventListener('click', function (e) { e.preventDefault(); prev(); resetAutoplay(); });
+            if (nextBtn) nextBtn.addEventListener('click', function (e) { e.preventDefault(); next(); resetAutoplay(); });
+
+            startAutoplay();
+        })();
+    </script>
 </body>
 
 </html>
