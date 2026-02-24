@@ -106,10 +106,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Determinar el prefijo de ruta seg&uacute;n la profundidad del directorio actual
     const currentPath = window.location.pathname;
-    const isInSubdir = /\/admin\/|\/portfolio\/|\/maintenance\//.test(currentPath) ||
-        currentPath.startsWith('admin/') ||
-        currentPath.startsWith('portfolio/') ||
-        currentPath.startsWith('maintenance/');
+    // Comprobar si estamos en un subdirectorio (admin, portfolio, maintenance o producci&oacute;n)
+    const isAdmin = /\/admin\/|\\admin\\/.test(currentPath) || currentPath.includes('admin/');
+    const isPortfolio = /\/portfolio\/|\\portfolio\\/.test(currentPath) || currentPath.includes('portfolio/');
+    const isMaintenance = /\/maintenance\/|\\maintenance\\/.test(currentPath) || currentPath.includes('maintenance/');
+    const isProduccion = /[\\/]producci(\u00f3n|%C3%B3n|on)[\\/]/i.test(currentPath) || /^(producci\u00f3n|produccion)[\\/]/i.test(currentPath);
+
+    const isInSubdir = isAdmin || isPortfolio || isMaintenance || isProduccion;
     const pathPrefix = isInSubdir ? '../' : '';
 
     const headerPath = pathPrefix + 'includes/header.html';

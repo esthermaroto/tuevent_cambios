@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="canonical" href="https://www.tuevent.es/impresi%C3%B3n-digital" />
+
+    <title>Impresión Digital, pequeño y gran formato</title>
+    <meta name="keywords" content='"organización de eventos" "agencia de eventos" "impresión digital"' />
+    <meta name="description" content="Servicios de impresión digital de pequeño y gran formato para eventos." />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/images/clonados/FAVICON_TODOS-09.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/clonados/site_favicon_16_1672785771553.ico" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+
+</head>
+
+<body>
+    <!-- Common Header Placeholder -->
+    <div id="common-header"></div>
+
+    <div class="site-content">
+        <!-- Hero Section -->
+        <section class="impresion-hero-section">
+            <div class="hero-slider">
+                <div class="slide active"
+                    style="background-image: url('../assets/images/gepac/CongresoGepac_Stand_Gepac_Kolors2018(1)-ce79939f.JPG')">
+                </div>
+                <div class="slide"
+                    style="background-image: url('../assets/images/clonados/Vinoble2018_Carpa_Lona_Kolors-d49d8398-640w.jpg')">
+                </div>
+                <div class="slide"
+                    style="background-image: url('../assets/images/clonados/imagen_lona_Hotel_Barcelo_Granada-640w.jpeg')">
+                </div>
+            </div>
+            <div class="impresion-hero-overlay"></div>
+            <div class="impresion-hero-content">
+                <h1 class="impresion-hero-title"><b>Impresión Digital, pequeño y gran formato</b></h1>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <div class="about-intro">
+            <p>Disponemos de producción propia, para impresión de <b>pequeño formato</b> (folletos,
+                flyers, dípticos, cartelería) y <b>gran formato</b> (lonas, banderolas, roll ups,
+                banderas...).</p>
+
+            <h2>Impresión Digital</h2>
+            <p>Disponemos de la maquinaria y elementos necesarios para producir todos los <b>complementos
+                    gráficos</b> necesarios para tu evento: bolsas personalizadas, photocall, lonas para
+                fachadas, banderas, banderolas para farola, foam para mesa presidencial...</p>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-images">
+            <img src="../assets/images/clonados/Kolors2018_BioTech_Bolsas-640w.jpg" alt="Impresión 1">
+            <img src="../assets/images/clonados/photocall_maxima-640w.jpeg" alt="Impresión 2">
+            <img src="../assets/images/clonados/photocall-640w.JPG" alt="Impresión 3">
+            <img src="../assets/images/clonados/LONA_ILUMINADA_GEPAC-640w.JPG" alt="Impresión 4">
+            <img src="../assets/images/clonados/Vinoble2018_Carpa_Lona_Kolors-d49d8398-640w.jpg" alt="Impresión 5">
+            <img src="../assets/images/clonados/imagen_lona_Hotel_Barcelo_Granada-640w.jpeg" alt="Impresión 6">
+            <img src="../assets/images/clonados/baranda-entre-la-2-y-la-1-960x600-640w.jpg" alt="Impresión 7">
+            <img src="../assets/images/clonados/pancarta-Palacio2-960x600-640w.jpg" alt="Impresión 8">
+            <img src="../assets/images/clonados/Kolors2018_BioTech_Banderolas-640w.jpg" alt="Impresión 9">
+            <img src="../assets/images/clonados/Banderola-estandarteN-960x600-640w.jpg" alt="Impresión 10">
+            <img src="../assets/images/clonados/Faldón_mesa_presidencia-640w.JPG" alt="Impresión 11">
+            <img src="../assets/images/clonados/Guadalinfo2018_Almuñecar_Banderolas_Kolors-640w.JPG" alt="Impresión 12">
+        </div>
+
+    </div>
+
+    <!-- Common Footer Placeholder -->
+    <div id="common-footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/load-common.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/lightbox.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.hero-slider .slide');
+            let currentSlide = 0;
+            const slideInterval = 5000; // 5 seconds
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            if (slides.length > 1) {
+                setInterval(nextSlide, slideInterval);
+            }
+        });
+    </script>
+</body>
+
+</html>
