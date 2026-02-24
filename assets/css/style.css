@@ -3738,9 +3738,9 @@ h6 {
 
 .intro-text {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 140%;
     margin-bottom: 15px;
-    color: #737171;
+    color: #000000;
 }
 
 .comunicacion-divider-section {
