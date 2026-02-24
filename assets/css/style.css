@@ -238,8 +238,8 @@ h6 {
     }
 
     .main-navigation {
-        position: fixed;
-        top: 80px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         background: #2a2a2a;
@@ -3836,11 +3836,11 @@ h6 {
 
 .collage-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 0; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
     padding: 0;
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .foto {
@@ -3873,7 +3873,9 @@ h6 {
     .collage-container {
         grid-template-columns: 1fr;
     }
-    .item-grande, .item-largo {
+
+    .item-grande,
+    .item-largo {
         grid-row: span 1;
         grid-column: span 1;
     }
@@ -3936,4 +3938,11 @@ h6 {
 .proyecto-container:hover .boton-enlace {
     opacity: 1;
     transform: scale(1);
+}
+
+#common-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
