@@ -44,7 +44,7 @@
             background-color: #000;
         }
 
-        /* CAPA DE IMAGEN (Para que el gris no afecte al botón) */
+        /* CAPA DE IMAGEN */
         .portfolio-card::before {
             content: "";
             position: absolute;
@@ -57,7 +57,7 @@
             transition: transform 0.5s ease;
         }
 
-        /* Overlay oscuro para legibilidad */
+        /* Overlay oscuro */
         .portfolio-card::after {
             content: "";
             position: absolute;
@@ -103,7 +103,7 @@
             transform: scale(1.05);
         }
 
-        /* Desfase visual */
+        /* Desfase visual original */
         .portfolio-card:nth-child(odd) .button-wrapper { transform: translateX(-15px); }
         .portfolio-card:nth-child(even) .button-wrapper { transform: translateX(15px); }
 
@@ -117,58 +117,21 @@
 </head>
 
 <body>
-  <div id="common-header"></div>
+    <div id="common-header"></div>
 
-  <section class="portfolio-hero-section">
-    <div class="text-center mb-neg-8">
-      <span class="text-black font-size-30 font-weight-200">Algunos de nuestros eventos te están esperando</span>
-    </div>
-    <div class="text-center">
-      <span class="highlight">¿Por qué no pasas y les echas un vistazo?</span>
-    </div>
-    <div class="mt-100 lh-1-3">
-      <div class="text-center">
-        <span class="font-weight-300 font-size-35 text-gray-dark">Nuestros proyectos</span>
-      </div>
-      <div class="text-center">
-        <span class="font-weight-400 font-size-48 text-gray-dark">son el resultado</span>
-      </div>
-      <div class="text-center">
-        <span class="font-weight-600 font-size-34 text-gray-dark">de todo en lo que creemos:</span>
-      </div>
-      <div class="text-center">
-        <span class="font-weight-900 font-size-60 text-gray-dark">_TUS</span>
-        <span class="font-weight-900 font-size-60 text-yellow-primary">IDEAS</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio-grid-section">
-    <div class="portfolio-grid">
-      <div class="portfolio-card bg-project-biotech">
-        <div class="button-wrapper">
-          <a href="portfolio/biotech-open-innovation.html" class="portfolio-card-button">Biotech Open Innovation</a>
-        </div>
-      </div>
-      <div class="portfolio-card bg-project-feria-corredor">
-        <div class="button-wrapper">
-          <a href="portfolio/feria-del-corredor-granada-2019.html" class="portfolio-card-button">Feria del Corredor</a>
-        </div>
-      </div>
-      <div class="portfolio-card bg-project-salon-ugr">
-        <div class="button-wrapper">
-          <a href="salon-estudiantil-universidad-granada.html" class="portfolio-card-button">IV Sal&oacute;n Estudiantil
-            UGR</a>
+    <section class="portfolio-hero-section">
+        <div style="text-align: center; margin-bottom: -8px;">
+            <span style="color: #000; font-size: 30px; font-weight: 200;">Algunos de nuestros eventos te están esperando</span>
         </div>
         <div style="text-align: center;">
             <span style="font-size: 36px; font-weight: 800; color: rgb(238, 181, 0);">¿Por qué no pasas y les echas un vistazo?</span>
         </div>
         <div style="margin-top: 100px; line-height: 1.3;">
-            <div style="text-align: center;"><span style="font-weight: 300; font-size: 35px; color: rgb(64, 64, 64);">Nuestros proyectos </span></div>
-            <div style="text-align: center;"><span style="font-weight: 400; font-size: 48px; color: rgb(64, 64, 64);">son el resultado </span></div>
-            <div style="text-align: center;"><span style="font-weight: 600; font-size: 34px; color: rgb(64, 64, 64);">de todo en lo que creemos: </span></div>
+            <div style="text-align: center;"><span style="font-weight: 300; font-size: 35px; color: rgb(64, 64, 64);">Nuestros proyectos</span></div>
+            <div style="text-align: center;"><span style="font-weight: 400; font-size: 48px; color: rgb(64, 64, 64);">son el resultado</span></div>
+            <div style="text-align: center;"><span style="font-weight: 600; font-size: 34px; color: rgb(64, 64, 64);">de todo en lo que creemos:</span></div>
             <div style="text-align: center;">
-                <span style="font-weight: 900; font-size: 60px; color: rgb(107, 107, 107);">_TUS </span>
+                <span style="font-weight: 900; font-size: 60px; color: rgb(107, 107, 107);">_TUS</span>
                 <span style="font-weight: 900; font-size: 60px; color: #eaaf0a;">IDEAS</span>
             </div>
         </div>
@@ -176,54 +139,63 @@
 
     <section class="portfolio-grid-section">
         <div class="portfolio-grid">
+            
             <div class="portfolio-card" style="background-image: url('assets/images/biotech.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/biotech-open-innovation.html" class="portfolio-card-button">Biotech Open Innovation</a>
+                    <a href="portfolio/biotech-open-innovation.html" class="portfolio-card-button">Biotech Open Innovation</a>
                 </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/feria-corredor.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/feria-del-corredor-granada-2019.html" class="portfolio-card-button">Feria del Corredor</a>
+                    <a href="portfolio/feria-del-corredor-granada-2019.html" class="portfolio-card-button">Feria del Corredor</a>
                 </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/salon-estudiantil/paraninfo.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/salon-estudiantil-universidad-granada.html" class="portfolio-card-button">IV Salón Estudiantil UGR</a>
-                </div> 
+                    <a href="portfolio/salon-estudiantil-universidad-granada.html" class="portfolio-card-button">IV Salón Estudiantil UGR</a>
+                </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/guadalinfo.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/guadalinfo-en-ruta.html" class="portfolio-card-button">Guadalinfo en ruta</a>
+                    <a href="portfolio/guadalinfo-en-ruta.html" class="portfolio-card-button">Guadalinfo en ruta</a>
                 </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/vinoble.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/vinoble-2018.html" class="portfolio-card-button">Salón Internacional de Vinos Nobles</a>
+                    <a href="portfolio/vinoble-2018.html" class="portfolio-card-button">Salón Internacional de Vinos Nobles</a>
                 </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/sabor-granada/showcooking-2.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/sabor-granada.html" class="portfolio-card-button">Sabor Granada</a>
+                    <a href="portfolio/sabor-granada.html" class="portfolio-card-button">Sabor Granada</a>
                 </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/gepac/stand-gepac.jpg');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/congreso-gepac.html" class="portfolio-card-button">CONGRESO GEPAC</a>
+                    <a href="portfolio/congreso-gepac.html" class="portfolio-card-button">CONGRESO GEPAC</a>
                 </div>
             </div>
+
             <div class="portfolio-card" style="background-image: url('assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');">
                 <div class="button-wrapper">
-                    <a href="/portfolio/sabor-granada-andalucia.html" class="portfolio-card-button">Sabor Granada en Andalucía Sabor</a>
+                    <a href="portfolio/sabor-granada-andalucia.html" class="portfolio-card-button">Sabor Granada en Andalucía Sabor</a>
                 </div>
             </div>
+
         </div>
     </section>
 
-  <div id="common-footer"></div>
+    <div id="common-footer"></div>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/load-common.js"></script>
-  <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/load-common.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </body>
 
 </html>
