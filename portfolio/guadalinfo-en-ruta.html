@@ -16,26 +16,167 @@
     <!-- Header com&uacute;n -->
     <div id="common-header"></div>
 
-    <section class="hero-section section-bg-guadalinfo hero-p-100">
-        <div class="hero-content">
-            <h1 class="hero-title text-white">Guadalinfo en Ruta</h1>
-            <p class="font-size-24 mt-20">Exposici&oacute;n Itinerante</p>
-        </div>
-    </section>
-
-    <section class="services-section">
+    <!-- Hero Section -->
+    <section class="biotech-hero">
         <div class="dmHeaderResp">
-            <div class="service-item max-w-800">
-                <h2 class="service-title">Proyecto: Guadalinfo en Ruta</h2>
-                <div class="service-text">
-                    <p>Organizaci&oacute;n de la exposici&oacute;n itinerante Guadalinfo en Ruta.</p>
-                    <p>Este proyecto incluy&oacute; la gesti&oacute;n completa de la exposici&oacute;n itinerante, desde
-                        el dise&ntilde;o y producci&oacute;n de elementos expositivos hasta la log&iacute;stica y
-                        montaje en diferentes ubicaciones.</p>
-                </div>
+            <h1>
+                <span>_Guadalinfo en Ruta</span><br>
+                <span class="highlight">Ruta por Andalucía 2018</span>
+            </h1>
+            <div class="date">DE JULIO A OCTUBRE DE 2018</div>
+            <div class="description">
+                Guadalinfo en ruta fue un evento itinerante por toda Andalucía con motivo de los 15 años del proyecto.
             </div>
         </div>
     </section>
+
+    <!-- Slider Section -->
+    <section class="biotech-slider">
+        <img src="../assets/images/guadalinfo/cordoba-robot.jpg" alt="Guadalinfo en Ruta - Córdoba Robot"
+            class="active">
+        <img src="../assets/images/guadalinfo/hdr.jpg" alt="Guadalinfo en Ruta - Andalucía">
+    </section>
+
+    <!-- Content Section -->
+    <section class="biotech-content">
+        <div class="dmHeaderResp">
+            <h3>
+                <span>Nuestra</span> <span class="highlight">propuesta de valor</span>
+            </h3>
+            <p>
+                Nos ocupamos de la <strong>organizaci&oacute;n integral de todo el evento de Guadalinfo en ruta</strong>
+                diseñamos la imagen del evento y la plasmamos en las 3 jaimas que simulaban las instalaciones Guadalinfo. 
+                Una de las jaimas contaba con paneles modulares expositivos y en las otras dos se realizaron actividades 
+                de robotica, scratch, impresión 3D y administración electrónica. 
+                <br/> <br/>
+                Pusimos a disposición de todos los asistentes unas gafas de realidad virtual 360º con las que podían 
+                trasladarse a un centro de Guadalinfo.
+                <br/> <br/>
+                El espacio se decoró con una letra G de porexpan, photocall selfie, bocadillos, lona con mapa de la ruta y 
+                banderas tipo gota con la imagen del evento. 
+                Todo el evento quedó documentado con material audiovisual para su difusión en medios y redes.
+            </p>
+
+            <!-- Gallery -->
+            <div class="biotech-gallery">
+                <div class="biotech-gallery-item">
+                    <img src="../assets/images/guadalinfo/Guadalinfo2018_Cordoba_Tuevent-86a76e0d.jpg" alt="Biotech Open Innovation">
+                </div>
+                <div class="biotech-gallery-item">
+                    <img src="../assets/images/guadalinfo/Guadalinfo2018_Chipiona_GafasRealidadVirtual2_Tuevent.jpg" alt="Biotech Open Innovation - Bolsas">
+                </div>
+                <div class="biotech-gallery-item">
+                    <img src="../assets/images/guadalinfo/Guadalinfo2018_Tuevent.jpg" alt="Biotech Open Innovation">
+                </div>
+                <div class="biotech-gallery-item">
+                    <img src="../assets/images/guadalinfo/Guadalinfo2018_Almuñecar_LetraGPorexpan_Mostrador_Urna_Rotulo_Tuevent-670acd74.JPG" alt="Biotech Open Innovation - Mesa">
+                </div>
+            </div>
+
+            <h3>
+                <span>15 años con</span> <span class="highlight">Guadalinfo</span>
+            </h3>
+            <p>
+                Guadalinfo <strong>celebró sus 15 años</strong> con este evento itinerante con 2 puestas, una en verano para las zonas 
+                costeras y otra de invierno para las zonas del interior de Andalucía. <strong>En total de 30 puestas</strong> en las que 
+                los usuarios que accedieron, pudieron realizar las actividades administración electrónica, competencias digitales, 
+                digitalización de empresas, uso de las redes sociales y el manejo responsable y seguro de las TIC.
+            </p>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</span>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- JavaScript para el slider -->
+    <script>
+        // Slider simple autom&aacute;tico
+        (function () {
+            const images = document.querySelectorAll('.biotech-slider img');
+            let currentIndex = 0;
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            // Cambiar imagen cada 7 segundos
+            setInterval(showNextImage, 7000);
+        })();
+    </script>
+
+    <!-- JavaScript para el lightbox -->
+    <script>
+        (function () {
+            const galleryItems = document.querySelectorAll('.photo-gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+            let currentImageIndex = 0;
+            const images = Array.from(galleryItems).map(item => item.querySelector('img').src);
+
+            function openLightbox(index) {
+                currentImageIndex = index;
+                lightboxImage.src = images[currentImageIndex];
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                lightboxImage.src = images[currentImageIndex];
+            }
+
+            function showPrevImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                lightboxImage.src = images[currentImageIndex];
+            }
+
+            // Event listeners
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxNext.addEventListener('click', showNextImage);
+            lightboxPrev.addEventListener('click', showPrevImage);
+
+            // Cerrar con ESC
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        showPrevImage();
+                    } else if (e.key === 'ArrowRight') {
+                        showNextImage();
+                    }
+                }
+            });
+
+            // Cerrar al hacer clic fuera de la imagen
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        })();
+    </script>
 
     <!-- Footer com&uacute;n -->
     <div id="common-footer"></div>
