@@ -115,8 +115,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const isInSubdir = isAdmin || isPortfolio || isMaintenance || isProduccion;
     const pathPrefix = isInSubdir ? '../' : '';
 
-    const headerPath = pathPrefix + 'includes/header.html';
-    const footerPath = pathPrefix + 'includes/footer.html';
+    const cacheBuster = '?v=' + new Date().getTime();
+    const headerPath = pathPrefix + 'includes/header.html' + cacheBuster;
+    const footerPath = pathPrefix + 'includes/footer.html' + cacheBuster;
 
     // Verificar que los elementos existen antes de cargar
     const headerElement = document.getElementById('common-header');
