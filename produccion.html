@@ -1,199 +1,545 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="canonical" href="https://www.tuevent.es/produccion" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producción - Tuevent</title>
+    <meta name="description" content="Servicios agencia de organización de eventos y comunicación">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=1770315462" />
 
-  <title>
-    Servicios agencia de organizaci&oacute;n de eventos y comunicaci&oacute;n
-  </title>
-  <meta name="keywords"
-    content='"organizaci&oacute;n de eventos" "servicios" "agencia comunicaci&oacute;n" "agencia eventos" "tecnolog&iacute;a" "maketing ferial" "audiovisuales" "desarrollo web" "mailing" "espacios" "identidad" "llave en mano" "impresi&oacute;n digital" "stands" "mobiliario"' />
-  <meta name="description"
-    content="Ofrecemos la organizaci&oacute;n integral de tu evento, feria o congreso. Desde la imagen de tu evento hasta el dise&ntilde;o y producci&oacute;n." />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff;
+        }
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="assets/images/clonados/FAVICON_TODOS-09.png" />
-  <link rel="icon" type="image/x-icon" href="assets/images/clonados/site_favicon_16_1672785771553.ico" />
+        /* --- Hero Section --- */
+        .produccion-hero-section {
+            padding: 160px 40px 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+        }
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap"
-    rel="stylesheet" />
+        .hero-slider-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
 
-  <!-- Font Awesome (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* Efecto quietudo (parallax) */
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: heroFade 12s infinite;
+        }
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+        .hero-slide:nth-child(1) {
+            background-image: url('assets/images/biotech/biotech-main.jpg');
+            animation-delay: 0s;
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: url('assets/images/vinoble/Vinoble_2018_tuevent_vitrinas.JPG');
+            animation-delay: 4s;
+        }
+
+        .hero-slide:nth-child(3) {
+            animation-delay: 8s;
+            background-image: url('assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_truss.JPG');
+        }
+
+        @keyframes heroFade {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            /* 0 a 1.2s transicionado suave */
+            33.33% {
+                opacity: 1;
+            }
+
+            /* 1.2 a 4s se mantiene */
+            43.33% {
+                opacity: 0;
+            }
+
+            /* de 4 a 5.2s desaparece */
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .produccion-hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.35);
+            /* #1664954006:before */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            color: #ffffff;
+            font-size: 60px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            line-height: initial;
+            margin-top: 0;
+        }
+
+        /* --- Servicios Intro --- */
+        .servicios-intro {
+            padding: 100px 40px;
+            text-align: center;
+            background-color: #fafafa;
+            /* u_1649638088 */
+        }
+
+        .servicios-intro h3 {
+            font-size: 32px;
+            color: #020202;
+            margin: 0 auto;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .servicios-intro p {
+            color: #828282;
+            font-size: 16px;
+            margin-top: 14px;
+            margin-bottom: 0;
+        }
+
+        /* --- Galerías --- */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 45px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        .service-card {
+            width: calc(20% - 12px);
+            /* 5 columnas */
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eaeaea;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1024px) {
+            .service-card {
+                width: calc(33.333% - 15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+
+        .service-image {
+            width: 100%;
+            height: 169px;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 12px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            min-height: 130px;
+            box-sizing: border-box;
+            text-decoration: none;
+            background-color: #fff;
+        }
+
+        .service-content h3 {
+            font-size: 15px;
+            color: #737171;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .service-content:hover h3 {
+            background-color: #737171;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* --- Banner ON --- */
+        .banner-on {
+            background-color: #ffffff;
+            padding: 80px 40px 30px;
+            text-align: center;
+        }
+
+        .banner-on span {
+            font-size: 48px;
+            color: #000;
+        }
+
+        .banner-on span .on-yellow {
+            font-weight: 900;
+            color: rgb(238, 181, 0);
+        }
+
+        .banner-on span .on-bold {
+            font-weight: 700;
+        }
+
+        .banner-on span .on-light {
+            font-weight: 400;
+        }
+
+        /* --- Projects Grid --- */
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            padding: 0 0 84.5px 0;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .project-card {
+            position: relative;
+            width: 25%;
+            /* 4 columnas de la grid original de duda */
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1300px) {
+            .project-card {
+                width: 33.333%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .project-card {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                width: 100%;
+            }
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: inherit;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scale(1.05);
+            /* Zoom sutil de la foto */
+        }
+
+        .project-card-content {
+            position: relative;
+            z-index: 3;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Fondo normal */
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card:hover .project-card-content {
+            background-color: rgba(238, 181, 0, 0.5);
+            /* Amarillento al hacer hover */
+        }
+
+        /* --- Lightbox --- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 48px;
+            color: #fff;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 10000;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Common Header Placeholder -->
-  <div id="common-header"></div>
+    <div id="common-header"></div>
 
-  <div class="site-content">
-    <!-- Hero Section -->
-    <section class="produccion-hero-section">
-      <div class="comunicacion-hero-overlay"></div>
-      <div class="comunicacion-hero-content">
-        <h1 class="comunicacion-hero-title">Eventos 360&ordm;</h1>
-      </div>
-    </section>
+    <main>
+        <!-- ================================================
+             HERO SECTION
+             ================================================ -->
+        <section class="produccion-hero-section">
+            <div class="hero-slider-bg">
+                <div class="hero-slide"></div>
+                <div class="hero-slide"></div>
+                <div class="hero-slide"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Eventos 360</h1>
+            </div>
+        </section>
 
-    <!-- Intro Section: Servicios a su alcance -->
-    <section class="comunicacion-intro-section" style="text-align: center">
-      <div class="container">
-        <div class="intro-description">
-          <h2 style="
-                font-size: 32px;
-                font-weight: 400;
-                color: #000;
-                margin-bottom: 10px;
-              ">
-            Todos los servicios que necesite,<br />a su alcance
-          </h2>
-          <p class="intro-text" style="color: #828282">
-            Disponemos de lo necesario para ayudar al &eacute;xito de su
-            evento
-          </p>
-        </div>
-      </div>
-    </section>
+        <!-- ================================================
+             SERVICIOS INTRO
+             ================================================ -->
+        <section class="servicios-intro">
+            <h3>
+                <span>Todos los servicios que necesite,</span><br>
+                <span>a su alcance</span>
+            </h3>
+            <p>Disponemos de lo necesario para ayudar al éxito de su evento</p>
 
-    <!-- Services Grid -->
-    <section class="comunicacion-gallery-section" style="margin-bottom: 40px">
-      <div class="gallery-grid">
-        <!-- Item 1: Stands -->
-        <a href="producción/diseno-y-montaje-de-stands.html" class="gallery-item half-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Sabor_granada_andalucia_sabor_agencia_tuevent_truss.JPG&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Dise&ntilde;o y Montaje de Stands y Decorados</span>
-          </div>
-        </a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <a href="assets/images/produccion/Sabor_granada_andalucia_sabor_agencia_tuevent_truss.JPG"
+                        class="service-image"
+                        style="background-image: url('assets/images/produccion/Sabor_granada_andalucia_sabor_agencia_tuevent_truss.JPG');"
+                        onclick="event.preventDefault(); openSingleLightbox(this.href);">
+                    </a>
+                    <a href="producción/diseno-y-montaje-de-stands.html" class="service-content">
+                        <h3>Diseño y Montaje de Stands y Decorados</h3>
+                    </a>
+                </div>
 
-        <!-- Item 2: Mobiliario -->
-        <a href="producción/alquiler-de-mobiliario.html" class="gallery-item half-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Sabor_Granada_Malaga_2019_tuevent_showcooking_1.jpeg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Alquiler de Mobiliario y Decoraci&oacute;n</span>
-          </div>
-        </a>
+                <div class="service-card">
+                    <a href="assets/images/produccion/Sabor_Granada_Malaga_2019_tuevent_showcooking_1.jpeg"
+                        class="service-image"
+                        style="background-image: url('assets/images/produccion/Sabor_Granada_Malaga_2019_tuevent_showcooking_1.jpeg');"
+                        onclick="event.preventDefault(); openSingleLightbox(this.href);">
+                    </a>
+                    <a href="producción/alquiler-de-mobiliario.html" class="service-content">
+                        <h3>Alquiler de Mobiliario y Decoración</h3>
+                    </a>
+                </div>
 
-        <!-- Item 3: Impresion Digital -->
-        <a href="producción/impresion-digital.html" class="gallery-item third-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Vinoble2018_Lona_Kolors.JPG&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Impresi&oacute;n Digital Peque&ntilde;o y Gran formato</span>
-          </div>
-        </a>
+                <div class="service-card">
+                    <a href="assets/images/vinoble/Vinoble_2018_tuevent_vitrinas.JPG" class="service-image"
+                        style="background-image: url('assets/images/vinoble/Vinoble_2018_tuevent_vitrinas.JPG');"
+                        onclick="event.preventDefault(); openSingleLightbox(this.href);">
+                    </a>
+                    <a href="producción/impresion-digital.html" class="service-content">
+                        <h3>Impresión Digital Pequeño y Gran formato</h3>
+                    </a>
+                </div>
 
-        <!-- Item 4: Audiovisual -->
-        <a href="producción/audiovisuales.html" class="gallery-item half-width-item" style="
-              background-image: url(&quot;assets/images/produccion/IIEncuentroJuncaril-Asegra_CamaraSony_Kolors2018.JPG&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Producci&oacute;n Audiovisual</span>
-          </div>
-        </a>
+                <div class="service-card">
+                    <a href="assets/images/produccion/IIEncuentroJuncaril-Asegra_CamaraSony_Kolors2018.JPG"
+                        class="service-image"
+                        style="background-image: url('assets/images/produccion/IIEncuentroJuncaril-Asegra_CamaraSony_Kolors2018.JPG');"
+                        onclick="event.preventDefault(); openSingleLightbox(this.href);">
+                    </a>
+                    <a href="producción/audiovisuales.html" class="service-content">
+                        <h3>Producción Audiovisual</h3>
+                    </a>
+                </div>
 
-        <!-- Item 5: Diseño -->
-        <a href="producción/diseno-grafico.html" class="gallery-item third-width-item" style="
-              background-image: url(&quot;assets/images/produccion/IMG-20171004-WA0007-9eb29984.jpg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Dise&ntilde;o Gr&aacute;fico</span>
-          </div>
-        </a>
-      </div>
-    </section>
+                <div class="service-card">
+                    <a href="assets/images/produccion/IMG-20171004-WA0007-9eb29984.jpg" class="service-image"
+                        style="background-image: url('assets/images/produccion/IMG-20171004-WA0007-9eb29984.jpg');"
+                        onclick="event.preventDefault(); openSingleLightbox(this.href);">
+                    </a>
+                    <a href="producción/diseno-grafico.html" class="service-content">
+                        <h3>Diseño Gráfico</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Divider Section: #ON Hacemos eventos 360º -->
-    <section class="comunicacion-divider-section" style="padding-top: 40px; padding-bottom: 40px">
-      <div class="container">
-        <h2 class="divider-title">
-          <span class="text-primary bold">#ON</span>
-          <strong><span class="text-light-weight">Hacemos</span> eventos
-            360&ordm;</strong>
-        </h2>
-      </div>
-    </section>
+        <!-- ================================================
+             BANNER ON
+             ================================================ -->
+        <section class="banner-on">
+            <span>
+                <span class="on-yellow">#ON</span>
+                <span class="on-bold"><span class="on-light">Hacemos</span> eventos 360º</span>
+            </span>
+        </section>
 
-    <!-- Gallery / Portfolio Grid (reutilizando estilos de comunicacion.html) -->
-    <section class="comunicacion-gallery-section">
-      <div class="gallery-grid">
-        <!-- Item 1: Biotech -->
-        <a href="portfolio/biotech-open-innovation.html" class="gallery-item half-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Tuevent_BioTech.jpg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Biotech Open Innovation 2018</span>
-          </div>
-        </a>
+        <!-- ================================================
+             PROJECTS GRID
+             ================================================ -->
+        <section class="projects-grid">
+            <a href="portfolio/biotech-open-innovation.html" class="project-card"
+                style="background-image: url('assets/images/produccion/Tuevent_BioTech.jpg');">
+                <div class="project-card-content">Biotech Open Innovation 2018</div>
+            </a>
 
-        <!-- Item 2: Guadalinfo -->
-        <a href="portfolio/guadalinfo-en-ruta.html" class="gallery-item half-width-item" target="_blank" style="
-              background-image: url(&quot;assets/images/produccion/Guadalinfo2018_Cordoba_Robot_Lona_Tuevent.jpg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Guadalinfo en ruta 2018</span>
-          </div>
-        </a>
+            <a href="portfolio/guadalinfo-en-ruta.html" class="project-card"
+                style="background-image: url('assets/images/produccion/Guadalinfo2018_Cordoba_Robot_Lona_Tuevent.jpg');">
+                <div class="project-card-content">Guadalinfo en ruta 2018</div>
+            </a>
 
-        <!-- Item 3: IV Salon -->
-        <a href="portfolio/salon-estudiantil-universidad-granada.html" class="gallery-item third-width-item" style="
-              background-image: url(&quot;assets/images/produccion/IV_Salon_Estudiantil_UGR_Paraninfo_Sala_Alumnos1_Tuevent_2019.jpg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">IV Sal&oacute;n Estudiantil UGR</span>
-          </div>
-        </a>
+            <a href="portfolio/salon-estudiantil-universidad-granada.html" class="project-card"
+                style="background-image: url('assets/images/produccion/IV_Salon_Estudiantil_UGR_Paraninfo_Sala_Alumnos1_Tuevent_2019.jpg');">
+                <div class="project-card-content">IV Salón Estudiantil UGR</div>
+            </a>
 
-        <!-- Item 4: Sabor Granada -->
-        <a href="portfolio/sabor-granada.html" class="gallery-item third-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Sabor_Granada_H_T_Malaga_2019_Tuevent_Showcooking-aab1285e.jpg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Sabor Granada en H&amp;T Sal&oacute;n de Innovaci&oacute;n en
-              Hosteler&iacute;a</span>
-          </div>
-        </a>
+            <a href="portfolio/sabor-granada.html" class="project-card"
+                style="background-image: url('assets/images/produccion/Sabor_Granada_H_T_Malaga_2019_Tuevent_Showcooking-aab1285e.jpg');">
+                <div class="project-card-content">Sabor Granada en H&T Salón de Innovación en Hostelería</div>
+            </a>
 
-        <!-- Item 5: Vinoble 2018 -->
-        <a href="portfolio/vinoble-2018.html" class="gallery-item third-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Vinoble2018_Carpa_Lona3_Tuevent.JPG&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Vinoble 2018</span>
-          </div>
-        </a>
+            <a href="portfolio/vinoble-2018.html" class="project-card"
+                style="background-image: url('assets/images/produccion/Vinoble2018_Carpa_Lona3_Tuevent.JPG');">
+                <div class="project-card-content">Vinoble 2018</div>
+            </a>
 
-        <!-- Item 6: Feria corredor -->
-        <a href="portfolio/feria-del-corredor-granada-2019.html" class="gallery-item third-width-item" style="
-              background-image: url(&quot;assets/images/produccion/Feria_del_corredor_2019_decathlon_stand_tuevent_3.jpg&quot;);
-            ">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-title">Feria del Corredor</span>
-          </div>
-        </a>
-      </div>
-    </section>
-  </div>
+            <a href="portfolio/feria-del-corredor-granada-2019.html" class="project-card"
+                style="background-image: url('assets/images/produccion/Feria_del_corredor_2019_decathlon_stand_tuevent_3.jpg');">
+                <div class="project-card-content">Feria del Corredor</div>
+            </a>
+        </section>
 
-  <!-- Common Footer Placeholder -->
-  <div id="common-footer"></div>
+    </main>
 
-  <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="assets/js/load-common.js"></script>
-  <script src="assets/js/navigation.js"></script>
+    <div id="common-footer"></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/load-common.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        function openSingleLightbox(url) {
+            lightboxImg.src = url;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
+        // Cierra al hacer clic fuera
+        if (lightbox) lightbox.addEventListener('click', function (e) {
+            if (e.target !== lightboxImg && e.target !== lightboxClose) {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 
 </html>
