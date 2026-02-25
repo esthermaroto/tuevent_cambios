@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Granada en Andalucía Sabor 2019 - Tuevent</title>
+    <meta name="description"
+        content="Visibilizar el stand de la marca Sabor Granada en la séptima edición de Andalucía Sabor">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&subset=latin-ext&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css?v=1770315462">
+
+    <style>
+        body {
+            background-color: #fff !important;
+        }
+
+        /* =============================================
+           HERO
+           ============================================= */
+        .u_1885042527 {
+            padding: 70px 0 30px;
+            text-align: center;
+            background: #fff;
+        }
+
+        /* Título principal */
+        .u_1321182104 {
+            margin: 0 0 0 0;
+            line-height: 1.2;
+        }
+
+        .u_1321182104 span {
+            font-size: 37px;
+            font-weight: 300;
+            color: #222;
+        }
+
+        .u_1321182104 .subtitle-year {
+            font-size: 37px;
+            font-weight: 800;
+            color: rgb(238, 181, 0);
+            display: block;
+            margin-top: 16px;
+        }
+
+        /* Fecha */
+        .dmNewParagraph.date-paragraph {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0;
+            color: #888;
+            margin: 30px 0 30px 0;
+            text-align: center;
+        }
+
+        /* Descripción breve */
+        .u_1440505187 {
+            font-size: 15px;
+            color: #3f3f3f;
+            max-width: 700px;
+            margin: 0 auto 0px auto;
+            text-align: center;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+
+        /* =============================================
+           SLIDER
+           ============================================= */
+        .slider-wrapper {
+            max-width: 100%;
+            margin: 0 auto 30px auto;
+        }
+
+        .slider-sq {
+            position: relative;
+            width: 100%;
+            height: 525px;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .u_1202658461 {
+            max-width: 100%;
+            margin: 0 auto 30px auto;
+        }
+
+        .flexslider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .flexslider .slides {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100%;
+        }
+
+        .flexslider .slides li {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .flexslider .slides li.flex-active-slide {
+            display: block;
+        }
+
+        /* Flechas del slider */
+        .flex-direction-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-direction-nav li a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: #fff;
+            text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            line-height: 1;
+            z-index: 10;
+            padding: 0 12px;
+            transition: opacity 0.2s;
+        }
+
+        .flex-direction-nav li a:hover {
+            opacity: 0.7;
+        }
+
+        .flex-prev {
+            left: 0;
+        }
+
+        .flex-next {
+            right: 0;
+        }
+
+        /* =============================================
+           CONTENIDO (propuesta de valor, galería, etc.)
+           ============================================= */
+        .content-wrapper {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 60px 0;
+        }
+
+        /* Encabezados de sección */
+        .u_1794567936,
+        .u_1753836395 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #000;
+            margin: 40px 0 0 0;
+            text-align: left;
+        }
+
+        .u_1794567936 font,
+        .u_1753836395 font {
+            color: rgb(238, 181, 0);
+            font-weight: 600;
+        }
+
+        /* Párrafos de contenido */
+        .u_1144088973,
+        .u_1970845985 {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.7;
+            margin: 20px 0 0 0;
+            text-align: left;
+        }
+
+        .u_1144088973 a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        /* =============================================
+           GALERÍA COLLAGE 5 FOTOS (Asymetric 2)
+           ============================================= */
+        .u_1223532881 {
+            margin: 30px 0 30px 0;
+        }
+
+        .photo-collage {
+            display: grid;
+            grid-template-columns: 30% 30% 40%;
+            grid-auto-rows: 250px;
+            gap: 0;
+        }
+
+        .photo-collage .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .photo-collage .image-container a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-collage .image-container a:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+            .photo-collage {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 250px;
+            }
+
+            .thumb-large {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .u_1885042527 {
+                padding: 30px 0;
+            }
+
+            .slider-sq {
+                height: 300px;
+            }
+
+            main {
+                padding: 0 20px !important;
+            }
+        }
+
+        .thumb-large {
+            grid-column: 3 / 4;
+            grid-row: 1 / 3;
+        }
+
+        /* =============================================
+           LIGHTBOX
+           ============================================= */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 48px;
+            color: #fff;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 10000;
+        }
+
+        .lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+            z-index: 10000;
+            user-select: none;
+        }
+
+        .lightbox-prev {
+            left: 0;
+        }
+
+        .lightbox-next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header común -->
+    <div id="common-header"></div>
+
+    <main style="padding: 0 70px;">
+        <!-- ================================================
+             HERO
+             ================================================ -->
+        <div class="u_1885042527">
+            <h2 class="u_1321182104 dmNewParagraph" id="1321182104">
+                <div style="text-align: center;">
+                    <span style="font-weight: 500;">_Sabor Granada en </span>
+                </div>
+                <div style="text-align: center;">
+                    <span class="subtitle-year">Andalucía Sabor 2019</span>
+                </div>
+            </h2>
+
+            <h4 class="dmNewParagraph date-paragraph" id="1971690327">
+                <div style="text-align: center;">
+                    <span style="font-weight: 300;">23 AL 25 DE SEPTIEMBRE DE 2019</span>
+                </div>
+            </h4>
+
+            <div class="u_1440505187 dmNewParagraph" id="1440505187">
+                <div style="text-align: center;">25 Empresas y 3 Consejos Reguladores expusieron sus productos en
+                    Andalucía Sabor 2019</div>
+            </div>
+        </div>
+
+        <!-- ================================================
+         SLIDER
+         ================================================ -->
+        <div class="u_1202658461 flex-container dmImageSlider dmNoMargin" id="1202658461">
+            <div class="slider-sq">
+                <div class="flexslider" id="1865423228">
+                    <ul class="slides" id="1529219221">
+                        <li class="u_1958005789 dmCoverImgContainer flex-active-slide" id="1958005789"
+                            style="background-image: url('../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================
+         CONTENIDO
+         ================================================ -->
+        <div class="content-wrapper">
+
+            <h4 class="u_1794567936 dmNewParagraph" id="1794567936">
+                <span style="font-weight: 300; color: rgb(0, 0, 0);">Nuestra</span>
+                <font style="color: rgb(238, 181, 0);">propuesta de valor</font>
+            </h4>
+
+            <div class="u_1144088973 dmNewParagraph" id="1144088973">
+                <div>Visibilizar el stand de la marca Sabor Granada en la séptima edición de Andalucía Sabor era nuestro
+                    principal objetivo. Por eso, se instaló una estructura truss con una lona retroiluminada que hiciera
+                    visible el espacio Sabor Granada desde cualquier parte del pabellón.<br><br>
+                    El espacio quedó dividido en dos por un pasillo central. En uno de los espacios ubicamos un
+                    mostrador corporativo pero muy sencillo que daba la bienvenida a los asistentes y a su lado, un
+                    display retroiluminado que servía como reclamo a los mismos. En el otro de los espacios se dispuso
+                    un espacio multiusos con pantalla, encimera, taburetes, etc, donde se desarrollaron las actividades
+                    de catas, exhibiciones y showcooking.</div>
+            </div>
+
+            <!-- Galería Collage 5 Fotos -->
+            <div class="u_1223532881 dmPhotoGallery" id="1223532881">
+                <div class="photo-collage">
+                    <div class="photoGalleryThumbs thumb-small animated fadeInUp" data-index="0">
+                        <div class="image-container">
+                            <a href="../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_truss.JPG"
+                                style="background-image: url('../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_truss.JPG');"
+                                aria-label="Sabor Granada Andalucía Sabor">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="photoGalleryThumbs thumb-small animated fadeInUp" data-index="1">
+                        <div class="image-container">
+                            <a href="../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_showcooking.JPG"
+                                style="background-image: url('../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_showcooking.JPG');"
+                                aria-label="Sabor Granada Andalucía Sabor">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="photoGalleryThumbs thumb-small animated fadeInUp" data-index="2">
+                        <div class="image-container">
+                            <a href="../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_recepcion.JPG"
+                                style="background-image: url('../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_recepcion.JPG');"
+                                aria-label="Sabor Granada Andalucía Sabor">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="photoGalleryThumbs thumb-small animated fadeInUp" data-index="3">
+                        <div class="image-container">
+                            <a href="../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_expositores_bodegas_muñana.JPG"
+                                style="background-image: url('../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_expositores_bodegas_muñana.JPG');"
+                                aria-label="Sabor Granada Andalucía Sabor">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="photoGalleryThumbs thumb-large animated fadeInUp" data-index="4">
+                        <div class="image-container">
+                            <a href="../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG"
+                                style="background-image: url('../assets/images/sabor-andalucia/Sabor_granada_andalucia_sabor_agencia_tuevent_2019-8f30fde6.JPG');"
+                                aria-label="Sabor Granada Andalucía Sabor">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="u_1753836395 dmNewParagraph" id="1753836395">
+                <span style="font-weight: 300; color: rgb(0, 0, 0);">Un evento</span>
+                <font style="color: rgb(238, 181, 0);">con alma propia</font>
+            </h4>
+
+            <div class="u_1970845985 dmNewParagraph" id="1970845985">
+                <div>
+                    <b><span style="font-weight: 400;">El resto, fue gracias a Diputación de Granada, Sabor Granada y
+                            todas las empresas expositoras y Consejos Reguladores que dieron forma al evento mediante la
+                            degustación y presentación de los mejores productos de nuestra tierra. Este evento, es sin
+                            duda, una de las mayores oportunidades de lanzar al amplia oferta agroalimentaria al mercado
+                            nacional e internacional.</span></b>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 60px;"></div>
+        </div>
+
+    </main>
+
+    <!-- Footer común -->
+    <div id="common-footer"></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/load-common.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script>
+        (function () {
+            const slides = document.querySelectorAll('.flexslider .slides li');
+            const prevBtn = document.getElementById('flexPrev');
+            const nextBtn = document.getElementById('flexNext');
+            let current = 0;
+            let timer;
+
+            function showSlide(index) {
+                slides.forEach(function (s) { s.classList.remove('flex-active-slide'); });
+                if (slides[index]) slides[index].classList.add('flex-active-slide');
+            }
+
+            function next() {
+                if (slides.length === 0) return;
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+
+            function prev() {
+                if (slides.length === 0) return;
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            }
+
+            function startAutoplay() { timer = setInterval(next, 7000); }
+            function resetAutoplay() { clearInterval(timer); startAutoplay(); }
+
+            if (prevBtn) prevBtn.addEventListener('click', function (e) { e.preventDefault(); prev(); resetAutoplay(); });
+            if (nextBtn) nextBtn.addEventListener('click', function (e) { e.preventDefault(); next(); resetAutoplay(); });
+
+            if (slides.length > 1) startAutoplay();
+        })();
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const galleryImages = document.querySelectorAll('.u_1223532881 .image-container a');
+
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const imgUrl = galleryImages[index].getAttribute('href');
+            lightboxImg.src = imgUrl;
+            if (lightboxPrev) lightboxPrev.style.display = 'block';
+            if (lightboxNext) lightboxNext.style.display = 'block';
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        function nextImage() {
+            if (galleryImages.length === 0) return;
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            const imgUrl = galleryImages[currentImageIndex].getAttribute('href');
+            lightboxImg.src = imgUrl;
+        }
+
+        function prevImage() {
+            if (galleryImages.length === 0) return;
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            const imgUrl = galleryImages[currentImageIndex].getAttribute('href');
+            lightboxImg.src = imgUrl;
+        }
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(index);
+            });
+        });
+
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        if (lightboxNext) lightboxNext.addEventListener('click', nextImage);
+        if (lightboxPrev) lightboxPrev.addEventListener('click', prevImage);
+    </script>
+</body>
+
+</html>
