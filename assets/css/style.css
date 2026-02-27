@@ -2810,6 +2810,105 @@ h6 {
     color: #fff;
 }
 
+.footer-links-list .has-submenu {
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+    /* Expande el área de hover del trigger hacia abajo */
+    z-index: 99;
+    /* Crea un contexto de apilamiento para que el submenú quede encima del resto */
+}
+
+.footer-links-list .has-submenu>a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-links-list .has-submenu:hover>a::after,
+.footer-links-list .has-submenu.active>a::after {
+    transform: rotate(-135deg);
+    margin-bottom: -1px;
+    border-color: #fff;
+    color: #fff;
+}
+
+.footer-links-list .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1a1a1a;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    border: 1px solid #333;
+    min-width: 200px;
+}
+
+.footer-links-list .has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.footer-links-list .submenu li {
+    margin-bottom: 0;
+}
+
+.footer-links-list .submenu li a {
+    display: block;
+    padding: 8px 20px;
+    color: #999;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.footer-links-list .submenu li a:hover {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer-links-list .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+
+    .footer-links-list .has-submenu.active .submenu {
+        max-height: 300px;
+    }
+
+    .footer-links-list .has-submenu>a::after {
+        float: right;
+        margin-top: 5px;
+    }
+}
+
 .footer-contact-info p {
     font-size: 14px;
     color: #999;
@@ -3279,11 +3378,11 @@ h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
-    opacity: 0; 
-    transition: opacity 1.5s ease-in-out; 
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .biotech-slider img.active {
@@ -3300,7 +3399,7 @@ h6 {
     max-width: 1050px !important;
     margin: 0 auto !important;
     padding: 0 20px;
-    text-align: left; 
+    text-align: left;
     display: block;
 }
 

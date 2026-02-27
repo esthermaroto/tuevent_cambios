@@ -69,17 +69,17 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Submenu toggle en m&oacute;vil
-        const hasSubmenu = document.querySelectorAll('.has-submenu');
-        hasSubmenu.forEach(item => {
-            const link = item.querySelector('a');
-            if (link && window.innerWidth <= 768) {
-                link.addEventListener('click', function (e) {
+        // Submenu toggle en móvil (Usando delegación para soportar elementos cargados dinámicamente)
+        if (!window.submenuListenerAdded) {
+            document.addEventListener('click', function (e) {
+                const targetLink = e.target.closest('.has-submenu > a');
+                if (targetLink && window.innerWidth <= 768) {
                     e.preventDefault();
-                    item.classList.toggle('active');
-                });
-            }
-        });
+                    targetLink.parentElement.classList.toggle('active');
+                }
+            });
+            window.submenuListenerAdded = true;
+        }
 
         // Marcar el elemento activo del men&uacute; seg&uacute;n la p&aacute;gina actual
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
